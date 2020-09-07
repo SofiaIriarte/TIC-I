@@ -1,0 +1,63 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
+package com.javatpoint.mypackage;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.boot.Metadata;
+import org.hibernate.boot.MetadataSources;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+
+public class Stores {
+    private String type;
+    private int numRef;
+    private String name;
+
+    public Stores() {
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public int getNumRef() {
+        return numRef;
+    }
+
+    public void setNumRef(int numRef) {
+        this.numRef = numRef;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public static void main(String[] var0) {
+        StandardServiceRegistry var1 = (new StandardServiceRegistryBuilder()).configure("hibernate.cfg.xml").build();
+        Metadata var2 = (new MetadataSources(var1)).getMetadataBuilder().build();
+        SessionFactory var3 = var2.getSessionFactoryBuilder().build();
+        Session var4 = var3.openSession();
+        Transaction var5 = var4.beginTransaction();
+        Brand var6 = new Brand();
+        var6.setId(101);
+        var6.setName("Zara");
+        var4.save(var6);
+        var5.commit();
+        System.out.println("successfully saved");
+        var3.close();
+        var4.close();
+    }
+}
