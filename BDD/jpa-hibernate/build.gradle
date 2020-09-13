@@ -1,0 +1,30 @@
+plugins {
+    id 'net.ltgt.apt' version '0.10'
+}
+
+apply plugin: 'java-library'
+
+
+repositories {
+    jcenter()
+    maven {
+    	url "http://m2.objectdb.com"
+    }
+}
+
+dependencies {
+   
+  compile 'org.hibernate:hibernate-core:3.6.10.Final'
+  compile 'mysql:mysql-connector-java:5.1.34'
+  compile 'org.javassist:javassist:3.19.0-GA'
+  compile 'com.objectdb:objectdb:2.4.0'
+  compile 'org.hibernate:hibernate-entitymanager:3.6.10.Final'
+   
+   
+  testImplementation 'junit:junit:4.12'
+    
+  compileOnly 'org.projectlombok:lombok:1.18.0'
+  apt "org.projectlombok:lombok:1.18.0"
+  
+}
+

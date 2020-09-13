@@ -1,0 +1,17 @@
+System.out.println(new java.text.DecimalFormat("##.0").format(3.4));
+
+
+edu.um.database.examples.Event event = new edu.um.database.examples.Event();
+event.setId(10L);
+java.util.Set<edu.um.database.examples.Event> list = new java.util.HashSet<edu.um.database.examples.Event>();
+for (int i = 0; i < 10; i++) {
+	list.add(event);
+}
+event.setId(20L);
+for (edu.um.database.examples.Event listEvent : list) {
+	System.out.println(event.getId());
+}
+
+java.math.BigDecimal value = java.math.BigDecimal.ZERO;
+value = value.add(java.math.BigDecimal.valueOf(200));
+System.out.println(value);
