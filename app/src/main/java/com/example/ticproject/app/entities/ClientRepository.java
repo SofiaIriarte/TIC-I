@@ -6,6 +6,9 @@ import java.util.List;
 
 @Repository
 public interface ClientRepository extends CrudRepository<Client, Integer> {
+
     List<Client> findByLastName(String lastName);
+
     Client findBycI(int cI);
+
 }
