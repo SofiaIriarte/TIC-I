@@ -1,10 +1,13 @@
 package com.example.ticproject.app.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Date;
+import java.util.List;
 
 @Table
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity(name="client")
 public class Client {
 
@@ -12,20 +15,16 @@ public class Client {
     private String cI;
     private String firstName;
     private String lastName;
+    private Date birthday;
     private String address;
     private String userName;
     private String passworld;
-
-    protected Client (){}
-
-    public Client (String cI, String firstName, String lastName, String address, String userName, String passworld){
-        this.cI = cI;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
-        this.userName = userName;
-        this.passworld = passworld;
-    }
+    @OneToMany
+    @JoinColumn(name="client_userName")
+    List<MetodoDePago> metodoDePagos;
+    @OneToOne
+    @JoinColumn(name="client_userName")
+    List<ShoppingCart> cartS;
 
     @Override
     public String toString() {
@@ -52,6 +51,14 @@ public class Client {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
     public void setLastName(String lastName) {
