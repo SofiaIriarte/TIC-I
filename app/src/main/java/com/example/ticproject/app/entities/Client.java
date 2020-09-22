@@ -1,13 +1,11 @@
 package com.example.ticproject.app.entities;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 @Table
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity(name="client")
 public class Client {
 
@@ -20,11 +18,25 @@ public class Client {
     private String userName;
     private String passworld;
     @OneToMany
-    @JoinColumn(name="client_userName")
-    List<MetodoDePago> metodoDePagos;
+    @JoinColumn(name="pago_nTarjeta")
+    private List<MetodoDePago> metodoDePagos;
     @OneToOne
-    @JoinColumn(name="client_userName")
-    List<ShoppingCart> cartS;
+    @JoinColumn(name="cartS_iD")
+    private ShoppingCart cartS;
+
+    public Client(){
+    }
+
+    public Client(String cI, String firstName, String lastName, Date birthday, String address, String userName, String passworld) {
+        this.cI = cI;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthday = birthday;
+        this.address = address;
+        this.userName = userName;
+        this.passworld = passworld;
+        this.metodoDePagos = new ArrayList<>();
+    }
 
     @Override
     public String toString() {
@@ -87,6 +99,22 @@ public class Client {
 
     public void setPassworld(String passworld) {
         this.passworld = passworld;
+    }
+
+    public List<MetodoDePago> getMetodoDePagos() {
+        return metodoDePagos;
+    }
+
+    public void setMetodoDePagos(List<MetodoDePago> metodoDePagos) {
+        this.metodoDePagos = metodoDePagos;
+    }
+
+    public ShoppingCart getCartS() {
+        return cartS;
+    }
+
+    public void setCartS(ShoppingCart cartS) {
+        this.cartS = cartS;
     }
 
 }

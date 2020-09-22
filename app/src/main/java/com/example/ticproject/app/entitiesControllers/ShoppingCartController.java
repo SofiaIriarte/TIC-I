@@ -1,13 +1,12 @@
-package com.example.ticproject.app.entities;
+package com.example.ticproject.app.entitiesControllers;
 
+import com.example.ticproject.app.entities.ShoppingCart;
+import com.example.ticproject.app.repositories.ShoppingCartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 
-@RestController
-@RequestMapping("/cartS")
-@AllArgsConstructor
 @Service
 public class ShoppingCartController {
 
@@ -18,11 +17,6 @@ public class ShoppingCartController {
     public void createSC(int iD, long precio) {
         ShoppingCart toInsert = new ShoppingCart(iD,precio);
         sCRepository.save(toInsert);
-    }
-
-    @PostMapping("/")
-    public void create(@RequestBody ShoppingCart cartS) {
-        sCRepository.save(cartS);
     }
 
 }

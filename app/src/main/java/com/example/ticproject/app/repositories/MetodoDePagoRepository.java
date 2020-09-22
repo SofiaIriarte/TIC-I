@@ -1,14 +1,14 @@
-package com.example.ticproject.app.entities;
+package com.example.ticproject.app.repositories;
 
+import com.example.ticproject.app.entities.MetodoDePago;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import java.util.List;
 
 @Repository
 public interface MetodoDePagoRepository extends CrudRepository<MetodoDePago, Integer> {
 
-    List<MetodoDePago> findByTitular(String titular);
+    //List<MetodoDePago> findByTitular(String titular);
 
-    MetodoDePago findByNTarjeta(int nTarjeta);
+    //MetodoDePago findByNTarjeta(int nTarjeta);
 
 }

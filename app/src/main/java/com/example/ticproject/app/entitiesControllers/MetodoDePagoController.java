@@ -1,11 +1,11 @@
-package com.example.ticproject.app.entities;
+package com.example.ticproject.app.entitiesControllers;
 
+import com.example.ticproject.app.entities.MetodoDePago;
+import com.example.ticproject.app.repositories.MetodoDePagoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
-@RestController
-@RequestMapping("/pagos")
-@AllArgsConstructor
+
 @Service
 public class MetodoDePagoController {
 
@@ -18,10 +18,6 @@ public class MetodoDePagoController {
         pagoRepository.save(toInsert);
     }
 
-    @PostMapping("/")
-    public void create(@RequestBody MetodoDePago pago) {
-        pagoRepository.save(pago);
-    }
 
 }
 

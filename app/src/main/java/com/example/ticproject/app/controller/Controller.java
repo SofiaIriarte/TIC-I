@@ -1,7 +1,7 @@
 package com.example.ticproject.app.controller;
 
 
-import com.example.ticproject.app.entities.ClientController;
+import com.example.ticproject.app.entitiesControllers.ClientController;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -42,13 +42,13 @@ public class Controller implements Initializable {
 
     @FXML
     public void submitButton(){
-        clientController.createCustomer(id.getText(),
-                firstName.getText(),
-                lastName.getText(),
-                address.getText(),
-                email.getText(),
-                password.getText());
-        System.out.println("funciono");
+//        clientController.createCustomer(id.getText(),
+//                firstName.getText(),
+//                lastName.getText(),
+//                address.getText(),
+//                email.getText(),
+//                password.getText());
+//        System.out.println("funciono");
     }
 
 }
