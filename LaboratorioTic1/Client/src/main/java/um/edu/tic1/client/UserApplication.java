@@ -1,6 +1,5 @@
-package com.example.ticproject.app;
+package um.edu.tic1.client;
 
-import com.example.ticproject.app.client.controller.MainMenu;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Parent;
@@ -9,11 +8,20 @@ import javafx.stage.Stage;
 import net.rgielen.fxweaver.core.FxWeaver;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
+import um.edu.tic1.client.controllers.MainMenu;
+import um.edu.tic1.client.dtos.AdministradorDTO;
+import um.edu.tic1.client.dtos.BrandDTO;
+import um.edu.tic1.client.dtos.ClientDTO;
+import um.edu.tic1.client.dtos.StoreDTO;
 
-public class ApplicationExample extends Application {
+public class UserApplication extends Application {
 
     public static ConfigurableApplicationContext springContext;
     private Parent root;
+    public ClientDTO cliente = null;
+    public AdministradorDTO admin = null;
+    public StoreDTO store = null;
+    public BrandDTO brand = null;
 
     @Override
     public void init() throws Exception {
@@ -21,13 +29,13 @@ public class ApplicationExample extends Application {
         String[] args = getParameters().getRaw().toArray(new String[0]);
 
         this.springContext = new SpringApplicationBuilder()
-                .sources(AppApplication.class)
+                .sources(ClientApplication.class)
                 .run(args);
 
     }
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) {
         FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
         Parent root = fxWeaver.loadView(MainMenu.class);
         Scene scene = new Scene(root);
@@ -40,4 +48,6 @@ public class ApplicationExample extends Application {
         springContext.close();
         Platform.exit();
     }
+
+
 }

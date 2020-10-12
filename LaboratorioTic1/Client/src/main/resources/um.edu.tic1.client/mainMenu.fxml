@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.MainMenu">
+    <children>
+        <Label layoutX="87.0" layoutY="64.0" text="Store Online" textFill="#d30909">
+            <font>
+                <Font size="41.0" />
+            </font>
+        </Label>
+        <Button fx:id="logIn" layoutX="238.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToLogIn" prefHeight="25.0" prefWidth="75.0" text="Log in " />
+        <Button fx:id="regisrarse" layoutX="316.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToRegisterScene" text="Registrarse" />
+    </children>
+</AnchorPane>

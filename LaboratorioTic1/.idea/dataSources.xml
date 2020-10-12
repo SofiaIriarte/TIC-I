@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="tiendaRopaOnline@localhost" uuid="c968b258-a349-4f84-a351-bf47213db6a8">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/tiendaRopaOnline</jdbc-url>
+      <time-zone>America/Montevideo</time-zone>
+    </data-source>
+  </component>
+</project>
