@@ -1,18 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.MainMenu">
-    <children>
-        <Label layoutX="87.0" layoutY="64.0" text="Store Online" textFill="#d30909">
-            <font>
-                <Font size="41.0" />
-            </font>
-        </Label>
-        <Button fx:id="logIn" layoutX="238.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToLogIn" prefHeight="25.0" prefWidth="75.0" text="Log in " />
-        <Button fx:id="regisrarse" layoutX="316.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToRegisterScene" text="Registrarse" />
-    </children>
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.MainMenu">
+   <children>
+      <ImageView fitHeight="532.0" fitWidth="1006.0" layoutX="4.0" layoutY="263.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
+         <image>
+            <Image url="@../../../../../../../../diseño/image1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="358.0" fitWidth="525.0" layoutX="450.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../diseño/caratula.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="541.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Button layoutX="644.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Button layoutX="765.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Button fx:id="login" layoutX="864.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToLogIn" style="-fx-background-color: transparent black" text="LOGIN" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Button fx:id="logIn" layoutX="106.0" layoutY="389.0" mnemonicParsing="false" onAction="#goToLogIn" prefHeight="36.0" prefWidth="221.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="INICIAR SESION" textFill="#e8505b">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="registrarse" layoutX="106.0" layoutY="444.0" mnemonicParsing="false" onAction="#goToRegisterScene" prefHeight="37.0" prefWidth="221.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="REGISTRARSE" textFill="#e8505b" />
+      <Text layoutX="72.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estas listo para " wrappingWidth="257.6724548339844">
+         <font>
+            <Font name="Futura Medium" size="35.0" />
+         </font>
+      </Text>
+      <Text layoutX="68.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="la nueva experiencia? " wrappingWidth="403.9798889160156">
+         <font>
+            <Font name="Avenir Next Bold" size="37.0" />
+         </font>
+      </Text>
+      <Pane layoutX="542.0" layoutY="65.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
+   </children>
 </AnchorPane>

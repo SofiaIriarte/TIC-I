@@ -5,33 +5,74 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="434.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.TempRegister">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.TempRegister">
     <children>
-        <TextField fx:id="firstName" layoutX="39.0" layoutY="106.0" promptText="NOMBRE" />
-        <TextField fx:id="lastName" layoutX="228.0" layoutY="106.0" promptText="APELLIDO" />
-        <TextField fx:id="id" layoutX="39.0" layoutY="147.0" prefHeight="27.0" prefWidth="149.0" promptText="CEDULA" />
-        <TextField fx:id="address" layoutX="39.0" layoutY="190.0" prefHeight="27.0" prefWidth="345.0" promptText="DIRECCIÓN" />
-        <TextField fx:id="email" layoutX="39.0" layoutY="232.0" prefHeight="27.0" prefWidth="345.0" promptText="EMAIL" />
-        <PasswordField fx:id="password" layoutX="39.0" layoutY="275.0" prefHeight="27.0" prefWidth="345.0" promptText="CONTRASEÑA" />
-        <Button fx:id="submit" layoutX="222.0" layoutY="315.0" mnemonicParsing="false" onAction="#submitButton" prefHeight="27.0" prefWidth="161.0" text="Submit" textFill="#cd0202" />
-        <Label layoutX="41.0" layoutY="61.0" text="REGISTRO DE USUARIO">
+      <ImageView fitHeight="533.0" fitWidth="996.0" layoutX="1.0" layoutY="68.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
+         <image>
+            <Image url="@../../../../../../../../diseño/image1.png" />
+         </image>
+      </ImageView>
+        <TextField fx:id="firstName" layoutX="115.0" layoutY="188.0" />
+        <TextField fx:id="lastName" layoutX="328.0" layoutY="189.0" />
+        <TextField fx:id="id" layoutX="116.0" layoutY="256.0" prefHeight="27.0" prefWidth="159.0" />
+        <TextField fx:id="address" layoutX="118.0" layoutY="321.0" prefHeight="27.0" prefWidth="369.0" />
+        <TextField fx:id="email" layoutX="119.0" layoutY="385.0" prefHeight="27.0" prefWidth="369.0" />
+        <PasswordField fx:id="password" layoutX="122.0" layoutY="449.0" prefHeight="27.0" prefWidth="362.0" />
+        <Button fx:id="submit" layoutX="192.0" layoutY="503.0" mnemonicParsing="false" onAction="#submitButton" prefHeight="36.0" prefWidth="211.0" style="-fx-background-color: #e8505b;" text="REGISTRARME" textFill="WHITE" />
+        <DatePicker fx:id="fechaNacimiento" layoutX="329.0" layoutY="255.0" prefHeight="27.0" prefWidth="161.0" />
+        <Label layoutX="634.0" layoutY="453.0" prefHeight="63.0" prefWidth="286.0" text="¿Sos una Marca o Local? ">
             <font>
-                <Font size="20.0" />
+                <Font name="AppleGothic Regular" size="22.0" />
             </font>
         </Label>
-        <DatePicker fx:id="fechaNacimiento" layoutX="228.0" layoutY="148.0" prefHeight="25.0" prefWidth="149.0" promptText="FECHA DE NACIMIENTO" />
-        <Label layoutX="39.0" layoutY="415.0" text="¿Sos una Marca o Local? Registrate aqui" textFill="#0d0ae8">
-            <font>
-                <Font size="16.0" />
-            </font>
-        </Label>
-        <Button layoutX="222.0" layoutY="448.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="161.0" text="Local" textFill="#ea0303" />
-        <Button layoutX="33.0" layoutY="448.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="161.0" text="Marca" textFill="#dd0404" />
-        <Button layoutX="383.0" layoutY="490.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="49.0" text="EXIT" />
-        <Button layoutX="2.0" layoutY="2.0" mnemonicParsing="false" text="BACK" />
-      <Label fx:id="error" layoutX="223.0" layoutY="361.0" prefHeight="9.0" prefWidth="161.0" />
+        <Button layoutX="791.0" layoutY="514.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="161.0" text="Local" textFill="#ea0303" />
+        <Button layoutX="567.0" layoutY="514.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="161.0" text="Marca" textFill="#dd0404" />
+      <Label fx:id="error" layoutX="3.0" layoutY="396.0" prefHeight="9.0" prefWidth="161.0" />
+      <Label layoutX="208.0" layoutY="95.0" prefHeight="41.0" prefWidth="182.0" text="REGISTRARSE" textFill="#e8505b">
+         <font>
+            <Font name="Apple Braille" size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="554.0" layoutY="26.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Button layoutX="655.0" layoutY="26.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Button layoutX="775.0" layoutY="26.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Button fx:id="login" layoutX="874.0" layoutY="26.0" mnemonicParsing="false" onAction="#goToLogIn" style="-fx-background-color: transparent black" text="LOGIN" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Pane layoutX="874.0" layoutY="66.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
+      <Text layoutX="118.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:" />
+      <Text layoutX="332.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido:" />
+      <Text layoutX="120.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cedula:" />
+      <Text layoutX="331.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de nacimiento:" />
+      <Text layoutX="118.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Direccion:" wrappingWidth="67.74398803710938" />
+      <Text layoutX="122.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" wrappingWidth="67.74398803710938" />
+      <Text layoutX="123.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña:" wrappingWidth="67.74398803710938" />
+      <ImageView fitHeight="276.0" fitWidth="397.0" layoutX="563.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../diseño/Imagen5.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

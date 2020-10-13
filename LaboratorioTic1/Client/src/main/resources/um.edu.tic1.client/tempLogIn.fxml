@@ -5,30 +5,78 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.TempLogIn">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.TempLogIn">
    <children>
-      <TextField fx:id="userName" layoutX="38.0" layoutY="160.0" promptText="USER NAME" />
-      <TextField fx:id="password" layoutX="38.0" layoutY="194.0" promptText="PASSWORLD" />
-      <Label layoutX="123.0" layoutY="26.0" text="LOG IN">
+      <ImageView fitHeight="534.0" fitWidth="998.0" layoutX="-4.0" layoutY="84.0" pickOnBounds="true" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
+         <image>
+            <Image url="@../../../../../../../../diseño/image1.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="password" layoutX="171.0" layoutY="391.0" prefHeight="27.0" prefWidth="246.0" style="-fx-background-color: white;" />
+      <Label layoutX="213.0" layoutY="110.0" prefHeight="41.0" prefWidth="182.0" text="INICIAR SESION" textFill="#e8505b">
          <font>
-            <Font size="48.0" />
+            <Font name="Apple Braille" size="22.0" />
          </font>
       </Label>
-      <Button fx:id="logIn" layoutX="38.0" layoutY="228.0" mnemonicParsing="false" onAction="#logIn" text="LOG IN" textFill="#da1e1e" />
-      <RadioButton fx:id="client" layoutX="38.0" layoutY="105.0" mnemonicParsing="false" text="CLIENT">
+      <RadioButton fx:id="client" layoutX="172.0" layoutY="212.0" mnemonicParsing="false" text="Cliente">
          <toggleGroup>
             <ToggleGroup fx:id="toggleGroup" />
          </toggleGroup>
+         <font>
+            <Font size="14.0" />
+         </font>
       </RadioButton>
-      <RadioButton fx:id="brand" layoutX="163.0" layoutY="105.0" mnemonicParsing="false" text="BRAND" toggleGroup="$toggleGroup" />
-      <RadioButton fx:id="admin" layoutX="38.0" layoutY="132.0" mnemonicParsing="false" text="ADMINISTRADOR" toggleGroup="$toggleGroup" />
-      <RadioButton fx:id="store" layoutX="165.0" layoutY="132.0" mnemonicParsing="false" text="STORE" toggleGroup="$toggleGroup" />
-      <Button fx:id="check" layoutX="303.0" layoutY="461.0" mnemonicParsing="false" onAction="#checkUserIsLogIn" text="TEST LOG IN" />
-      <Label fx:id="revisar" layoutX="248.0" layoutY="435.0" prefHeight="17.0" prefWidth="138.0" />
-      <Label fx:id="mensaje" layoutX="38.0" layoutY="266.0" prefHeight="17.0" prefWidth="343.0" />
+      <RadioButton fx:id="brand" layoutX="340.0" layoutY="211.0" mnemonicParsing="false" text="Marca" toggleGroup="$toggleGroup">
+         <font>
+            <Font size="14.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="admin" layoutX="171.0" layoutY="243.0" mnemonicParsing="false" text="Administrador" toggleGroup="$toggleGroup">
+         <font>
+            <Font size="15.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="store" layoutX="339.0" layoutY="243.0" mnemonicParsing="false" text="Tienda" toggleGroup="$toggleGroup">
+         <font>
+            <Font size="14.0" />
+         </font></RadioButton>
+      <Button layoutX="551.0" layoutY="34.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Button layoutX="654.0" layoutY="34.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Button layoutX="775.0" layoutY="34.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Button fx:id="login" layoutX="874.0" layoutY="34.0" mnemonicParsing="false" onAction="#goToRegisterScene" style="-fx-background-color: transparent black" text="LOGIN" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Pane layoutX="875.0" layoutY="66.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
+      <TextField fx:id="userName" layoutX="171.0" layoutY="317.0" prefHeight="27.0" prefWidth="247.0" style="-fx-background-color: white;" />
+      <Text layoutX="171.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" />
+      <Text layoutX="171.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+      <Text layoutX="172.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identificate:" />
+      <Button fx:id="logIn" layoutX="171.0" layoutY="456.0" mnemonicParsing="false" onAction="#logIn" prefHeight="35.0" prefWidth="248.0" style="-fx-background-radius: 0px; -fx-background-color: e8505b;" text="LOG IN" textFill="WHITE" />
+      <Text layoutX="212.0" layoutY="512.0" opacity="0.38" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Has Olvidado Tu Contraseña?" wrappingWidth="170.9049281016919" />
+      <ImageView fitHeight="407.0" fitWidth="376.0" layoutX="549.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../diseño/imagen7.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
