@@ -13,12 +13,12 @@
    <children>
       <ImageView fitHeight="532.0" fitWidth="1006.0" layoutX="4.0" layoutY="263.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
          <image>
-            <Image url="@../../../../../../../../diseño/image1.png" />
+            <Image url="@../images/image1.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="358.0" fitWidth="525.0" layoutX="450.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../diseño/caratula.png" />
+            <Image url="@../images/caratula.png" />
          </image>
       </ImageView>
       <Button layoutX="541.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">

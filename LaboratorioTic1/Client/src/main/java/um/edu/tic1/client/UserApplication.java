@@ -18,10 +18,10 @@ public class UserApplication extends Application {
 
     public static ConfigurableApplicationContext springContext;
     private Parent root;
-    public ClientDTO cliente = null;
-    public AdministradorDTO admin = null;
-    public StoreDTO store = null;
-    public BrandDTO brand = null;
+    public static ClientDTO cliente = null;
+    public static AdministradorDTO admin = null;
+    public static StoreDTO store = null;
+    public static BrandDTO brand = null;
 
     @Override
     public void init() throws Exception {

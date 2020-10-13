@@ -11,11 +11,9 @@ import javafx.stage.Stage;
 import net.rgielen.fxweaver.core.FxWeaver;
 import net.rgielen.fxweaver.core.FxmlView;
 import org.springframework.stereotype.Component;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import static um.edu.tic1.client.UserApplication.springContext;
 
 @Component
@@ -26,11 +24,8 @@ public class MainMenu implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
     }
 
-    @FXML
-    private Button registrarse;
-
-    @FXML
-    private Button logIn;
+    @FXML private Button registrarse;
+    @FXML private Button logIn;
 
     @FXML
     public void goToRegisterScene (ActionEvent event) throws IOException {
@@ -42,7 +37,8 @@ public class MainMenu implements Initializable {
         stage.show();
     }
 
-    @FXML void goToLogIn (ActionEvent event) {
+    @FXML
+    public void goToLogIn (ActionEvent event) {
         FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
         Parent root = fxWeaver.loadView(TempLogIn.class);
         Scene scene = new Scene(root);

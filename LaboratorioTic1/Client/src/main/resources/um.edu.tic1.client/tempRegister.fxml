@@ -17,11 +17,11 @@
     <children>
       <ImageView fitHeight="533.0" fitWidth="996.0" layoutX="1.0" layoutY="68.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
          <image>
-            <Image url="@../../../../../../../../diseño/image1.png" />
+            <Image url="@../images/image1.png" />
          </image>
       </ImageView>
-        <TextField fx:id="firstName" layoutX="115.0" layoutY="188.0" />
-        <TextField fx:id="lastName" layoutX="328.0" layoutY="189.0" />
+        <TextField fx:id="firstName" layoutX="115.0" layoutY="188.0" prefHeight="25.0" prefWidth="159.0" />
+        <TextField fx:id="lastName" layoutX="328.0" layoutY="189.0" prefHeight="25.0" prefWidth="159.0" />
         <TextField fx:id="id" layoutX="116.0" layoutY="256.0" prefHeight="27.0" prefWidth="159.0" />
         <TextField fx:id="address" layoutX="118.0" layoutY="321.0" prefHeight="27.0" prefWidth="369.0" />
         <TextField fx:id="email" layoutX="119.0" layoutY="385.0" prefHeight="27.0" prefWidth="369.0" />
@@ -41,7 +41,7 @@
             <Font name="Apple Braille" size="22.0" />
          </font>
       </Label>
-      <Button layoutX="554.0" layoutY="26.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
+      <Button fx:id="menu" layoutX="554.0" layoutY="26.0" mnemonicParsing="false" onAction="#goToMenu" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
@@ -56,7 +56,7 @@
             <Blend />
          </effect>
       </Button>
-      <Button fx:id="login" layoutX="874.0" layoutY="26.0" mnemonicParsing="false" onAction="#goToLogIn" style="-fx-background-color: transparent black" text="LOGIN" textFill="#e8505b" textOverrun="CLIP">
+      <Button fx:id="logIn" layoutX="874.0" layoutY="26.0" mnemonicParsing="false" onAction="#goToLogIn" style="-fx-background-color: transparent black" text="LOGIN" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
@@ -71,7 +71,7 @@
       <Text layoutX="123.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña:" wrappingWidth="67.74398803710938" />
       <ImageView fitHeight="276.0" fitWidth="397.0" layoutX="563.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../diseño/Imagen5.png" />
+            <Image url="@../images/Imagen5.png" />
          </image>
       </ImageView>
     </children>

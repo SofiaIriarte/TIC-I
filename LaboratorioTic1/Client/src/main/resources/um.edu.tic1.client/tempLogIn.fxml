@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
@@ -17,10 +18,9 @@
    <children>
       <ImageView fitHeight="534.0" fitWidth="998.0" layoutX="-4.0" layoutY="84.0" pickOnBounds="true" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
          <image>
-            <Image url="@../../../../../../../../diseño/image1.png" />
+            <Image url="@../images/image1.png" />
          </image>
       </ImageView>
-      <TextField fx:id="password" layoutX="171.0" layoutY="391.0" prefHeight="27.0" prefWidth="246.0" style="-fx-background-color: white;" />
       <Label layoutX="213.0" layoutY="110.0" prefHeight="41.0" prefWidth="182.0" text="INICIAR SESION" textFill="#e8505b">
          <font>
             <Font name="Apple Braille" size="22.0" />
@@ -46,22 +46,22 @@
          <font>
             <Font size="14.0" />
          </font></RadioButton>
-      <Button layoutX="551.0" layoutY="34.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
+      <Button fx:id="menu" layoutX="551.0" layoutY="24.0" mnemonicParsing="false" onAction="#goToMenu" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
       </Button>
-      <Button layoutX="654.0" layoutY="34.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
+      <Button layoutX="654.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
       </Button>
-      <Button layoutX="775.0" layoutY="34.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
+      <Button layoutX="775.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
       </Button>
-      <Button fx:id="login" layoutX="874.0" layoutY="34.0" mnemonicParsing="false" onAction="#goToRegisterScene" style="-fx-background-color: transparent black" text="LOGIN" textFill="#e8505b" textOverrun="CLIP">
+      <Button fx:id="login" layoutX="874.0" layoutY="24.0" mnemonicParsing="false" onAction="#logIn" style="-fx-background-color: transparent black" text="LOGIN" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
@@ -75,8 +75,9 @@
       <Text layoutX="212.0" layoutY="512.0" opacity="0.38" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Has Olvidado Tu Contraseña?" wrappingWidth="170.9049281016919" />
       <ImageView fitHeight="407.0" fitWidth="376.0" layoutX="549.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../diseño/imagen7.png" />
+            <Image url="@../images/imagen7.png" />
          </image>
       </ImageView>
+      <PasswordField fx:id="passworld" layoutX="172.0" layoutY="394.0" prefHeight="25.0" prefWidth="247.0" />
    </children>
 </AnchorPane>
