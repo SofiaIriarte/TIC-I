@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.MainMenuWithLogIn">
+    <children>
+        <ImageView fitHeight="532.0" fitWidth="1006.0" layoutX="4.0" layoutY="263.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
+            <image>
+                <Image url="@../images/image1.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="358.0" fitWidth="525.0" layoutX="450.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/caratula.png" />
+            </image>
+        </ImageView>
+        <Button layoutX="616.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Button fx:id="aboutUs" layoutX="689.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Button fx:id="shop" layoutX="778.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToShop" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Button fx:id="miPerfil" layoutX="106.0" layoutY="389.0" mnemonicParsing="false" onAction="#goToMyPerfil" prefHeight="36.0" prefWidth="221.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="MI PERFIL" textFill="#e8505b">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Button>
+        <Button fx:id="shop2" layoutX="106.0" layoutY="444.0" mnemonicParsing="false" onAction="#goToShop" prefHeight="37.0" prefWidth="221.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="IR A COMPRAR" textFill="#e8505b" />
+        <Text layoutX="72.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estas listo para " wrappingWidth="257.6724548339844">
+            <font>
+                <Font name="Futura Medium" size="35.0" />
+            </font>
+        </Text>
+        <Text layoutX="68.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="la nueva experiencia? " wrappingWidth="403.9798889160156">
+            <font>
+                <Font name="Avenir Next Bold" size="37.0" />
+            </font>
+        </Text>
+        <Pane layoutX="617.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
+      <Button fx:id="cart" layoutX="913.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToCart" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent black;">
+         <graphic>
+            <ImageView accessibleRole="BUTTON" fitHeight="35.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Carrito.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="miPerfil2" layoutX="850.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToMyPerfil" prefHeight="36.0" prefWidth="38.0" style="-fx-background-color: trasparent;">
+         <graphic>
+            <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/UserLogo.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+    </children>
+</AnchorPane>

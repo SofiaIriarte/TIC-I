@@ -1,14 +1,13 @@
 package um.edu.tic1.server.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import um.edu.tic1.server.dtos.StoreDTO;
 import um.edu.tic1.server.entities.Store;
 import um.edu.tic1.server.repositories.StoreRepository;
 
 import javax.transaction.Transactional;
+import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("/store")
@@ -21,6 +20,16 @@ public class StoreController {
     @Transactional
     public void createCustomer(@RequestBody Store store) {
         storeRepository.save(store);
+    }
+
+    @GetMapping("/findById/{id}")
+    @Transactional
+    public StoreDTO findByUserName (@PathVariable("id") String id) throws NoSuchElementException {
+        if (storeRepository.existsById(id)){
+            Store store = storeRepository.findById(id).get();
+            return store.toDTO();
+        }
+        return null;
     }
 
 }

@@ -1,7 +1,5 @@
 package um.edu.tic1.client.dtos;
 
-import java.sql.Blob;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDTO {
@@ -11,19 +9,23 @@ public class ProductDTO {
     private String description;
     private String name;
     private String cathegory;
-    // Revisar
-    private Blob image;
+    private String marca;
+    private String color;
+    private String estacion;
+    private Byte[] image;
     private List<StoreDTO> stores;
     private List<ShoppingCartDTO> shoppingCarts;
 
-    public ProductDTO(int iD, long price, String description, String name, String cathegory) {
+    public ProductDTO(int iD, long price, String description, String name,
+                      String cathegory, String marca, String color, String estacion) {
         this.iD = iD;
         this.price = price;
         this.description = description;
         this.name = name;
         this.cathegory = cathegory;
-        this.stores = new ArrayList<>();
-        this.shoppingCarts = new ArrayList<>();
+        this.marca = marca;
+        this.color = color;
+        this.estacion = estacion;
     }
 
     public ProductDTO() {
@@ -86,4 +88,35 @@ public class ProductDTO {
         this.shoppingCarts = shoppingCarts;
     }
 
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getEstacion() {
+        return estacion;
+    }
+
+    public void setEstacion(String estacion) {
+        this.estacion = estacion;
+    }
+
+    public Byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(Byte[] image) {
+        this.image = image;
+    }
 }

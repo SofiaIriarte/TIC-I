@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleGroup?>
-<?import javafx.scene.effect.Blend?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.TempLogIn">
    <children>
@@ -46,29 +38,29 @@
          <font>
             <Font size="14.0" />
          </font></RadioButton>
-      <Button fx:id="menu" layoutX="551.0" layoutY="24.0" mnemonicParsing="false" onAction="#goToMenu" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
+      <Button fx:id="menu" layoutX="549.0" layoutY="31.0" mnemonicParsing="false" onAction="#goToMenu" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
       </Button>
-      <Button layoutX="654.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
+      <Button fx:id="aboutUs" layoutX="623.0" layoutY="31.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
       </Button>
-      <Button layoutX="775.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
+      <Button fx:id="shop" layoutX="721.0" layoutY="31.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
       </Button>
-      <Button fx:id="login" layoutX="874.0" layoutY="24.0" mnemonicParsing="false" onAction="#logIn" style="-fx-background-color: transparent black" text="LOGIN" textFill="#e8505b" textOverrun="CLIP">
+      <Button fx:id="login" layoutX="788.0" layoutY="31.0" mnemonicParsing="false" onAction="#logIn" style="-fx-background-color: transparent black" text="LOGIN" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
       </Button>
-      <Pane layoutX="875.0" layoutY="66.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
+      <Pane layoutX="787.0" layoutY="66.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
       <TextField fx:id="userName" layoutX="171.0" layoutY="317.0" prefHeight="27.0" prefWidth="247.0" style="-fx-background-color: white;" />
-      <Text layoutX="171.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" />
+      <Text layoutX="171.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User name:" />
       <Text layoutX="171.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
       <Text layoutX="172.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identificate:" />
       <Button fx:id="logIn" layoutX="171.0" layoutY="456.0" mnemonicParsing="false" onAction="#logIn" prefHeight="35.0" prefWidth="248.0" style="-fx-background-radius: 0px; -fx-background-color: e8505b;" text="LOG IN" textFill="WHITE" />
@@ -78,6 +70,12 @@
             <Image url="@../images/imagen7.png" />
          </image>
       </ImageView>
-      <PasswordField fx:id="passworld" layoutX="172.0" layoutY="394.0" prefHeight="25.0" prefWidth="247.0" />
+      <PasswordField fx:id="password" layoutX="172.0" layoutY="394.0" prefHeight="25.0" prefWidth="247.0" style="-fx-background-color: white;" />
+      <Button fx:id="registrarse" layoutX="865.0" layoutY="31.0" mnemonicParsing="false" onAction="#goToRegisterScene" style="-fx-background-color: transparent black" text="REGISTER" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Label fx:id="mensaje" layoutX="171.0" layoutY="532.0" prefHeight="17.0" prefWidth="248.0" textAlignment="CENTER" />
    </children>
 </AnchorPane>

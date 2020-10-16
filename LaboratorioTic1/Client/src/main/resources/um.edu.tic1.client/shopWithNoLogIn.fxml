@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.ShopWithNoLogIn">
+    <children>
+        <ImageView fitHeight="532.0" fitWidth="1006.0" layoutX="4.0" layoutY="263.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
+            <image>
+                <Image url="@../images/image1.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="home" layoutX="616.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToMenu" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Button fx:id="aboutUs" layoutX="689.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Button layoutX="778.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Text layoutX="38.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Encuentra lo que deseas" wrappingWidth="386.6724548339844">
+            <font>
+                <Font name="Futura Medium" size="35.0" />
+            </font>
+        </Text>
+        <Pane layoutX="776.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
+        <Button fx:id="buscar" layoutX="85.0" layoutY="497.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="221.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="BUSCAR" textFill="#e8505b">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Button>
+        <ComboBox fx:id="marca" layoutX="121.0" layoutY="236.0" prefWidth="150.0" />
+        <ComboBox fx:id="categoria" layoutX="121.0" layoutY="304.0" prefWidth="150.0" />
+        <ComboBox fx:id="color" layoutX="121.0" layoutY="373.0" prefWidth="150.0" />
+        <ComboBox fx:id="estacion" layoutX="121.0" layoutY="438.0" prefWidth="150.0" />
+        <Label layoutX="121.0" layoutY="212.0" text="Marca:" />
+        <Label layoutX="121.0" layoutY="283.0" text="Categoria:" />
+        <Label layoutX="121.0" layoutY="350.0" text="Color:" />
+        <Label layoutX="121.0" layoutY="415.0" text="Estacion:" />
+      <Button fx:id="logIn" layoutX="845.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToLogIn" style="-fx-background-color: transparent black" text="LOGIN" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Button fx:id="registrarse" layoutX="914.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToRegisterScene" style="-fx-background-color: transparent black" text="REGISTER" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+    </children>
+</AnchorPane>

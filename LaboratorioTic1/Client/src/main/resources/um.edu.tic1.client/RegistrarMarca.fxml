@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.RegistrarMarca">
+   <children>
+      <ImageView fitHeight="532.0" fitWidth="1006.0" layoutY="72.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/image1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="276.0" fitWidth="397.0" layoutX="573.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Imagen5.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="home" layoutX="564.0" layoutY="36.0" mnemonicParsing="false" onAction="#goToAdminHome" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <TextField fx:id="id" layoutX="125.0" layoutY="194.0" prefHeight="25.0" prefWidth="159.0" style="-fx-background-color: white;" />
+      <Text layoutX="128.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" />
+      <Label layoutX="209.0" layoutY="105.0" prefHeight="41.0" prefWidth="198.0" text="Registrar Marca" textAlignment="CENTER" textFill="#e8505b">
+         <font>
+            <Font name="Apple Braille" size="22.0" />
+         </font>
+      </Label>
+      <Text layoutX="128.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:" wrappingWidth="118.74398803710938" />
+      <TextField fx:id="userName" layoutX="124.0" layoutY="257.0" prefHeight="27.0" prefWidth="369.0" style="-fx-background-color: white;" />
+      <Text layoutX="125.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña:" wrappingWidth="67.74398803710938" />
+      <PasswordField fx:id="password" layoutX="124.0" layoutY="325.0" prefHeight="27.0" prefWidth="362.0" style="-fx-background-color: white;" />
+      <Button fx:id="submit" layoutX="200.0" layoutY="380.0" mnemonicParsing="false" onAction="#submitButton" prefHeight="36.0" prefWidth="211.0" style="-fx-background-color: #e8505b;" text="REGISTRAR MARCA" textFill="WHITE" />
+   </children>
+</AnchorPane>

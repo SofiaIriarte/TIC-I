@@ -1,6 +1,5 @@
 package um.edu.tic1.server.entities;
 
-import org.hibernate.type.BlobType;
 import um.edu.tic1.server.dtos.ProductDTO;
 import um.edu.tic1.server.dtos.StoreDTO;
 
@@ -21,8 +20,14 @@ public class Product {
     private String name;
     @Column(length = 20)
     private String cathegory;
+    @Column(length = 30)
+    private String marca;
+    @Column(length = 20)
+    private String color;
+    @Column(length = 15)
+    private String estacion;
     @Lob
-    private BlobType image;
+    private Byte[] image;
     @ManyToMany
     @JoinTable(
             name = "Product_Store",
@@ -38,12 +43,16 @@ public class Product {
     )
     private List<ShoppingCart> shoppingCarts;
 
-    public Product(int iD, long price, String description, String name, String cathegory) {
+    public Product(int iD, long price, String description, String name,
+                   String cathegory, String marca, String color, String estacion) {
         this.iD = iD;
         this.price = price;
         this.description = description;
         this.name = name;
         this.cathegory = cathegory;
+        this.marca = marca;
+        this.color = color;
+        this.estacion = estacion;
         this.stores = new ArrayList<>();
         this.shoppingCarts = new ArrayList<>();
     }
@@ -109,7 +118,8 @@ public class Product {
     }
 
     public ProductDTO toDTO(){
-        ProductDTO productDTO = new ProductDTO(this.iD, this.price, this.description,this.name,this.cathegory);
+        ProductDTO productDTO = new ProductDTO(this.iD, this.price, this.description,this.name,
+                this.cathegory,this.marca,this.color,this.estacion);
         List<StoreDTO> productDTOS= new ArrayList<>();
         for (Store store:this.stores){
             productDTOS.add(store.toDTO());
@@ -118,11 +128,35 @@ public class Product {
         return productDTO;
     }
 
-    public BlobType getImage() {
+    public Byte[] getImage() {
         return image;
     }
 
-    public void setImage(BlobType image) {
+    public void setImage(Byte[] image) {
         this.image = image;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getEstacion() {
+        return estacion;
+    }
+
+    public void setEstacion(String estacion) {
+        this.estacion = estacion;
     }
 }

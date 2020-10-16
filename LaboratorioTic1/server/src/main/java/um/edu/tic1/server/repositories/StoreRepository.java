@@ -5,8 +5,8 @@ import org.springframework.stereotype.Repository;
 import um.edu.tic1.server.entities.Store;
 
 @Repository
-public interface StoreRepository extends CrudRepository<Store, Integer> {
+public interface StoreRepository extends CrudRepository<Store, String> {
 
-    Store findByiD(int iD);
+    Store findByiD(String iD);
 
 }
