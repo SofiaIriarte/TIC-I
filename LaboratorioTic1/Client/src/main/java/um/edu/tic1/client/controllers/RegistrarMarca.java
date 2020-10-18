@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
 import static um.edu.tic1.client.UserApplication.springContext;
 
 @Component
-@FxmlView("/um.edu.tic1.client/RegistrarMarca.fxml")
+@FxmlView("/um.edu.tic1.client/registrarMarca.fxml")
 public class RegistrarMarca implements Initializable {
 
     @Override
@@ -54,7 +54,7 @@ public class RegistrarMarca implements Initializable {
     @FXML
     public void goToAdminHome (ActionEvent event) {
         FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
-        Parent root = fxWeaver.loadView(AdminHome.class);
+        Parent root = fxWeaver.loadView(AdminInicio.class);
         Scene scene = new Scene(root);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);

@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 import net.rgielen.fxweaver.core.FxWeaver;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
-import um.edu.tic1.client.controllers.MainMenu;
+import um.edu.tic1.client.controllers.Inicio;
 import um.edu.tic1.client.dtos.AdministradorDTO;
 import um.edu.tic1.client.dtos.BrandDTO;
 import um.edu.tic1.client.dtos.ClientDTO;
@@ -39,7 +39,7 @@ public class UserApplication extends Application {
     @Override
     public void start(Stage stage) {
         FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
-        Parent root = fxWeaver.loadView(MainMenu.class);
+        Parent root = fxWeaver.loadView(Inicio.class);
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

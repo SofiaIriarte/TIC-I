@@ -28,8 +28,8 @@ import static um.edu.tic1.client.UserApplication.cliente;
 import static um.edu.tic1.client.UserApplication.springContext;
 
 @Component
-@FxmlView("/um.edu.tic1.client/tempLogIn.fxml")
-public class TempLogIn implements Initializable {
+@FxmlView("/um.edu.tic1.client/logInUsuario.fxml")
+public class LogInUsuario implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -65,7 +65,7 @@ public class TempLogIn implements Initializable {
                 mensaje.setText("Log in exitoso");
                 UserApplication.cliente = clienteCheck;
                 FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
-                Parent root = fxWeaver.loadView(MainMenuWithLogIn.class);
+                Parent root = fxWeaver.loadView(InicioUsuario.class);
                 Scene scene = new Scene(root);
                 Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
                 stage.setScene(scene);
@@ -81,7 +81,7 @@ public class TempLogIn implements Initializable {
                 mensaje.setText("Log in exitoso");
                 UserApplication.admin = administradorDTO;
                 FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
-                Parent root = fxWeaver.loadView(AdminHome.class);
+                Parent root = fxWeaver.loadView(AdminInicio.class);
                 Scene scene = new Scene(root);
                 Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
                 stage.setScene(scene);
@@ -99,7 +99,7 @@ public class TempLogIn implements Initializable {
                     mensaje.setText("Log in exitoso");
                     UserApplication.brand = brandDTO;
                     FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
-                    Parent root = fxWeaver.loadView(BrandHome.class);
+                    Parent root = fxWeaver.loadView(MarcaInicio.class);
                     Scene scene = new Scene(root);
                     Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
                     stage.setScene(scene);
@@ -118,7 +118,7 @@ public class TempLogIn implements Initializable {
                 mensaje.setText("Log in exitoso");
                 UserApplication.store = storeDTO;
                 FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
-                Parent root = fxWeaver.loadView(TiendaHome.class);
+                Parent root = fxWeaver.loadView(TiendaInicio.class);
                 Scene scene = new Scene(root);
                 Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
                 stage.setScene(scene);
@@ -135,7 +135,7 @@ public class TempLogIn implements Initializable {
     public void goToMenu (ActionEvent event){
         if (cliente == null) {
             FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
-            Parent root = fxWeaver.loadView(MainMenu.class);
+            Parent root = fxWeaver.loadView(Inicio.class);
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
@@ -146,7 +146,7 @@ public class TempLogIn implements Initializable {
     @FXML
     public void goToRegisterScene (ActionEvent event) throws IOException {
         FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
-        Parent root = fxWeaver.loadView(TempRegister.class);
+        Parent root = fxWeaver.loadView(RegistrarUsuario.class);
         Scene scene = new Scene(root);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);

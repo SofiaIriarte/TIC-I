@@ -27,7 +27,7 @@ public class Product {
     @Column(length = 15)
     private String estacion;
     @Lob
-    private Byte[] image;
+    private byte[] image;
     @ManyToMany
     @JoinTable(
             name = "Product_Store",
@@ -125,14 +125,15 @@ public class Product {
             productDTOS.add(store.toDTO());
         }
         productDTO.setStores(productDTOS);
+        productDTO.setImage(this.image);
         return productDTO;
     }
 
-    public Byte[] getImage() {
+    public byte[] getImage() {
         return image;
     }
 
-    public void setImage(Byte[] image) {
+    public void setImage(byte[] image) {
         this.image = image;
     }
 

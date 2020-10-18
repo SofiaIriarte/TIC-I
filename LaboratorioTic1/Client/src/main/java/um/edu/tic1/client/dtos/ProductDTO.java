@@ -12,7 +12,7 @@ public class ProductDTO {
     private String marca;
     private String color;
     private String estacion;
-    private Byte[] image;
+    private byte[] image;
     private List<StoreDTO> stores;
     private List<ShoppingCartDTO> shoppingCarts;
 
@@ -112,11 +112,11 @@ public class ProductDTO {
         this.estacion = estacion;
     }
 
-    public Byte[] getImage() {
+    public byte[] getImage() {
         return image;
     }
 
-    public void setImage(Byte[] image) {
+    public void setImage(byte[] image) {
         this.image = image;
     }
 }

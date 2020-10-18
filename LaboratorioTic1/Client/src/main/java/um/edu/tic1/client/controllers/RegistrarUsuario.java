@@ -23,8 +23,8 @@ import static um.edu.tic1.client.UserApplication.cliente;
 import static um.edu.tic1.client.UserApplication.springContext;
 
 @Component
-@FxmlView("/um.edu.tic1.client/tempRegister.fxml")
-public class TempRegister implements Initializable {
+@FxmlView("/um.edu.tic1.client/registrarUsuario.fxml")
+public class RegistrarUsuario implements Initializable {
 
     @FXML private TextField firstName;
     @FXML private TextField lastName;
@@ -65,7 +65,7 @@ public class TempRegister implements Initializable {
                 clientServices.save(client);
                 cliente = client;
                 FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
-                Parent root = fxWeaver.loadView(MainMenuWithLogIn.class);
+                Parent root = fxWeaver.loadView(InicioUsuario.class);
                 Scene scene = new Scene(root);
                 Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                 stage.setScene(scene);
@@ -77,7 +77,7 @@ public class TempRegister implements Initializable {
     @FXML
     public void goToLogIn (ActionEvent event) {
         FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
-        Parent root = fxWeaver.loadView(TempLogIn.class);
+        Parent root = fxWeaver.loadView(LogInUsuario.class);
         Scene scene = new Scene(root);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
@@ -87,7 +87,7 @@ public class TempRegister implements Initializable {
     @FXML
     public void goToMenu (ActionEvent event){
         FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
-        Parent root = fxWeaver.loadView(MainMenu.class);
+        Parent root = fxWeaver.loadView(Inicio.class);
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);

@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import um.edu.tic1.server.entities.Stock;
 
 @Repository
-public interface StockRepository extends CrudRepository<Stock, Integer> {
+public interface StockRepository extends CrudRepository<Stock, String> {
 
 }

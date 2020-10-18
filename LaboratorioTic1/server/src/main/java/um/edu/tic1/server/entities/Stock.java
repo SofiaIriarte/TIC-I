@@ -8,22 +8,21 @@ import java.io.Serializable;
 
 @Table
 @Entity(name="stock")
-@IdClass(Stock.class)
 public class Stock implements Serializable {
 
     @Id
+    private String id;
     @Column(length = 30)
     private int productId;
-    @Id
     @Column(length = 30)
     private int storeId;
-    @Id
     @Column(length = 6)
     private String talle;
     @Column(length = 10)
     private int quantity;
 
-    public Stock (int productId, int storeId,String talle, int quantity){
+    public Stock (String id, int productId, int storeId, String talle, int quantity){
+        this.id = id;
         this.productId = productId;
         this.storeId = storeId;
         this.talle=talle;
@@ -31,6 +30,14 @@ public class Stock implements Serializable {
     }
 
     public Stock() {    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public int getProductId() {
         return productId;
@@ -56,8 +63,16 @@ public class Stock implements Serializable {
         this.quantity = quantity;
     }
 
+    public String getTalle() {
+        return talle;
+    }
+
+    public void setTalle(String talle) {
+        this.talle = talle;
+    }
+
     public StockDTO toDTO(){
-        StockDTO stockDTO = new StockDTO(this.productId,this.storeId,this.talle,this.quantity);
+        StockDTO stockDTO = new StockDTO(this.id, this.productId,this.storeId,this.talle,this.quantity);
         return stockDTO;
     }
 

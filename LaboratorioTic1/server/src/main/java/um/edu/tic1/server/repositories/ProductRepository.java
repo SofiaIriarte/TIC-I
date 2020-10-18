@@ -2,6 +2,7 @@ package um.edu.tic1.server.repositories;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import um.edu.tic1.server.entities.Product;
 
@@ -11,8 +12,6 @@ import java.util.List;
 public interface ProductRepository extends CrudRepository<Product, Integer> {
 
     Product findByiD(int iD);
-
-    List<Product> findByCathegory(String Cat);
 
     @Query("SELECT distinct p.marca from product p")
     List<String> findDistinctByMarca();
@@ -25,5 +24,10 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
 
     @Query("SELECT distinct p.estacion from product p")
     List<String> findDistinctByEstacion();
+
+    @Query(value = "SELECT p FROM product p WHERE (:cathegory is null or p.cathegory = :cathegory) and (:marca is null or p.marca = :marca) and (:color is null or p.color = :color) and (:estacion is null or p.estacion = :estacion)")
+    List<Product> findAllByCathegoryAndMarcaAndColorAndEstacion(@Param("cathegory") String cathegory, @Param("marca") String marca, @Param("color") String color, @Param("estacion") String estacion);
+
+    List<Product> findAllByCathegory(String cat);
 
 }

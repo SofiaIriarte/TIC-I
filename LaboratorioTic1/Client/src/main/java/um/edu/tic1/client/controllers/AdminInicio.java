@@ -17,23 +17,20 @@ import java.util.ResourceBundle;
 import static um.edu.tic1.client.UserApplication.springContext;
 
 @Component
-@FxmlView("/um.edu.tic1.client/mainMenu.fxml")
-public class MainMenu implements Initializable {
+@FxmlView("/um.edu.tic1.client/adminInicio.fxml")
+public class AdminInicio implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
     }
 
-    @FXML private Button registrarse2;
-    @FXML private Button registrarse;
-    @FXML private Button logIn;
-    @FXML private Button aboutUs;
-    @FXML private Button shop;
+    @FXML private Button crearMarca;
+    @FXML private Button crearTienda;
 
     @FXML
-    public void goToRegisterScene (ActionEvent event) throws IOException {
+    public void goToCrearMarca (ActionEvent event) throws IOException {
         FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
-        Parent root = fxWeaver.loadView(TempRegister.class);
+        Parent root = fxWeaver.loadView(RegistrarMarca.class);
         Scene scene = new Scene(root);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
@@ -41,23 +38,12 @@ public class MainMenu implements Initializable {
     }
 
     @FXML
-    public void goToLogIn (ActionEvent event) {
+    public void goToCrearTienda (ActionEvent event) {
         FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
-        Parent root = fxWeaver.loadView(TempLogIn.class);
+        Parent root = fxWeaver.loadView(RegistrarTienda.class);
         Scene scene = new Scene(root);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
     }
-
-    @FXML
-    public void goToShop (ActionEvent event) {
-        FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
-        Parent root = fxWeaver.loadView(ShopWithNoLogIn.class);
-        Scene scene = new Scene(root);
-        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
-    }
-
 }

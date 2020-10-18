@@ -2,15 +2,17 @@ package um.edu.tic1.server.dtos;
 
 public class StockDTO {
 
+    private String id;
     private int productId;
     private int storeId;
     private String talle;
     private int quantity;
 
-    public StockDTO (int productId, int storeId,String talle, int quantity){
+    public StockDTO (String id, int productId, int storeId, String talle, int quantity){
+        this.id = id;
         this.productId = productId;
         this.storeId = storeId;
-        this.talle=talle;
+        this.talle = talle;
         this.quantity = quantity;
     }
 
@@ -40,4 +42,19 @@ public class StockDTO {
         this.quantity = quantity;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getTalle() {
+        return talle;
+    }
+
+    public void setTalle(String talle) {
+        this.talle = talle;
+    }
 }

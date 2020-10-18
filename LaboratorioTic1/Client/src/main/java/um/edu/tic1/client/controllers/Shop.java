@@ -71,7 +71,7 @@ public class Shop implements Initializable {
     @FXML
     public void goToMenu (ActionEvent event){
         FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
-        Parent root = fxWeaver.loadView(MainMenuWithLogIn.class);
+        Parent root = fxWeaver.loadView(InicioUsuario.class);
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);

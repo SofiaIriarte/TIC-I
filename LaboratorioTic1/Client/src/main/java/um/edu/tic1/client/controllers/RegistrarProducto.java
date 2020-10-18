@@ -28,8 +28,8 @@ import static um.edu.tic1.client.UserApplication.brand;
 import static um.edu.tic1.client.UserApplication.springContext;
 
 @Component
-@FxmlView("/um.edu.tic1.client/productRegister.fxml")
-public class ProductRegister implements Initializable {
+@FxmlView("/um.edu.tic1.client/registrarProducto.fxml")
+public class RegistrarProducto implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {    }
@@ -49,7 +49,6 @@ public class ProductRegister implements Initializable {
 
     private File file = null;
     private byte[] fileContet;
-    private Byte[] image;
 
     @FXML
     public void submitButton(ActionEvent event) {
@@ -65,7 +64,7 @@ public class ProductRegister implements Initializable {
                     long precio = Long.parseLong(price.getText());
                     ProductDTO productDTO = new ProductDTO(idProduct,precio,description.getText(),name.getText(),
                             cathegory.getText(),brand.getName(),color.getText(),estacion.getText());
-                    productDTO.setImage(image);
+                    productDTO.setImage(fileContet);
                     productService.save(productDTO);
                     this.goToBrandHome(event);
                 }
@@ -78,7 +77,7 @@ public class ProductRegister implements Initializable {
     @FXML
     public void goToBrandHome (ActionEvent event) {
         FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
-        Parent root = fxWeaver.loadView(BrandHome.class);
+        Parent root = fxWeaver.loadView(MarcaInicio.class);
         Scene scene = new Scene(root);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
@@ -97,10 +96,6 @@ public class ProductRegister implements Initializable {
         this.file = fileChooser.showOpenDialog(stage);
         Path path = Paths.get(file.getAbsolutePath());
         fileContet = Files.readAllBytes(path);
-        image = new Byte[fileContet.length];
-        for (int i=0; i<fileContet.length; i++){
-            image[i] = Byte.valueOf(fileContet[i]);
-        }
     }
 
 }
