@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPaneProduct" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.AgregarProductoATienda">
+    <children>
+        <ImageView fitHeight="533.0" fitWidth="996.0" layoutX="1.0" layoutY="68.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
+            <image>
+                <Image url="@../images/image1.png" />
+            </image>
+        </ImageView>
+        <TextField fx:id="idProducto" layoutX="84.0" layoutY="254.0" prefHeight="25.0" prefWidth="159.0" style="-fx-background-color: white;" />
+        <TextField fx:id="cantidad" layoutX="84.0" layoutY="329.0" prefHeight="17.0" prefWidth="159.0" style="-fx-background-color: white;" />
+        <Button fx:id="agregarProducto" layoutX="192.0" layoutY="458.0" mnemonicParsing="false" onAction="#registerProduct" prefHeight="36.0" prefWidth="211.0" style="-fx-background-color: #e8505b;" text="AGREGAR PRUCTO" textFill="WHITE" />
+        <Label fx:id="error" layoutX="181.0" layoutY="554.0" prefHeight="17.0" prefWidth="233.0" textAlignment="CENTER" textFill="#e10505" />
+        <Label layoutX="178.0" layoutY="95.0" prefHeight="41.0" prefWidth="240.0" text="AGREGAR PRODUCTO" textAlignment="CENTER" textFill="#e8505b">
+            <font>
+                <Font name="Apple Braille" size="22.0" />
+            </font>
+        </Label>
+        <Button fx:id="home" layoutX="554.0" layoutY="26.0" mnemonicParsing="false" onAction="#goToStoreHome" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Text layoutX="84.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID DEL PRODUCTO:" />
+        <Text layoutX="82.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CANTIDAD (STOCK):" />
+        <ImageView fitHeight="276.0" fitWidth="397.0" layoutX="563.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/Imagen5.png" />
+            </image>
+        </ImageView>
+      <TextField fx:id="talle" layoutX="83.0" layoutY="395.0" prefHeight="17.0" prefWidth="159.0" style="-fx-background-color: white;" />
+      <Text layoutX="82.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TALLE:" />
+    </children>
+</AnchorPane>
