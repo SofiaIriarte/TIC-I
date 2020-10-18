@@ -72,10 +72,25 @@ public class ShopSinLogIn implements Initializable {
     @FXML private Label nombreProducto;
     @FXML private Button addToCart;
 
+    @FXML private ImageView productImage2;
+    @FXML private Label nombreProducto2;
+    @FXML private Button addToCart2;
+
+    @FXML private ImageView productImage3;
+    @FXML private Label nombreProducto3;
+    @FXML private Button addToCart3;
+
+    @FXML private ImageView productImage4;
+    @FXML private Label nombreProducto4;
+    @FXML private Button addToCart4;
+
     @FXML private ComboBox<String> marca;
     @FXML private ComboBox<String> categoria;
     @FXML private ComboBox<String> color;
     @FXML private ComboBox<String> estacion;
+
+    @FXML Button derecha;
+    @FXML Button izquierda;
 
     @FXML
     public void goToRegisterScene (ActionEvent event) throws IOException {
