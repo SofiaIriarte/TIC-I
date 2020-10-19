@@ -8,6 +8,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -24,28 +25,35 @@
         <TextField fx:id="address" layoutX="118.0" layoutY="321.0" prefHeight="27.0" prefWidth="369.0" style="-fx-background-color: white;" />
         <TextField fx:id="userName" layoutX="119.0" layoutY="385.0" prefHeight="27.0" prefWidth="369.0" style="-fx-background-color: white;" />
         <PasswordField fx:id="password" layoutX="122.0" layoutY="449.0" prefHeight="27.0" prefWidth="362.0" style="-fx-background-color: white;" />
-        <Button fx:id="submit" layoutX="192.0" layoutY="503.0" mnemonicParsing="false" onAction="#submitButton" prefHeight="36.0" prefWidth="211.0" style="-fx-background-color: #e8505b;" text="REGISTRAR TIENDA" textFill="WHITE" />
+        <Button fx:id="submit" layoutX="192.0" layoutY="503.0" mnemonicParsing="false" onAction="#submitButton" prefHeight="36.0" prefWidth="211.0" style="-fx-background-color: #7d4de0#7d4de0;" text="REGISTRAR TIENDA" textFill="WHITE" />
         <Label fx:id="error" layoutX="181.0" layoutY="554.0" prefHeight="17.0" prefWidth="233.0" textAlignment="CENTER" textFill="#e10505" />
-        <Label layoutX="199.0" layoutY="95.0" prefHeight="41.0" prefWidth="198.0" text="REGISTRAR TIENDA" textAlignment="CENTER" textFill="#e8505b">
+        <Label layoutX="199.0" layoutY="95.0" prefHeight="41.0" prefWidth="233.0" text="REGISTRAR TIENDA" textAlignment="CENTER" textFill="#7d4de0">
             <font>
                 <Font name="Apple Braille" size="22.0" />
             </font>
         </Label>
-        <Button fx:id="home" layoutX="554.0" layoutY="26.0" mnemonicParsing="false" onAction="#goToAdminHome" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
-            <effect>
-                <Blend />
-            </effect>
-        </Button>
         <Text layoutX="118.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" />
         <Text layoutX="324.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hora de Cierre:" />
         <Text layoutX="120.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hora de Apertura:" />
         <Text layoutX="118.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Direccion:" wrappingWidth="67.74398803710938" />
         <Text layoutX="120.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de usuario:" wrappingWidth="118.74398803710938" />
         <Text layoutX="123.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña:" wrappingWidth="67.74398803710938" />
-        <ImageView fitHeight="276.0" fitWidth="397.0" layoutX="563.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="461.0" fitWidth="386.0" layoutX="574.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../images/Imagen5.png" />
+                <Image url="@../images/Web_PNG.png" />
             </image>
         </ImageView>
+      <Button fx:id="home2" layoutX="790.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToBrandHome" style="-fx-background-color: transparent black" text="HOME" textFill="#7d4de0" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Button fx:id="home11" layoutX="873.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToBrandHome" style="-fx-background-color: transparent black" text="CONTACT" textFill="#7d4de0" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Pane layoutX="792.0" layoutY="68.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #7d4de0#7d4de0;" />
+      <Pane layoutX="889.0" layoutY="68.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #7d4de0#7d4de0;" />
     </children>
 </AnchorPane>

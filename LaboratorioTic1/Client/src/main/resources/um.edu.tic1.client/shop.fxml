@@ -41,22 +41,14 @@
         <Pane layoutX="778.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
         <Button fx:id="cart" layoutX="913.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToCart" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent black;">
             <graphic>
-                <ImageView accessibleRole="BUTTON" fitHeight="35.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView accessibleRole="BUTTON" fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../images/Carrito.png" />
+                        <Image url="@../images/iconocarrito.png" />
                     </image>
                 </ImageView>
             </graphic>
         </Button>
-        <Button fx:id="miPerfil" layoutX="850.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToMyPerfil" prefHeight="36.0" prefWidth="38.0" style="-fx-background-color: trasparent;">
-            <graphic>
-                <ImageView accessibleRole="BUTTON" fitHeight="40.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../images/UserLogo.png" />
-                    </image>
-                </ImageView>
-            </graphic>
-        </Button>
+        <Button fx:id="miPerfil" layoutX="850.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToMyPerfil" prefHeight="36.0" prefWidth="38.0" style="-fx-background-color: trasparent;" />
       <Button fx:id="buscar" layoutX="85.0" layoutY="497.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="221.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="BUSCAR" textFill="#e8505b">
          <font>
             <Font name="System Bold" size="13.0" />
@@ -70,5 +62,10 @@
       <Label layoutX="121.0" layoutY="283.0" text="Categoria:" />
       <Label layoutX="121.0" layoutY="350.0" text="Color:" />
       <Label layoutX="121.0" layoutY="415.0" text="Estacion:" />
+          <ImageView accessibleRole="BUTTON" fitHeight="33.0" fitWidth="25.0" layoutX="881.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                  <Image url="@../images/iconopersona.png" />
+              </image>
+          </ImageView>
     </children>
 </AnchorPane>

@@ -16,31 +16,37 @@
                 <Image url="@../images/image1.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="358.0" fitWidth="525.0" layoutX="460.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="479.0" fitWidth="534.0" layoutX="469.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../images/caratula.png" />
+                <Image url="@../images/Startup_PNG.png" />
             </image>
         </ImageView>
-        <Button layoutX="551.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
-            <effect>
-                <Blend />
-            </effect>
-        </Button>
-        <Pane layoutX="552.0" layoutY="65.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
         <Text layoutX="82.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenida" wrappingWidth="257.6724548339844">
             <font>
-                <Font name="Futura Medium" size="35.0" />
+                <Font name="Futura Medium" size="44.0" />
             </font>
         </Text>
-        <Text layoutX="78.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marca" wrappingWidth="403.9798889160156">
+        <Text layoutX="78.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marca" wrappingWidth="403.9798889160156">
             <font>
-                <Font name="Avenir Next Bold" size="37.0" />
+                <Font name="Avenir Next Bold" size="49.0" />
             </font>
         </Text>
-        <Button fx:id="addProduct" layoutX="116.0" layoutY="399.0" mnemonicParsing="false" onAction="#goToAddProduct" prefHeight="36.0" prefWidth="221.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="AGREGAR PRODUCTO" textFill="#e8505b">
+        <Button fx:id="addProduct" layoutX="116.0" layoutY="399.0" mnemonicParsing="false" onAction="#goToAddProduct" prefHeight="36.0" prefWidth="221.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="AGREGAR PRODUCTO" textFill="#7d4de0">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>
         </Button>
+      <Button fx:id="home" layoutX="787.0" layoutY="28.0" mnemonicParsing="false" onAction="#goToBrandHome" style="-fx-background-color: transparent black" text="HOME" textFill="#7d4de0" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Button fx:id="home1" layoutX="870.0" layoutY="28.0" mnemonicParsing="false" onAction="#goToBrandHome" style="-fx-background-color: transparent black" text="CONTACT" textFill="#7d4de0" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Pane layoutX="789.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #7d4de0#7d4de0;" />
+      <Pane layoutX="886.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #7d4de0#7d4de0;" />
     </children>
 </AnchorPane>
