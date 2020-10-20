@@ -7,12 +7,25 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.Shop">
     <children>
+      <Button fx:id="perfil" layoutX="853.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToMyPerfil" style="-fx-background-color: transparent black;">
+         <graphic>
+            <ImageView accessibleRole="BUTTON" fitHeight="31.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iconopersona.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
         <ImageView fitHeight="532.0" fitWidth="1006.0" layoutX="4.0" layoutY="263.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
             <image>
                 <Image url="@../images/image1.png" />
@@ -33,39 +46,152 @@
                 <Blend />
             </effect>
         </Button>
-        <Text layoutX="38.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Encuentra lo que deseas" wrappingWidth="386.6724548339844">
+        <Pane layoutX="776.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
+        <Button fx:id="buscar" layoutX="42.0" layoutY="500.0" mnemonicParsing="false" onAction="#search" prefHeight="36.0" prefWidth="199.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="BUSCAR" textFill="#e8505b">
             <font>
-                <Font name="Futura Medium" size="35.0" />
+                <Font name="System Bold" size="13.0" />
             </font>
-        </Text>
-        <Pane layoutX="778.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
-        <Button fx:id="cart" layoutX="913.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToCart" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent black;">
-            <graphic>
-                <ImageView accessibleRole="BUTTON" fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../images/iconocarrito.png" />
-                    </image>
-                </ImageView>
-            </graphic>
         </Button>
-        <Button fx:id="miPerfil" layoutX="850.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToMyPerfil" prefHeight="36.0" prefWidth="38.0" style="-fx-background-color: trasparent;" />
-      <Button fx:id="buscar" layoutX="85.0" layoutY="497.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="221.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="BUSCAR" textFill="#e8505b">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
+        <ComboBox fx:id="marca" layoutX="43.0" layoutY="239.0" prefHeight="27.0" prefWidth="195.0" style="-fx-background-color: white;" />
+        <ComboBox fx:id="categoria" layoutX="43.0" layoutY="307.0" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: white;" />
+        <ComboBox fx:id="color" layoutX="44.0" layoutY="376.0" prefHeight="27.0" prefWidth="198.0" style="-fx-background-color: white;" />
+        <ComboBox fx:id="estacion" layoutX="45.0" layoutY="444.0" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: white;" />
+        <Label layoutX="45.0" layoutY="215.0" text="Marca:" />
+        <Label layoutX="41.0" layoutY="286.0" text="Categoria:" />
+        <Label layoutX="44.0" layoutY="353.0" text="Color:" />
+        <Label layoutX="45.0" layoutY="424.0" text="Estacion:" />
+        <GridPane fx:id="grid" layoutX="321.0" layoutY="105.0" prefHeight="451.0" prefWidth="666.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="249.22885131835938" minHeight="10.0" prefHeight="227.45181274414062" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="229.35540771484375" minHeight="10.0" prefHeight="223.54818725585938" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <VBox prefHeight="226.0" prefWidth="222.0">
+                    <children>
+                        <ImageView fx:id="productImage" fitHeight="152.0" fitWidth="221.0" pickOnBounds="true" />
+                        <Label fx:id="nombreProducto" prefHeight="17.0" prefWidth="246.0" textAlignment="CENTER" textFill="#cd0e0e" />
+                        <Label fx:id="precioProducto" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" />
+                        <Button fx:id="addToCart" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                            <graphic>
+                                <ImageView fitHeight="21.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/iconocarrito.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                    </children>
+                </VBox>
+                <VBox prefHeight="206.0" prefWidth="196.0" GridPane.rowIndex="1">
+                    <children>
+                        <ImageView fx:id="productImage4" fitHeight="158.0" fitWidth="227.0" pickOnBounds="true" />
+                        <Label fx:id="nombreProducto4" prefHeight="17.0" prefWidth="246.0" textAlignment="CENTER" textFill="#cd0e0e" />
+                        <Label fx:id="precioProducto4" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" />
+                        <Button fx:id="addToCart4" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                            <graphic>
+                                <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/iconocarrito.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                    </children>
+                </VBox>
+                <VBox prefHeight="239.0" prefWidth="196.0" GridPane.columnIndex="1">
+                    <children>
+                        <ImageView fx:id="productImage2" fitHeight="152.0" fitWidth="222.0" pickOnBounds="true" />
+                        <Label fx:id="nombreProducto2" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" textFill="#cd0e0e" />
+                        <Label fx:id="precioProducto2" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" />
+                        <Button fx:id="addToCart2" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/iconocarrito.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                    </children>
+                </VBox>
+                <VBox prefHeight="218.0" prefWidth="222.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <children>
+                        <ImageView fx:id="productImage5" fitHeight="153.0" fitWidth="222.0" pickOnBounds="true" />
+                        <Label fx:id="nombreProducto5" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" textFill="#cd0e0e" />
+                        <Label fx:id="precioProducto5" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" />
+                        <Button fx:id="addToCart5" mnemonicParsing="false" prefHeight="30.0" prefWidth="29.0" style="-fx-background-color: transparent;">
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/iconocarrito.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                    </children>
+                </VBox>
+                <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+                    <children>
+                        <ImageView fx:id="productImage3" fitHeight="149.0" fitWidth="221.0" pickOnBounds="true" />
+                        <Label fx:id="nombreProducto3" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" textFill="#cd0e0e" />
+                        <Label fx:id="precioProducto3" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" />
+                        <Button fx:id="addToCart3" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/iconocarrito.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </VBox>
+                <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <children>
+                        <ImageView fx:id="productImage6" fitHeight="154.0" fitWidth="224.0" pickOnBounds="true" />
+                        <Label fx:id="nombreProducto6" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" textFill="#cd0e0e" />
+                        <Label fx:id="precioProducto6" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" />
+                        <Button fx:id="addToCart6" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                            <graphic>
+                                <ImageView fitHeight="28.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/iconocarrito.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </GridPane>
+        <Button fx:id="nextPage" layoutX="922.0" layoutY="561.0" mnemonicParsing="false" onAction="#goToNextPage" style="-fx-background-color: trasparent;" text="&gt;" textAlignment="CENTER">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="previousPage" layoutX="885.0" layoutY="561.0" mnemonicParsing="false" onAction="#goToPreviousPage" style="-fx-background-color: trasparent;" text="&lt;" textAlignment="CENTER">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <Pane layoutX="43.0" layoutY="141.0" prefHeight="44.0" prefWidth="200.0" style="-fx-background-color: #e8505b#e8505b;">
+            <children>
+                <Text fill="WHITE" layoutX="36.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CATALOGO" wrappingWidth="168.90194702148438">
+                    <font>
+                        <Font name="Futura Medium" size="22.0" />
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+      <Button fx:id="cart" layoutX="899.0" layoutY="15.0" mnemonicParsing="false" onAction="#goToCart" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent black;">
+         <graphic>
+            <ImageView accessibleRole="BUTTON" fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iconocarrito.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
-      <ComboBox fx:id="marca" layoutX="121.0" layoutY="236.0" prefWidth="150.0" />
-      <ComboBox fx:id="categoria" layoutX="121.0" layoutY="304.0" prefWidth="150.0" />
-      <ComboBox fx:id="color" layoutX="121.0" layoutY="373.0" prefWidth="150.0" />
-      <ComboBox fx:id="estacion" layoutX="121.0" layoutY="438.0" prefWidth="150.0" />
-      <Label layoutX="121.0" layoutY="212.0" text="Marca:" />
-      <Label layoutX="121.0" layoutY="283.0" text="Categoria:" />
-      <Label layoutX="121.0" layoutY="350.0" text="Color:" />
-      <Label layoutX="121.0" layoutY="415.0" text="Estacion:" />
-          <ImageView accessibleRole="BUTTON" fitHeight="33.0" fitWidth="25.0" layoutX="881.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
-              <image>
-                  <Image url="@../images/iconopersona.png" />
-              </image>
-          </ImageView>
     </children>
 </AnchorPane>

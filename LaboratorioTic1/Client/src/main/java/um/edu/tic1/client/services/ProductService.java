@@ -53,20 +53,20 @@ public class ProductService {
         return brands;
     }
 
-    public List<ProductDTO> getProductosFiltrados (String cat, String brand, String col, String esta){
+    public List<ProductDTO> getProductosFiltrados (String url){
         RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<List<ProductDTO>> response = restTemplate.exchange("http://localhost:8080/product/findFilters/"+cat+"/"+brand+"/"+col+"/"+esta,
+        ResponseEntity<List<ProductDTO>> response = restTemplate.exchange("http://localhost:8080/product/findProducts/?"+url,
                 HttpMethod.GET, null, new ParameterizedTypeReference<>() {});
         List<ProductDTO> productosfiltrados = response.getBody();
         return productosfiltrados;
     }
 
-    public List<ProductDTO> getProductsByCathegory (String cat){
+    public ProductDTO findById (String url){
         RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<List<ProductDTO>> response = restTemplate.exchange("http://localhost:8080/product/findCathegory/"+cat,
+        ResponseEntity<ProductDTO> response = restTemplate.exchange("http://localhost:8080/product/findProduct/"+url,
                 HttpMethod.GET, null, new ParameterizedTypeReference<>() {});
-        List<ProductDTO> productosfiltrados = response.getBody();
-        return productosfiltrados;
+        ProductDTO productDTO = response.getBody();
+        return productDTO;
     }
 
 }

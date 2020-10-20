@@ -7,6 +7,8 @@ import um.edu.tic1.server.entities.Product;
 import um.edu.tic1.server.repositories.ProductRepository;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -16,6 +18,17 @@ public class ProductController {
 
     @Autowired
     ProductRepository productRepository;
+
+    @GetMapping("/findProduct/")
+    @Transactional
+    public ProductDTO findProduct (@RequestParam(name = "productId") String productId){
+        int idProduct = Integer.parseInt(productId);
+        if (productRepository.existsById(idProduct)){
+            Product product = productRepository.findById(idProduct).get();
+            return product.toDTO();
+        }
+        return null;
+    }
 
     @PostMapping("/saveproduct")
     @Transactional
@@ -51,19 +64,22 @@ public class ProductController {
         return lista.stream().collect(Collectors.toList());
     }
 
-    @GetMapping("/findFilters/{cathegory}/{marca}/{color}/{estacion}")
+    @GetMapping("/findProducts/")
     @Transactional
-    public List<ProductDTO> findFilters (@PathVariable("cathegory") String cat, @PathVariable("marca") String marca,
-                                         @PathVariable("color") String color, @PathVariable("estacion") String estacion){
-        List<Product> lista = productRepository.findAllByCathegoryAndMarcaAndColorAndEstacion(cat, marca, color, estacion);
-        return lista.stream().map(Product::toDTO).collect(Collectors.toList());
-    }
-
-    @GetMapping("/findCathegory/{cathegory}")
-    @Transactional
-    public List<ProductDTO> findByCathegory (@PathVariable("cathegory") String cat){
-        List<Product> lista = productRepository.findAllByCathegory(cat);
-        return lista.stream().map(Product::toDTO).collect(Collectors.toList());
+    public List<ProductDTO> findProducts (@RequestParam(name = "cathegory", required = false) String cathegory,
+                                          @RequestParam(name = "marca", required = false) String marca,
+                                          @RequestParam(name = "color", required = false) String color,
+                                          @RequestParam(name = "estacion", required = false) String estacion) {
+        if (cathegory != null || marca != null || color != null || estacion != null){
+            List<Product>  result = productRepository.findAll(new ProductSpecification(cathegory, marca, color, estacion));
+            return result.stream().map(Product::toDTO).collect(Collectors.toList());
+        } else {
+            List<Product> result = new ArrayList<>();
+            Iterator<Product> studentIterator = productRepository.findAll().iterator();
+            while (studentIterator.hasNext())
+                result.add(studentIterator.next());
+            return result.stream().map(Product::toDTO).collect(Collectors.toList());
+        }
     }
 
 }
