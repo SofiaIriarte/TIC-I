@@ -13,10 +13,14 @@ import net.rgielen.fxweaver.core.FxWeaver;
 import net.rgielen.fxweaver.core.FxmlView;
 import org.springframework.stereotype.Component;
 import um.edu.tic1.client.UserApplication;
+import um.edu.tic1.client.dtos.ProductDTO;
 import um.edu.tic1.client.dtos.StockDTO;
+import um.edu.tic1.client.services.ProductService;
 import um.edu.tic1.client.services.StockService;
+
 import java.net.URL;
 import java.util.ResourceBundle;
+
 import static um.edu.tic1.client.UserApplication.springContext;
 
 @Component
@@ -47,13 +51,19 @@ public class AgregarProductoATienda implements Initializable {
     @FXML
     public void registerProduct (){
         StockService stockService = new StockService();
+        ProductService productService = new ProductService();
         int prod = Integer.parseInt(idProducto.getText());
         int store = UserApplication.store.getiD();
         int cant = Integer.parseInt(cantidad.getText());
         String id = idProducto.getText()+UserApplication.store.getUser()+talle.getText();
         String size = talle.getText();
-        StockDTO stock = new StockDTO(id,prod,store,size,cant);
-        stockService.save(stock);
+        ProductDTO productDTO = productService.findById("idProducto.getText()");
+        if (productDTO == null){
+            return;
+        } else {
+            StockDTO stock = new StockDTO(id,prod,store,size,cant);
+            stockService.save(stock);
+        }
     }
 
 }

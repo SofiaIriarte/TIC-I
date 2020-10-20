@@ -221,7 +221,7 @@ public class Shop implements Initializable {
             postProdut++;
             i++;
             if (i == search.size()){
-                return;
+                break;
             }
         }
         if (page*6 + 6 > search.size()){

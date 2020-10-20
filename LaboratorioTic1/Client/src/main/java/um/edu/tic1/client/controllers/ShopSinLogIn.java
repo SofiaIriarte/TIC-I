@@ -231,10 +231,10 @@ public class ShopSinLogIn implements Initializable {
             postProdut++;
             i++;
             if (i == search.size()){
-                return;
+                break;
             }
         }
-        if (page*6 + 6 > search.size()){
+        if ((page*6 + 6) > search.size()){
             nextPage.setVisible(false);
             nextPage.setDisable(true);
         } else {
@@ -246,7 +246,7 @@ public class ShopSinLogIn implements Initializable {
             previousPage.setDisable(true);
         } else {
             previousPage.setVisible(true);
-            previousPage.setDisable(true);
+            previousPage.setDisable(false);
         }
 
     }
@@ -286,14 +286,14 @@ public class ShopSinLogIn implements Initializable {
     @FXML
     public void goToPreviousPage () throws IOException {
         this.clear();
-        page--;
+        page -= 1;
         this.showProducts();
     }
 
     @FXML
     public void goToNextPage () throws IOException {
         this.clear();
-        page++;
+        page += 1;
         this.showProducts();
     }
 
