@@ -44,18 +44,22 @@ public class ShopSinLogIn implements Initializable {
         List<String> marcas = productService.getDistinctBrand();
         ObservableList<String> obList = FXCollections.observableList(marcas);
         this.marca.setItems(obList);
+        this.marca.getItems().add(null);
 
         List<String> colores = productService.getDistinctColor();
         ObservableList<String> obList2 = FXCollections.observableList(colores);
         this.color.setItems(obList2);
+        this.color.getItems().add(null);
 
         List<String> categorias = productService.getDistinctCathegory();
         ObservableList<String> obList3 = FXCollections.observableList(categorias);
         this.categoria.setItems(obList3);
+        this.categoria.getItems().add(null);
 
         List<String> estaciones = productService.getDistinctEstacion();
         ObservableList<String> obList4 = FXCollections.observableList(estaciones);
         this.estacion.setItems(obList4);
+        this.estacion.getItems().add(null);
 
         addToCart.setVisible(false);
         addToCart.setDisable(true);
@@ -165,11 +169,11 @@ public class ShopSinLogIn implements Initializable {
         String url = "";
         if (cathegory != null){
             url += "cathegrory=" + cathegory + "&";
-        } else if (brand != null){
+        } if (brand != null){
             url += "marca=" + brand + "&";
-        } else if (col != null){
+        } if (col != null){
             url += "color=" + col + "&";
-        } else if (esta != null){
+        } if (esta != null){
             url += "estacion=" + esta;
         }
         search = productService.getProductosFiltrados(url);
@@ -181,6 +185,7 @@ public class ShopSinLogIn implements Initializable {
     }
 
     private void showProducts () throws IOException {
+        this.clear();
         int i = page*6;
         int postProdut = 0;
         while (search.get(i) != null && i<(page*6+6) ){
