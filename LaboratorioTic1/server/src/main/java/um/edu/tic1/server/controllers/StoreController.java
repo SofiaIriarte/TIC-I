@@ -32,4 +32,11 @@ public class StoreController {
         return null;
     }
 
+    @GetMapping("/findByNumId/{id}")
+    @Transactional
+    public StoreDTO findById (@PathVariable("id") int id) throws NoSuchElementException {
+        Store store = storeRepository.findByIdentificador(id);
+        return store.toDTO();
+    }
+
 }

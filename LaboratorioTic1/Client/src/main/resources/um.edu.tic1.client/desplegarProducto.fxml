@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.DesplegarProducto">
+    <children>
+        <ImageView fitHeight="532.0" fitWidth="1006.0" layoutX="4.0" layoutY="263.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
+            <image>
+                <Image url="@../images/image1.png" />
+            </image>
+        </ImageView>
+        <Button layoutX="616.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Button fx:id="aboutUs" layoutX="696.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Button fx:id="shop" layoutX="792.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToShop" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Button fx:id="cart" layoutX="913.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToCart" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent black;">
+            <graphic>
+                <ImageView accessibleRole="BUTTON" fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/iconocarrito.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="miPerfil" layoutX="858.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToMyPerfil" style="-fx-background-color: transparent black;">
+            <graphic>
+                <ImageView accessibleRole="BUTTON" fitHeight="31.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/iconopersona.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+      <Button fx:id="back" layoutX="24.0" layoutY="82.0" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="73.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="ATRAS" textFill="#e8505b">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="nombre" layoutX="136.0" layoutY="144.0" prefHeight="15.0" prefWidth="279.0" textAlignment="CENTER" textFill="#f80202">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imagenProducto" fitHeight="204.0" fitWidth="230.0" layoutX="136.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true" />
+      <ComboBox fx:id="entrega" layoutX="276.0" layoutY="420.0" prefWidth="150.0" promptText="Forma de entrega" style="-fx-background-color: WHITE;" />
+      <ComboBox fx:id="tiendaTalle" layoutX="439.0" layoutY="420.0" prefWidth="150.0" promptText="TIenda - Talle" style="-fx-background-color: WHITE;" />
+      <ComboBox fx:id="cantidad" layoutX="605.0" layoutY="420.0" prefWidth="150.0" promptText="Cantidad" style="-fx-background-color: White;" />
+      <Button fx:id="addToCart" layoutX="909.0" layoutY="521.0" mnemonicParsing="false" onAction="#agregarAlCarrito" prefHeight="54.0" prefWidth="64.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="41.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iconocarrito.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="precio" layoutX="916.0" layoutY="488.0" prefHeight="3.0" prefWidth="51.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="descripcion" layoutX="369.0" layoutY="184.0" prefHeight="65.0" prefWidth="454.0" />
+      <Label fx:id="marca" layoutX="369.0" layoutY="279.0" prefHeight="17.0" prefWidth="209.0" />
+      <Label fx:id="errorMessage" layoutX="444.0" layoutY="540.0" prefHeight="20.0" prefWidth="454.0" text="Debe de completar los campos cantidad, forma de entrega, tienda y talle" textFill="#f20404">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

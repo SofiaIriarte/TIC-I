@@ -9,10 +9,7 @@ import net.rgielen.fxweaver.core.FxWeaver;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 import um.edu.tic1.client.controllers.Inicio;
-import um.edu.tic1.client.dtos.AdministradorDTO;
-import um.edu.tic1.client.dtos.BrandDTO;
-import um.edu.tic1.client.dtos.ClientDTO;
-import um.edu.tic1.client.dtos.StoreDTO;
+import um.edu.tic1.client.dtos.*;
 
 public class UserApplication extends Application {
 
@@ -22,6 +19,12 @@ public class UserApplication extends Application {
     public static AdministradorDTO admin = null;
     public static StoreDTO store = null;
     public static BrandDTO brand = null;
+    public static String busqueda = null;
+    public static Boolean volver = false;
+
+    public static ProductDTO productDTO = null;
+    public static ProductDTO productDTOtoCompare1 = null;
+    public static ProductDTO productDTOtoCompare2 = null;
 
     @Override
     public void init() throws Exception {
@@ -31,8 +34,6 @@ public class UserApplication extends Application {
         this.springContext = new SpringApplicationBuilder()
                 .sources(ClientApplication.class)
                 .run(args);
-
-
 
     }
 
@@ -50,6 +51,5 @@ public class UserApplication extends Application {
         springContext.close();
         Platform.exit();
     }
-
 
 }

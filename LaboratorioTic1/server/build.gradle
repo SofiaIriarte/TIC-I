@@ -21,7 +21,7 @@ dependencies {
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	runtimeOnly 'mysql:mysql-connector-java'
 	testCompile group: 'org.hsqldb', name: 'hsqldb', version: '2.4.0'
-
+	compile ('um.edu.tic1:Commons')
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}

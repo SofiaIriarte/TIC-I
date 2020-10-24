@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.MiCarrito">
+    <children>
+        <ImageView fitHeight="532.0" fitWidth="1006.0" layoutX="4.0" layoutY="263.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
+            <image>
+                <Image url="@../images/image1.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="home" layoutX="616.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToMenu" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Button fx:id="aboutUs" layoutX="696.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToAboutUs" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Button fx:id="shop" layoutX="792.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToShop" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Button fx:id="comprar" layoutX="839.0" layoutY="547.0" mnemonicParsing="false" onAction="#comprar" prefHeight="37.0" prefWidth="103.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="COMPRAR" textFill="#e8505b">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Button>
+        <Text layoutX="72.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mi Carrito" wrappingWidth="257.6724548339844">
+            <font>
+                <Font name="Futura Medium" size="35.0" />
+            </font>
+        </Text>
+        <Button layoutX="913.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent black;">
+            <graphic>
+                <ImageView accessibleRole="BUTTON" fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/iconocarrito.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="miPerfil" layoutX="858.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToMyPerfil" style="-fx-background-color: transparent black;">
+            <graphic>
+                <ImageView accessibleRole="BUTTON" fitHeight="31.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/iconopersona.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+      <GridPane layoutX="72.0" layoutY="181.0" prefHeight="307.0" prefWidth="724.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="217.0" minWidth="10.0" prefWidth="188.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="281.33331298828125" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="67.66668701171875" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="423.0" minWidth="10.0" prefWidth="68.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.0" minWidth="0.0" prefWidth="72.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="deleteProduct" mnemonicParsing="false" onAction="#deleteProductFromCart" text="X" GridPane.columnIndex="4" />
+            <Button fx:id="deleteProduct2" mnemonicParsing="false" onAction="#deleteProductFromCart2" text="X" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button fx:id="deleteProduct3" mnemonicParsing="false" onAction="#deleteProductFromCart3" text="X" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Button fx:id="deleteProduct4" mnemonicParsing="false" onAction="#deleteProductFromCart4" text="X" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Button fx:id="deleteProduct5" mnemonicParsing="false" onAction="#deleteProductFromCart5" text="X" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Button fx:id="deleteProduct6" mnemonicParsing="false" onAction="#deleteProductFromCart6" text="X" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <Button fx:id="deleteProduct7" mnemonicParsing="false" onAction="#deleteProductFromCart7" text="X" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <Label fx:id="nombre" prefHeight="17.0" prefWidth="181.0" />
+            <Label fx:id="tiendaTalle" prefHeight="17.0" prefWidth="216.0" GridPane.columnIndex="1" />
+            <Label fx:id="cantidad" prefHeight="17.0" prefWidth="85.0" GridPane.columnIndex="2" />
+            <Label fx:id="precio" prefHeight="17.0" prefWidth="58.0" GridPane.columnIndex="3" />
+            <Label fx:id="nombre2" prefHeight="17.0" prefWidth="180.0" GridPane.rowIndex="1" />
+            <Label fx:id="nombre3" prefHeight="17.0" prefWidth="181.0" GridPane.rowIndex="2" />
+            <Label fx:id="nombre4" prefHeight="17.0" prefWidth="180.0" GridPane.rowIndex="3" />
+            <Label fx:id="nombre5" prefHeight="17.0" prefWidth="180.0" GridPane.rowIndex="4" />
+            <Label fx:id="nombre6" prefHeight="17.0" prefWidth="179.0" GridPane.rowIndex="5" />
+            <Label fx:id="nombre7" prefHeight="17.0" prefWidth="181.0" GridPane.rowIndex="6" />
+            <Label fx:id="tiendaTalle2" prefHeight="17.0" prefWidth="217.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="tiendaTalle3" prefHeight="17.0" prefWidth="216.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="tiendaTalle4" prefHeight="17.0" prefWidth="216.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="tiendaTalle5" prefHeight="17.0" prefWidth="216.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="tiendaTalle6" prefHeight="17.0" prefWidth="218.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="tiendaTalle7" prefHeight="17.0" prefWidth="217.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label fx:id="cantidad2" prefHeight="17.0" prefWidth="88.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="cantidad3" prefHeight="17.0" prefWidth="86.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="cantidad4" prefHeight="17.0" prefWidth="84.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label fx:id="cantidad5" prefHeight="17.0" prefWidth="85.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label fx:id="cantidad6" prefHeight="17.0" prefWidth="85.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label fx:id="cantidad7" prefHeight="17.0" prefWidth="85.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Label fx:id="precio2" prefHeight="17.0" prefWidth="62.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label fx:id="precio3" prefHeight="17.0" prefWidth="61.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label fx:id="precio4" prefHeight="17.0" prefWidth="62.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label fx:id="precio5" prefHeight="17.0" prefWidth="60.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Label fx:id="precio6" prefHeight="17.0" prefWidth="61.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Label fx:id="precio7" prefHeight="17.0" prefWidth="59.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <Label fx:id="precioTotal" layoutX="764.0" layoutY="552.0" prefHeight="17.0" prefWidth="65.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="goNextPage" layoutX="712.0" layoutY="506.0" mnemonicParsing="false" onAction="#goToNextPage" text="&gt;" />
+      <Button fx:id="goPreviousPage" layoutX="677.0" layoutY="506.0" mnemonicParsing="false" onAction="#goToPreviousPage" text="&lt;" />
+      <ComboBox fx:id="metodosDePago" layoutX="817.0" layoutY="434.0" prefWidth="150.0" promptText="METODO DE PAGO" style="-fx-background-color: WHITE;" />
+      <Label fx:id="error" layoutX="328.0" layoutY="552.0" prefHeight="17.0" prefWidth="351.0" textFill="#f80202">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

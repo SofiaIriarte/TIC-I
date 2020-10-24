@@ -1,14 +1,15 @@
 package um.edu.tic1.server.entities;
 
-
 import um.edu.tic1.server.dtos.StockDTO;
 
-import javax.persistence.*;
-import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Table
 @Entity(name="stock")
-public class Stock implements Serializable {
+public class Stock {
 
     @Id
     private String id;

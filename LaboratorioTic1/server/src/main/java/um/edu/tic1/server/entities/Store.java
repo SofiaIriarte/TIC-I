@@ -13,8 +13,8 @@ import java.util.List;
 @Entity(name="store")
 public class Store {
 
-    @Column(length = 30)
-    private int iD;
+    @Column(name = "iD", length = 30)
+    private int identificador;
     @Column(length = 5)
     private int horaApertura;
     @Column(length = 5)
@@ -32,7 +32,7 @@ public class Store {
     private List<Brand> brands;
 
     public Store(int iD, int horaApertura, int horaCerrar, String user, String address, String password) {
-        this.iD = iD;
+        this.identificador = iD;
         this.horaApertura = horaApertura;
         this.horaCerrar = horaCerrar;
         this.user = user;
@@ -46,12 +46,12 @@ public class Store {
 
     }
 
-    public int getiD() {
-        return iD;
+    public int getIdentificador() {
+        return identificador;
     }
 
-    public void setiD(int iD) {
-        this.iD = iD;
+    public void setIdentificador(int identificador) {
+        this.identificador = identificador;
     }
 
     public String getUser() {
@@ -95,7 +95,7 @@ public class Store {
     }
 
     public StoreDTO toDTO(){
-        StoreDTO storeDTO = new StoreDTO(this.iD = iD, this.horaApertura,this.horaCerrar, this.user, this.address, this.password);
+        StoreDTO storeDTO = new StoreDTO(this.identificador = identificador, this.horaApertura,this.horaCerrar, this.user, this.address, this.password);
         List<ProductDTO> productDTOS = new ArrayList<>();
         for (Product producto:this.products){
             productDTOS.add(producto.toDTO());

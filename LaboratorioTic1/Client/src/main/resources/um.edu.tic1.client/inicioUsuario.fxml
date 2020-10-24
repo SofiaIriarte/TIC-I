@@ -62,11 +62,14 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="miPerfil2" layoutX="850.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToMyPerfil" prefHeight="36.0" prefWidth="38.0" style="-fx-background-color: trasparent;" />
-      <ImageView accessibleRole="BUTTON" fitHeight="31.0" fitWidth="24.0" layoutX="880.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/iconopersona.png" />
-         </image>
-      </ImageView>
+      <Button fx:id="miPerfil2" layoutX="858.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToMyPerfil" style="-fx-background-color: transparent black;">
+         <graphic>
+            <ImageView accessibleRole="BUTTON" fitHeight="31.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iconopersona.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
     </children>
 </AnchorPane>

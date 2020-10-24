@@ -30,7 +30,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
-import static um.edu.tic1.client.UserApplication.springContext;
+
+import static um.edu.tic1.client.UserApplication.*;
 
 @Component
 @FxmlView("/um.edu.tic1.client/shop.fxml")
@@ -44,35 +45,48 @@ public class Shop implements Initializable {
         List<String> marcas = productService.getDistinctBrand();
         ObservableList<String> obList = FXCollections.observableList(marcas);
         this.marca.setItems(obList);
+        this.marca.getItems().add(null);
 
         List<String> colores = productService.getDistinctColor();
         ObservableList<String> obList2 = FXCollections.observableList(colores);
         this.color.setItems(obList2);
+        this.color.getItems().add(null);
 
         List<String> categorias = productService.getDistinctCathegory();
         ObservableList<String> obList3 = FXCollections.observableList(categorias);
         this.categoria.setItems(obList3);
+        this.categoria.getItems().add(null);
 
         List<String> estaciones = productService.getDistinctEstacion();
         ObservableList<String> obList4 = FXCollections.observableList(estaciones);
         this.estacion.setItems(obList4);
+        this.estacion.getItems().add(null);
 
-        addToCart.setVisible(false);
-        addToCart.setDisable(true);
-        addToCart2.setVisible(false);
-        addToCart2.setDisable(true);
-        addToCart3.setVisible(false);
-        addToCart3.setDisable(true);
-        addToCart4.setVisible(false);
-        addToCart4.setDisable(true);
-        addToCart5.setVisible(false);
-        addToCart5.setDisable(true);
-        addToCart6.setVisible(false);
-        addToCart6.setDisable(true);
-        nextPage.setVisible(false);
-        previousPage.setVisible(false);
-        nextPage.setDisable(true);
-        previousPage.setDisable(true);
+        if (volver == true){
+            try {
+                this.page = 0;
+                this.search();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            addToCart.setVisible(false);
+            addToCart.setDisable(true);
+            addToCart2.setVisible(false);
+            addToCart2.setDisable(true);
+            addToCart3.setVisible(false);
+            addToCart3.setDisable(true);
+            addToCart4.setVisible(false);
+            addToCart4.setDisable(true);
+            addToCart5.setVisible(false);
+            addToCart5.setDisable(true);
+            addToCart6.setVisible(false);
+            addToCart6.setDisable(true);
+            nextPage.setVisible(false);
+            previousPage.setVisible(false);
+            nextPage.setDisable(true);
+            previousPage.setDisable(true);
+        }
 
     }
 
@@ -128,7 +142,12 @@ public class Shop implements Initializable {
 
     @FXML
     public void goToMyPerfil (ActionEvent event) throws IOException {
-
+        FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
+        Parent root = fxWeaver.loadView(MiPerfil.class);
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -146,31 +165,43 @@ public class Shop implements Initializable {
         stage.show();
     }
 
-    @FXML
-    public void search (ActionEvent event) throws IOException {
+    private String makeUrl (){
         String cathegory = this.categoria.getValue();
         String brand = this.marca.getValue();
         String col = this.color.getValue();
         String esta = this.estacion.getValue();
         String url = "";
-        if (cathegory != null){
+        if (cathegory != null) {
             url += "cathegrory=" + cathegory + "&";
-        } else if (brand != null){
+        } if (brand != null) {
             url += "marca=" + brand + "&";
-        } else if (col != null){
+        } if (col != null) {
             url += "color=" + col + "&";
-        } else if (esta != null){
+        } if (esta != null) {
             url += "estacion=" + esta;
         }
-        search = productService.getProductosFiltrados(url);
-        this.showProducts();
-//        byte[] byteArray = search.get(0).getImage();
-//        ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(byteArray);
-//        BufferedImage bufferedImage = ImageIO.read(byteArrayInputStream);
-//        Image imagen = SwingFXUtils.toFXImage(bufferedImage, null);
+        return url;
+    }
+
+    @FXML
+    public void search () throws IOException {
+        if (volver == true){
+            search = productService.getProductosFiltrados(busqueda);
+            this.showProducts();
+            volver = false;
+            busqueda = null;
+        } else {
+            String url = this.makeUrl();
+            search = productService.getProductosFiltrados(url);
+            if (search.size() > 0) {
+                this.showProducts();
+                busqueda = url;
+            }
+        }
     }
 
     private void showProducts () throws IOException {
+        this.clear();
         int i = page*6;
         int postProdut = 0;
         while (search.get(i) != null && i<(page*6+6) ){
@@ -183,37 +214,37 @@ public class Shop implements Initializable {
             Image imagen = SwingFXUtils.toFXImage(bufferedImage, null);
             if(postProdut==0){
                 nombreProducto.setText(name);
-                precioProducto.setText(price.toString());
+                precioProducto.setText("$ " +price.toString());
                 productImage.setImage(imagen);
                 addToCart.setVisible(true);
                 addToCart.setDisable(false);
             } else if (postProdut==1){
                 nombreProducto2.setText(name);
-                precioProducto2.setText(price.toString());
+                precioProducto2.setText("$ " +price.toString());
                 productImage2.setImage(imagen);
                 addToCart2.setVisible(true);
                 addToCart2.setDisable(false);
             } else if (postProdut==2){
                 nombreProducto3.setText(name);
-                precioProducto3.setText(price.toString());
+                precioProducto3.setText("$ " +price.toString());
                 productImage3.setImage(imagen);
                 addToCart3.setVisible(true);
                 addToCart3.setDisable(false);
             } else if (postProdut==3){
                 nombreProducto4.setText(name);
-                precioProducto4.setText(price.toString());
+                precioProducto4.setText("$ " +price.toString());
                 productImage4.setImage(imagen);
                 addToCart4.setVisible(true);
                 addToCart4.setDisable(false);
             } else if (postProdut==4){
                 nombreProducto5.setText(name);
-                precioProducto5.setText(price.toString());
+                precioProducto5.setText("$ " +price.toString());
                 productImage5.setImage(imagen);
                 addToCart5.setVisible(true);
                 addToCart5.setDisable(false);
             } else if (postProdut==5){
                 nombreProducto6.setText(name);
-                precioProducto6.setText(price.toString());
+                precioProducto6.setText("$ " +price.toString());
                 productImage6.setImage(imagen);
                 addToCart6.setVisible(true);
                 addToCart6.setDisable(false);
@@ -236,7 +267,7 @@ public class Shop implements Initializable {
             previousPage.setDisable(true);
         } else {
             previousPage.setVisible(true);
-            previousPage.setDisable(true);
+            previousPage.setDisable(false);
         }
 
     }
@@ -285,6 +316,63 @@ public class Shop implements Initializable {
         this.clear();
         page++;
         this.showProducts();
+    }
+
+    private ProductDTO selectProduct (String nameProduct){
+        ProductDTO productDTO = null;
+        for (int i = 0; i<search.size(); i++){
+             ProductDTO temp = search.get(i);
+            if (temp.getName().equals(nameProduct)){
+                productDTO = temp;
+                break;
+            }
+        }
+        return productDTO;
+    }
+
+    private void goToMoreInformatio (ActionEvent event){
+        FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
+        Parent root = fxWeaver.loadView(DesplegarProducto.class);
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    public void showProduct1 (ActionEvent event){
+        productDTO = this.selectProduct(this.nombreProducto.getText());
+        this.goToMoreInformatio(event);
+    }
+
+    @FXML
+    public void showProduct2 (ActionEvent event){
+        productDTO = this.selectProduct(this.nombreProducto2.getText());
+        this.goToMoreInformatio(event);
+    }
+
+    @FXML
+    public void showProduct3 (ActionEvent event){
+        productDTO = this.selectProduct(this.nombreProducto3.getText());
+        this.goToMoreInformatio(event);
+    }
+
+    @FXML
+    public void showProduct4 (ActionEvent event){
+        productDTO = this.selectProduct(this.nombreProducto4.getText());
+        this.goToMoreInformatio(event);
+    }
+
+    @FXML
+    public void showProduct5 (ActionEvent event){
+        productDTO = this.selectProduct(this.nombreProducto5.getText());
+        this.goToMoreInformatio(event);
+    }
+
+    @FXML
+    public void showProduct6 (ActionEvent event){
+        productDTO = this.selectProduct(this.nombreProducto6.getText());
+        this.goToMoreInformatio(event);
     }
 
 }

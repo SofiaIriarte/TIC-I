@@ -7,6 +7,6 @@ import um.edu.tic1.server.entities.Store;
 @Repository
 public interface StoreRepository extends CrudRepository<Store, String> {
 
-    Store findByiD(String iD);
+    Store findByIdentificador (int iD);
 
 }

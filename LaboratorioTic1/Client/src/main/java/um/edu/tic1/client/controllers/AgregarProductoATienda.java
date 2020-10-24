@@ -61,8 +61,13 @@ public class AgregarProductoATienda implements Initializable {
         if (productDTO == null){
             return;
         } else {
-            StockDTO stock = new StockDTO(id,prod,store,size,cant);
-            stockService.save(stock);
+            StockDTO temp = stockService.getStock(id);
+            if (temp != null){
+                temp.setQuantity(temp.getQuantity() + cant);
+            } else {
+                StockDTO stock = new StockDTO(id, prod, store, size, cant);
+                stockService.save(stock);
+            }
         }
     }
 

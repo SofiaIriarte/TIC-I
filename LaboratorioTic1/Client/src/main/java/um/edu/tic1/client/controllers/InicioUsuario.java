@@ -35,7 +35,12 @@ public class InicioUsuario implements Initializable {
 
     @FXML
     public void goToMyPerfil (ActionEvent event) {
-
+        FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
+        Parent root = fxWeaver.loadView(MiPerfil.class);
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -50,6 +55,11 @@ public class InicioUsuario implements Initializable {
 
     @FXML
     public void goToCart (ActionEvent event) {
-
+        FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
+        Parent root = fxWeaver.loadView(MiCarrito.class);
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 }

@@ -27,4 +27,12 @@ public class StoreService {
         return storeDTO;
     }
 
+    public StoreDTO findByNum (int id){
+        RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<StoreDTO> response = restTemplate.exchange("http://localhost:8080/store/findByNumId/"+id,
+                HttpMethod.GET, null, new ParameterizedTypeReference<>() {});
+        StoreDTO storeDTO = response.getBody();
+        return storeDTO;
+    }
+
 }

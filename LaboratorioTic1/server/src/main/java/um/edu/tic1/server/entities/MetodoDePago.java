@@ -17,14 +17,16 @@ public class MetodoDePago {
     private int nTarjeta;
     @Column(length = 45)
     private String titular;
+    @Column(length = 45)
+    private String usuario;
 
-    public MetodoDePago(int nTarjeta, String titular) {
+    public MetodoDePago(int nTarjeta, String titular, String usuario) {
         this.nTarjeta = nTarjeta;
         this.titular = titular;
+        this.usuario = usuario;
     }
 
     public MetodoDePago() {
-
     }
 
     public int getnTarjeta() {
@@ -43,8 +45,16 @@ public class MetodoDePago {
         this.titular = titular;
     }
 
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
     public MetodoDePagoDTO toDTO (){
-        MetodoDePagoDTO metodoDePagoDTO = new MetodoDePagoDTO(this.nTarjeta, this.titular);
+        MetodoDePagoDTO metodoDePagoDTO = new MetodoDePagoDTO(this.nTarjeta, this.titular, this.usuario);
         return metodoDePagoDTO;
     }
 

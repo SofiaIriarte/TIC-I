@@ -2,12 +2,9 @@ package um.edu.tic1.server.entities;
 
 
 import um.edu.tic1.server.dtos.ClientDTO;
-import um.edu.tic1.server.dtos.MetodoDePagoDTO;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 @Table
 @Entity(name="client")
@@ -27,9 +24,6 @@ public class Client {
     private String userName;
     @Column(length = 30)
     private String passworld;
-    @OneToMany
-    @JoinColumn(name="pago_nTarjeta")
-    private List<MetodoDePago> metodoDePagos;
     @OneToOne
     @JoinColumn(name="cartS_iD")
     private ShoppingCart cartS;
@@ -46,7 +40,6 @@ public class Client {
         this.address = address;
         this.userName = userName;
         this.passworld = passworld;
-        this.metodoDePagos = new ArrayList<>();
         this.cartS = shoppingCart;
     }
 
@@ -59,7 +52,6 @@ public class Client {
         this.address = address;
         this.userName = userName;
         this.passworld = passworld;
-        this.metodoDePagos = new ArrayList<>();
     }
 
     @Override
@@ -117,14 +109,6 @@ public class Client {
         this.passworld = passworld;
     }
 
-    public List<MetodoDePago> getMetodoDePagos() {
-        return metodoDePagos;
-    }
-
-    public void setMetodoDePagos(List<MetodoDePago> metodoDePagos) {
-        this.metodoDePagos = metodoDePagos;
-    }
-
     public ShoppingCart getCartS() {
         return cartS;
     }
@@ -147,11 +131,6 @@ public class Client {
         if (this.cartS != null){
             clientDTO.setCartS(this.cartS.toDTO());
         }
-        List<MetodoDePagoDTO> metodoDePagosDtos = new ArrayList<>();
-        for (MetodoDePago metodo : this.metodoDePagos) {
-            metodoDePagosDtos.add(metodo.toDTO());
-        }
-        clientDTO.setMetodoDePagos(metodoDePagosDtos);
         return clientDTO;
     }
 }

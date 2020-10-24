@@ -1,14 +1,14 @@
 package um.edu.tic1.server.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import um.edu.tic1.server.dtos.StockDTO;
 import um.edu.tic1.server.entities.Stock;
 import um.edu.tic1.server.repositories.StockRepository;
 
 import javax.transaction.Transactional;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/stock")
@@ -22,4 +22,17 @@ public class StockController {
     public void createCustomer(@RequestBody Stock stock) {
         stockRepository.save(stock);
     }
+
+    @GetMapping("/getStocks/{productId}")
+    @Transactional
+    public List<StockDTO> getStocks (@PathVariable("productId") int productId) {
+        return stockRepository.findAllByProductId(productId).stream().map(Stock::toDTO).collect(Collectors.toList());
+    }
+
+    @GetMapping("/getStock/{id}")
+    @Transactional
+    public StockDTO getStock (@PathVariable("id") String id) {
+        return stockRepository.findById(id).get().toDTO();
+    }
+
 }

@@ -15,7 +15,7 @@ public class ClientService {
     public void save (ClientDTO client){
         RestTemplate restTemplate = new RestTemplate();
         HttpEntity<ClientDTO> body = new HttpEntity<>(client);
-        ResponseEntity<String> response = restTemplate.exchange("http://localhost:8080/client/saveClient",
+        ResponseEntity<String> response = restTemplate.exchange("http://localhost:8080/client/saveMetodo",
                 HttpMethod.POST,body,String.class);
         System.out.println("RestTemplate response: " + response.getBody());
     }

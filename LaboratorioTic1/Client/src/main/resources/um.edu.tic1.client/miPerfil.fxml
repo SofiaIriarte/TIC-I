@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.MiPerfil">
+    <children>
+        <ImageView fitHeight="532.0" fitWidth="1006.0" layoutX="4.0" layoutY="263.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
+            <image>
+                <Image url="@../images/image1.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="home" layoutX="616.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToHome" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Button fx:id="aboutUs" layoutX="696.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Button fx:id="shop" layoutX="792.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToShop" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Button fx:id="agregarMetodo" layoutX="70.0" layoutY="282.0" mnemonicParsing="false" onAction="#agregarMetodoPago" prefHeight="36.0" prefWidth="221.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="AGREGAR METODO DE PAGO" textFill="#e8505b">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Button>
+        <Button fx:id="verHistorial" layoutX="70.0" layoutY="334.0" mnemonicParsing="false" onAction="#goToHistorial" prefHeight="37.0" prefWidth="221.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="HISTORIAL DE COMPRAS" textFill="#e8505b" />
+        <Text layoutX="72.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome," wrappingWidth="257.6724548339844">
+            <font>
+                <Font name="Futura Medium" size="35.0" />
+            </font>
+        </Text>
+        <Text fx:id="nombreUsuario" layoutX="70.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="445.2601623535156">
+            <font>
+                <Font name="Avenir Next Bold" size="37.0" />
+            </font>
+        </Text>
+        <Pane layoutX="853.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
+        <Button fx:id="cart" layoutX="913.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToCart" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent black;">
+            <graphic>
+                <ImageView accessibleRole="BUTTON" fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/iconocarrito.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button layoutX="858.0" layoutY="16.0" mnemonicParsing="false" style="-fx-background-color: transparent black;">
+            <graphic>
+                <ImageView accessibleRole="BUTTON" fitHeight="31.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/iconopersona.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+      <TextField fx:id="nTarjeta" layoutX="95.0" layoutY="438.0" prefHeight="25.0" prefWidth="171.0" promptText="N° de tarjeta" style="-fx-background-color: WHITE;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="titular" layoutX="95.0" layoutY="486.0" prefHeight="25.0" prefWidth="171.0" promptText="Titular" style="-fx-background-color: WHITE;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Button fx:id="confirmar" layoutX="114.0" layoutY="531.0" mnemonicParsing="false" onAction="#confirmarMetodo" prefHeight="31.0" prefWidth="133.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="CONFIRMAR" textFill="#e8505b">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelar" layoutX="144.0" layoutY="569.0" mnemonicParsing="false" onAction="#cancelarAgregarMetodo" prefHeight="18.0" prefWidth="73.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="CANCELAR" textFill="#e8505b">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

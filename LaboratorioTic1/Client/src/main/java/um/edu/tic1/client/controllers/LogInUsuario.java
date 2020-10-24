@@ -20,7 +20,6 @@ import um.edu.tic1.client.services.AdministradorService;
 import um.edu.tic1.client.services.BrandService;
 import um.edu.tic1.client.services.ClientService;
 import um.edu.tic1.client.services.StoreService;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;

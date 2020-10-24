@@ -73,10 +73,10 @@
             <children>
                 <VBox prefHeight="226.0" prefWidth="222.0">
                     <children>
-                        <ImageView fx:id="productImage" fitHeight="152.0" fitWidth="221.0" pickOnBounds="true" />
+                        <ImageView fx:id="productImage" fitHeight="152.0" fitWidth="221.0" pickOnBounds="true" preserveRatio="true" />
                         <Label fx:id="nombreProducto" prefHeight="17.0" prefWidth="246.0" textAlignment="CENTER" textFill="#cd0e0e" />
                         <Label fx:id="precioProducto" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" />
-                        <Button fx:id="addToCart" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                        <Button fx:id="addToCart" mnemonicParsing="false" onAction="#showProduct1" style="-fx-background-color: transparent;">
                             <graphic>
                                 <ImageView fitHeight="21.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -88,10 +88,10 @@
                 </VBox>
                 <VBox prefHeight="206.0" prefWidth="196.0" GridPane.rowIndex="1">
                     <children>
-                        <ImageView fx:id="productImage4" fitHeight="158.0" fitWidth="227.0" pickOnBounds="true" />
+                        <ImageView fx:id="productImage4" fitHeight="158.0" fitWidth="227.0" pickOnBounds="true" preserveRatio="true" />
                         <Label fx:id="nombreProducto4" prefHeight="17.0" prefWidth="246.0" textAlignment="CENTER" textFill="#cd0e0e" />
                         <Label fx:id="precioProducto4" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" />
-                        <Button fx:id="addToCart4" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                        <Button fx:id="addToCart4" mnemonicParsing="false" onAction="#showProduct4" style="-fx-background-color: transparent;">
                             <graphic>
                                 <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -103,10 +103,10 @@
                 </VBox>
                 <VBox prefHeight="239.0" prefWidth="196.0" GridPane.columnIndex="1">
                     <children>
-                        <ImageView fx:id="productImage2" fitHeight="152.0" fitWidth="222.0" pickOnBounds="true" />
+                        <ImageView fx:id="productImage2" fitHeight="152.0" fitWidth="222.0" pickOnBounds="true" preserveRatio="true" />
                         <Label fx:id="nombreProducto2" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" textFill="#cd0e0e" />
                         <Label fx:id="precioProducto2" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" />
-                        <Button fx:id="addToCart2" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                        <Button fx:id="addToCart2" mnemonicParsing="false" onAction="#showProduct2" style="-fx-background-color: transparent;">
                             <graphic>
                                 <ImageView fitHeight="24.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -118,10 +118,10 @@
                 </VBox>
                 <VBox prefHeight="218.0" prefWidth="222.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <children>
-                        <ImageView fx:id="productImage5" fitHeight="153.0" fitWidth="222.0" pickOnBounds="true" />
+                        <ImageView fx:id="productImage5" fitHeight="153.0" fitWidth="222.0" pickOnBounds="true" preserveRatio="true" />
                         <Label fx:id="nombreProducto5" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" textFill="#cd0e0e" />
                         <Label fx:id="precioProducto5" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" />
-                        <Button fx:id="addToCart5" mnemonicParsing="false" prefHeight="30.0" prefWidth="29.0" style="-fx-background-color: transparent;">
+                        <Button fx:id="addToCart5" mnemonicParsing="false" onAction="#showProduct5" prefHeight="30.0" prefWidth="29.0" style="-fx-background-color: transparent;">
                             <graphic>
                                 <ImageView fitHeight="24.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -133,10 +133,10 @@
                 </VBox>
                 <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
                     <children>
-                        <ImageView fx:id="productImage3" fitHeight="149.0" fitWidth="221.0" pickOnBounds="true" />
+                        <ImageView fx:id="productImage3" fitHeight="149.0" fitWidth="221.0" pickOnBounds="true" preserveRatio="true" />
                         <Label fx:id="nombreProducto3" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" textFill="#cd0e0e" />
                         <Label fx:id="precioProducto3" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" />
-                        <Button fx:id="addToCart3" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                        <Button fx:id="addToCart3" mnemonicParsing="false" onAction="#showProduct3" style="-fx-background-color: transparent;">
                             <graphic>
                                 <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -149,10 +149,10 @@
                 </VBox>
                 <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                     <children>
-                        <ImageView fx:id="productImage6" fitHeight="154.0" fitWidth="224.0" pickOnBounds="true" />
+                        <ImageView fx:id="productImage6" fitHeight="154.0" fitWidth="224.0" pickOnBounds="true" preserveRatio="true" />
                         <Label fx:id="nombreProducto6" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" textFill="#cd0e0e" />
                         <Label fx:id="precioProducto6" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" />
-                        <Button fx:id="addToCart6" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                        <Button fx:id="addToCart6" mnemonicParsing="false" onAction="#showProduct6" style="-fx-background-color: transparent;">
                             <graphic>
                                 <ImageView fitHeight="28.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                                     <image>

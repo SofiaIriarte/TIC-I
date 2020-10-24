@@ -78,6 +78,8 @@ public class ShopSinLogIn implements Initializable {
         nextPage.setDisable(true);
         previousPage.setDisable(true);
 
+        noLogIn.setVisible(false);
+
     }
 
     @FXML private Button aboutUs;
@@ -125,6 +127,8 @@ public class ShopSinLogIn implements Initializable {
 
     @FXML private Button nextPage;
     @FXML private Button previousPage;
+
+    @FXML private Label noLogIn;
 
     private int amountPerPage = 6;
     private int page = 0;
@@ -177,11 +181,9 @@ public class ShopSinLogIn implements Initializable {
             url += "estacion=" + esta;
         }
         search = productService.getProductosFiltrados(url);
-        this.showProducts();
-//        byte[] byteArray = search.get(0).getImage();
-//        ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(byteArray);
-//        BufferedImage bufferedImage = ImageIO.read(byteArrayInputStream);
-//        Image imagen = SwingFXUtils.toFXImage(bufferedImage, null);
+        if (search.size() > 0){
+            this.showProducts();
+        }
     }
 
     private void showProducts () throws IOException {
@@ -198,37 +200,37 @@ public class ShopSinLogIn implements Initializable {
             Image imagen = SwingFXUtils.toFXImage(bufferedImage, null);
             if(postProdut==0){
                 nombreProducto.setText(name);
-                precioProducto.setText(price.toString());
+                precioProducto.setText("$ " +price.toString());
                 productImage.setImage(imagen);
                 addToCart.setVisible(true);
                 addToCart.setDisable(false);
             } else if (postProdut==1){
                 nombreProducto2.setText(name);
-                precioProducto2.setText(price.toString());
+                precioProducto2.setText("$ " +price.toString());
                 productImage2.setImage(imagen);
                 addToCart2.setVisible(true);
                 addToCart2.setDisable(false);
             } else if (postProdut==2){
                 nombreProducto3.setText(name);
-                precioProducto3.setText(price.toString());
+                precioProducto3.setText("$ " +price.toString());
                 productImage3.setImage(imagen);
                 addToCart3.setVisible(true);
                 addToCart3.setDisable(false);
             } else if (postProdut==3){
                 nombreProducto4.setText(name);
-                precioProducto4.setText(price.toString());
+                precioProducto4.setText("$ " +price.toString());
                 productImage4.setImage(imagen);
                 addToCart4.setVisible(true);
                 addToCart4.setDisable(false);
             } else if (postProdut==4){
                 nombreProducto5.setText(name);
-                precioProducto5.setText(price.toString());
+                precioProducto5.setText("$ " +price.toString());
                 productImage5.setImage(imagen);
                 addToCart5.setVisible(true);
                 addToCart5.setDisable(false);
             } else if (postProdut==5){
                 nombreProducto6.setText(name);
-                precioProducto6.setText(price.toString());
+                precioProducto6.setText("$ " +price.toString());
                 productImage6.setImage(imagen);
                 addToCart6.setVisible(true);
                 addToCart6.setDisable(false);
@@ -300,6 +302,11 @@ public class ShopSinLogIn implements Initializable {
         this.clear();
         page += 1;
         this.showProducts();
+    }
+
+    @FXML
+    public void noLogInOrRegister () {
+        this.noLogIn.setVisible(true);
     }
 
 }
