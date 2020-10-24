@@ -106,12 +106,12 @@
             <ImageView fx:id="imagenProducto2" fitHeight="191.0" fitWidth="207.0" pickOnBounds="true" GridPane.columnIndex="2" />
             <Label fx:id="nombre" prefHeight="17.0" prefWidth="272.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label fx:id="nombre2" prefHeight="17.0" prefWidth="241.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Label fx:id="descripcion" prefHeight="70.0" prefWidth="219.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="descripcion" prefHeight="70.0" prefWidth="219.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label fx:id="marca" prefHeight="17.0" prefWidth="317.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label fx:id="color" prefHeight="17.0" prefWidth="330.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label fx:id="estacion" prefHeight="17.0" prefWidth="298.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <Label fx:id="precio" prefHeight="17.0" prefWidth="273.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <Label fx:id="descripcion2" prefHeight="74.0" prefWidth="206.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="descripcion2" prefHeight="74.0" prefWidth="206.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <Label fx:id="marca2" prefHeight="17.0" prefWidth="329.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
             <Label fx:id="color2" prefHeight="17.0" prefWidth="285.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
             <Label fx:id="estacion2" prefHeight="17.0" prefWidth="283.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />

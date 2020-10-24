@@ -65,35 +65,44 @@ public class ShopSinLogIn implements Initializable {
         this.estacion.setItems(obList4);
         this.estacion.getItems().add(null);
 
-        addToCart.setVisible(false);
-        addToCart.setDisable(true);
-        addToCart2.setVisible(false);
-        addToCart2.setDisable(true);
-        addToCart3.setVisible(false);
-        addToCart3.setDisable(true);
-        addToCart4.setVisible(false);
-        addToCart4.setDisable(true);
-        addToCart5.setVisible(false);
-        addToCart5.setDisable(true);
-        addToCart6.setVisible(false);
-        addToCart6.setDisable(true);
-        addToCompare1.setVisible(false);
-        addToCompare1.setDisable(true);
-        addToCompare2.setVisible(false);
-        addToCompare2.setDisable(true);
-        addToCompare3.setVisible(false);
-        addToCompare3.setDisable(true);
-        addToCompare4.setVisible(false);
-        addToCompare4.setDisable(true);
-        addToCompare5.setVisible(false);
-        addToCompare5.setDisable(true);
-        addToCompare6.setVisible(false);
-        addToCompare6.setDisable(true);
-        nextPage.setVisible(false);
-        previousPage.setVisible(false);
-        nextPage.setDisable(true);
-        previousPage.setDisable(true);
-        noLogIn.setVisible(false);
+        if (volver == true){
+            try {
+                this.page = 0;
+                this.search();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            addToCart.setVisible(false);
+            addToCart.setDisable(true);
+            addToCart2.setVisible(false);
+            addToCart2.setDisable(true);
+            addToCart3.setVisible(false);
+            addToCart3.setDisable(true);
+            addToCart4.setVisible(false);
+            addToCart4.setDisable(true);
+            addToCart5.setVisible(false);
+            addToCart5.setDisable(true);
+            addToCart6.setVisible(false);
+            addToCart6.setDisable(true);
+            addToCompare1.setVisible(false);
+            addToCompare1.setDisable(true);
+            addToCompare2.setVisible(false);
+            addToCompare2.setDisable(true);
+            addToCompare3.setVisible(false);
+            addToCompare3.setDisable(true);
+            addToCompare4.setVisible(false);
+            addToCompare4.setDisable(true);
+            addToCompare5.setVisible(false);
+            addToCompare5.setDisable(true);
+            addToCompare6.setVisible(false);
+            addToCompare6.setDisable(true);
+            nextPage.setVisible(false);
+            previousPage.setVisible(false);
+            nextPage.setDisable(true);
+            previousPage.setDisable(true);
+            noLogIn.setVisible(false);
+        }
     }
 
     @FXML private Button aboutUs;
@@ -182,7 +191,7 @@ public class ShopSinLogIn implements Initializable {
     }
 
     @FXML
-    public void search (ActionEvent event) throws IOException {
+    public void search () throws IOException {
         String cathegory = this.categoria.getValue();
         String brand = this.marca.getValue();
         String col = this.color.getValue();
@@ -388,7 +397,7 @@ public class ShopSinLogIn implements Initializable {
             productDTOtoCompare1 = this.selectProduct(this.nombreProducto3.getText());
             compareMensaje.setText("Seleccione otro producto para comparar");
             compareMensaje.setVisible(true);
-        } else if (productDTOtoCompare2 != null) {
+        } else if (productDTOtoCompare2 == null) {
             productDTOtoCompare2 = this.selectProduct(this.nombreProducto3.getText());
             compareMensaje.setText("Pulse comparar");
             compareMensaje.setVisible(true);

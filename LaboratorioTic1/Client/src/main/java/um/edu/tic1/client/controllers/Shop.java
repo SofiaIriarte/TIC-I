@@ -448,7 +448,7 @@ public class Shop implements Initializable {
             productDTOtoCompare1 = this.selectProduct(this.nombreProducto3.getText());
             compareMensaje.setText("Seleccione otro producto para comparar");
             compareMensaje.setVisible(true);
-        } else if (productDTOtoCompare2 != null) {
+        } else if (productDTOtoCompare2 == null) {
             productDTOtoCompare2 = this.selectProduct(this.nombreProducto3.getText());
             compareMensaje.setText("Pulse comparar");
             compareMensaje.setVisible(true);
