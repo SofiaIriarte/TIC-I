@@ -42,6 +42,9 @@ public class Shop implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        compareMensaje.setVisible(false);
+
         List<String> marcas = productService.getDistinctBrand();
         ObservableList<String> obList = FXCollections.observableList(marcas);
         this.marca.setItems(obList);
@@ -82,6 +85,18 @@ public class Shop implements Initializable {
             addToCart5.setDisable(true);
             addToCart6.setVisible(false);
             addToCart6.setDisable(true);
+            addToCompare1.setVisible(false);
+            addToCompare1.setDisable(true);
+            addToCompare2.setVisible(false);
+            addToCompare2.setDisable(true);
+            addToCompare3.setVisible(false);
+            addToCompare3.setDisable(true);
+            addToCompare4.setVisible(false);
+            addToCompare4.setDisable(true);
+            addToCompare5.setVisible(false);
+            addToCompare5.setDisable(true);
+            addToCompare6.setVisible(false);
+            addToCompare6.setDisable(true);
             nextPage.setVisible(false);
             previousPage.setVisible(false);
             nextPage.setDisable(true);
@@ -95,6 +110,9 @@ public class Shop implements Initializable {
     @FXML private Button cart;
     @FXML private Button perfil;
     @FXML private Button home;
+
+    @FXML private Button compare, addToCompare1, addToCompare2, addToCompare3, addToCompare4, addToCompare5, addToCompare6;
+    @FXML private Label compareMensaje;
 
     @FXML private GridPane grid;
 
@@ -152,7 +170,12 @@ public class Shop implements Initializable {
 
     @FXML
     public void goToCart (ActionEvent event) {
-
+        FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
+        Parent root = fxWeaver.loadView(MiCarrito.class);
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -218,36 +241,48 @@ public class Shop implements Initializable {
                 productImage.setImage(imagen);
                 addToCart.setVisible(true);
                 addToCart.setDisable(false);
+                addToCompare1.setVisible(true);
+                addToCompare1.setDisable(false);
             } else if (postProdut==1){
                 nombreProducto2.setText(name);
                 precioProducto2.setText("$ " +price.toString());
                 productImage2.setImage(imagen);
                 addToCart2.setVisible(true);
                 addToCart2.setDisable(false);
+                addToCompare2.setVisible(true);
+                addToCompare2.setDisable(false);
             } else if (postProdut==2){
                 nombreProducto3.setText(name);
                 precioProducto3.setText("$ " +price.toString());
                 productImage3.setImage(imagen);
                 addToCart3.setVisible(true);
                 addToCart3.setDisable(false);
+                addToCompare3.setVisible(true);
+                addToCompare3.setDisable(false);
             } else if (postProdut==3){
                 nombreProducto4.setText(name);
                 precioProducto4.setText("$ " +price.toString());
                 productImage4.setImage(imagen);
                 addToCart4.setVisible(true);
                 addToCart4.setDisable(false);
+                addToCompare4.setVisible(true);
+                addToCompare4.setDisable(false);
             } else if (postProdut==4){
                 nombreProducto5.setText(name);
                 precioProducto5.setText("$ " +price.toString());
                 productImage5.setImage(imagen);
                 addToCart5.setVisible(true);
                 addToCart5.setDisable(false);
+                addToCompare5.setVisible(true);
+                addToCompare5.setDisable(false);
             } else if (postProdut==5){
                 nombreProducto6.setText(name);
                 precioProducto6.setText("$ " +price.toString());
                 productImage6.setImage(imagen);
                 addToCart6.setVisible(true);
                 addToCart6.setDisable(false);
+                addToCompare6.setVisible(true);
+                addToCompare6.setDisable(false);
             }
             postProdut++;
             i++;
@@ -277,31 +312,37 @@ public class Shop implements Initializable {
         nombreProducto.setText("");
         precioProducto.setText("");
         addToCart.setVisible(false);
+        addToCompare1.setVisible(false);
 
         productImage2.setImage(null);
         nombreProducto2.setText("");
         precioProducto2.setText("");
         addToCart2.setVisible(false);
+        addToCompare2.setVisible(false);
 
         productImage3.setImage(null);
         nombreProducto3.setText("");
         precioProducto3.setText("");
         addToCart3.setVisible(false);
+        addToCompare3.setVisible(false);
 
         productImage4.setImage(null);
         nombreProducto4.setText("");
         precioProducto4.setText("");
         addToCart4.setVisible(false);
+        addToCompare4.setVisible(false);
 
         productImage5.setImage(null);
         nombreProducto5.setText("");
         precioProducto5.setText("");
         addToCart5.setVisible(false);
+        addToCompare5.setVisible(false);
 
         productImage6.setImage(null);
         nombreProducto6.setText("");
         precioProducto6.setText("");
         addToCart6.setVisible(false);
+        addToCompare6.setVisible(false);
     }
 
     @FXML
@@ -373,6 +414,100 @@ public class Shop implements Initializable {
     public void showProduct6 (ActionEvent event){
         productDTO = this.selectProduct(this.nombreProducto6.getText());
         this.goToMoreInformatio(event);
+    }
+
+    @FXML
+    public void add (ActionEvent event){
+        if (productDTOtoCompare1 == null) {
+            productDTOtoCompare1 = this.selectProduct(this.nombreProducto.getText());
+            compareMensaje.setText("Seleccione otro producto para comparar");
+            compareMensaje.setVisible(true);
+        } else if (productDTOtoCompare2 == null) {
+            productDTOtoCompare2 = this.selectProduct(this.nombreProducto.getText());
+            compareMensaje.setText("Pulse comparar");
+            compareMensaje.setVisible(true);
+        }
+    }
+
+    @FXML
+    public void add2 (ActionEvent event){
+        if (productDTOtoCompare1 == null) {
+            productDTOtoCompare1 = this.selectProduct(this.nombreProducto2.getText());
+            compareMensaje.setText("Seleccione otro producto para comparar");
+            compareMensaje.setVisible(true);
+        } else if (productDTOtoCompare2 == null) {
+            productDTOtoCompare2 = this.selectProduct(this.nombreProducto2.getText());
+            compareMensaje.setText("Pulse comparar");
+            compareMensaje.setVisible(true);
+        }
+    }
+
+    @FXML
+    public void add3 (ActionEvent event){
+        if (productDTOtoCompare1 == null) {
+            productDTOtoCompare1 = this.selectProduct(this.nombreProducto3.getText());
+            compareMensaje.setText("Seleccione otro producto para comparar");
+            compareMensaje.setVisible(true);
+        } else if (productDTOtoCompare2 != null) {
+            productDTOtoCompare2 = this.selectProduct(this.nombreProducto3.getText());
+            compareMensaje.setText("Pulse comparar");
+            compareMensaje.setVisible(true);
+        }
+    }
+
+    @FXML
+    public void add4 (ActionEvent event){
+        if (productDTOtoCompare1 == null) {
+            productDTOtoCompare1 = this.selectProduct(this.nombreProducto4.getText());
+            compareMensaje.setText("Seleccione otro producto para comparar");
+            compareMensaje.setVisible(true);
+        } else if (productDTOtoCompare2 == null) {
+            productDTOtoCompare2 = this.selectProduct(this.nombreProducto4.getText());
+            compareMensaje.setText("Pulse comparar");
+            compareMensaje.setVisible(true);
+        }
+    }
+
+    @FXML
+    public void add5 (ActionEvent event){
+        if (productDTOtoCompare1 == null) {
+            productDTOtoCompare1 = this.selectProduct(this.nombreProducto5.getText());
+            compareMensaje.setText("Seleccione otro producto para comparar");
+            compareMensaje.setVisible(true);
+        } else if (productDTOtoCompare2 == null) {
+            productDTOtoCompare2 = this.selectProduct(this.nombreProducto5.getText());
+            compareMensaje.setText("Pulse comparar");
+            compareMensaje.setVisible(true);
+        }
+    }
+
+    @FXML
+    public void add6 (ActionEvent event){
+        if (productDTOtoCompare1 == null) {
+            productDTOtoCompare1 = this.selectProduct(this.nombreProducto6.getText());
+            compareMensaje.setText("Seleccione otro producto para comparar");
+            compareMensaje.setVisible(true);
+        } else if (productDTOtoCompare2 == null) {
+            productDTOtoCompare2 = this.selectProduct(this.nombreProducto6.getText());
+            compareMensaje.setText("Pulse comparar");
+            compareMensaje.setVisible(true);
+        }
+    }
+
+    @FXML
+    public void compareProducts(ActionEvent event){
+        if (productDTOtoCompare1 != null && productDTOtoCompare2 != null) {
+            FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
+            Parent root = fxWeaver.loadView(ComparacionProductos.class);
+            Scene scene = new Scene(root);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        } else {
+            compareMensaje.setText("");
+            compareMensaje.setText("No selecciono dos productos para comparar");
+            compareMensaje.setVisible(true);
+        }
     }
 
 }

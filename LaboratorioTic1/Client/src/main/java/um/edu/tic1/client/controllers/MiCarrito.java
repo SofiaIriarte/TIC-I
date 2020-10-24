@@ -80,12 +80,6 @@ public class MiCarrito implements Initializable {
     @FXML private Label cantidad4; @FXML private Label cantidad5;
     @FXML private Label cantidad6; @FXML private Label cantidad7;
 
-//    @FXML private Label tipo;
-//    @FXML private Label tipo2; @FXML private Label tipo3;
-//    @FXML private Label tipo4; @FXML private Label tipo5;
-//    @FXML private Label tipo6; @FXML private Label tipo7;
-
-
     @FXML private Label tiendaTalle;
     @FXML private Label tiendaTalle2; @FXML private Label tiendaTalle3;
     @FXML private Label tiendaTalle4; @FXML private Label tiendaTalle5;
@@ -107,6 +101,8 @@ public class MiCarrito implements Initializable {
         search = shoppingCartService.getCartItems(cliente.getUserName());
         if (search.size() > 0) {
             this.showProducts();
+        } else {
+            this.clear();
         }
         metodoDePagoDTOS = metodoDePagoService.getMetodosPorUsuario(cliente.getUserName());
         if (metodoDePagoDTOS.size() > 0){
@@ -208,7 +204,7 @@ public class MiCarrito implements Initializable {
         this.clear();
         int i = page*7;
         int productInCart = 0;
-        while (search.get(i) != null && i<(page*6+6) ){
+        while (search.get(i) != null && i<(page*7+7) ){
             CarritoDTO item = search.get(i);
             String name = item.getName();
             String price = item.getPrice();

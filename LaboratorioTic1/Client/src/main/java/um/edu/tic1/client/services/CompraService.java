@@ -21,7 +21,7 @@ public class CompraService {
         System.out.println("RestTemplate response: " + response.getBody());
     }
 
-    public List<CompraDTO> getCartItems (String userId){
+    public List<CompraDTO> getboughtItems (String userId){
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<List<CompraDTO>> response = restTemplate.exchange("http://localhost:8080/compra/findByUserId/"+userId,
                 HttpMethod.GET, null, new ParameterizedTypeReference<>() {});

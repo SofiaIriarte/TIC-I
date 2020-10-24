@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.HistorialCompras">
+    <children>
+        <ImageView fitHeight="532.0" fitWidth="1006.0" layoutX="4.0" layoutY="263.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
+            <image>
+                <Image url="@../images/image1.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="home" layoutX="616.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToMenu" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Button fx:id="aboutUs" layoutX="696.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToAboutUs" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Button fx:id="shop" layoutX="792.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToShop" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Text layoutX="72.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Historial de Compras" wrappingWidth="331.6724548339844">
+            <font>
+                <Font name="Futura Medium" size="35.0" />
+            </font>
+        </Text>
+        <Button fx:id="carrito" layoutX="913.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToCart" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent black;">
+            <graphic>
+                <ImageView accessibleRole="BUTTON" fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/iconocarrito.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="miPerfil" layoutX="858.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToMyPerfil" style="-fx-background-color: transparent black;">
+            <graphic>
+                <ImageView accessibleRole="BUTTON" fitHeight="31.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/iconopersona.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <GridPane layoutX="101.0" layoutY="189.0" prefHeight="307.0" prefWidth="724.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="217.0" minWidth="10.0" prefWidth="188.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="229.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="199.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="117.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="423.0" minWidth="10.0" prefWidth="68.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.0" minWidth="0.0" prefWidth="72.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label fx:id="nombre" prefHeight="17.0" prefWidth="181.0" textAlignment="CENTER" />
+                <Label fx:id="tiendaTalle" prefHeight="17.0" prefWidth="210.0" textAlignment="CENTER" GridPane.columnIndex="1" />
+                <Label fx:id="cantidad" prefHeight="17.0" prefWidth="68.0" textAlignment="CENTER" GridPane.columnIndex="4" />
+                <Label fx:id="precio" prefHeight="17.0" prefWidth="64.0" textAlignment="CENTER" GridPane.columnIndex="5" />
+                <Label fx:id="nombre2" prefHeight="17.0" prefWidth="180.0" textAlignment="CENTER" GridPane.rowIndex="1" />
+                <Label fx:id="nombre3" prefHeight="17.0" prefWidth="181.0" textAlignment="CENTER" GridPane.rowIndex="2" />
+                <Label fx:id="nombre4" prefHeight="17.0" prefWidth="180.0" textAlignment="CENTER" GridPane.rowIndex="3" />
+                <Label fx:id="nombre5" prefHeight="17.0" prefWidth="180.0" textAlignment="CENTER" GridPane.rowIndex="4" />
+                <Label fx:id="nombre6" prefHeight="17.0" prefWidth="179.0" textAlignment="CENTER" GridPane.rowIndex="5" />
+                <Label fx:id="nombre7" prefHeight="17.0" prefWidth="181.0" textAlignment="CENTER" GridPane.rowIndex="6" />
+                <Label fx:id="tiendaTalle2" prefHeight="17.0" prefWidth="217.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label fx:id="tiendaTalle3" prefHeight="17.0" prefWidth="216.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label fx:id="tiendaTalle4" prefHeight="17.0" prefWidth="216.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label fx:id="tiendaTalle5" prefHeight="17.0" prefWidth="216.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label fx:id="tiendaTalle6" prefHeight="17.0" prefWidth="218.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Label fx:id="tiendaTalle7" prefHeight="17.0" prefWidth="217.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <Label fx:id="cantidad2" prefHeight="17.0" prefWidth="64.0" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                <Label fx:id="cantidad3" prefHeight="17.0" prefWidth="64.0" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                <Label fx:id="cantidad4" prefHeight="17.0" prefWidth="66.0" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                <Label fx:id="cantidad5" prefHeight="17.0" prefWidth="66.0" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                <Label fx:id="cantidad6" prefHeight="17.0" prefWidth="64.0" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                <Label fx:id="cantidad7" prefHeight="17.0" prefWidth="66.0" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                <Label fx:id="precio2" prefHeight="17.0" prefWidth="62.0" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                <Label fx:id="precio3" prefHeight="17.0" prefWidth="61.0" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                <Label fx:id="precio4" prefHeight="17.0" prefWidth="62.0" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                <Label fx:id="precio5" prefHeight="17.0" prefWidth="60.0" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                <Label fx:id="precio6" prefHeight="17.0" prefWidth="61.0" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                <Label fx:id="precio7" prefHeight="17.0" prefWidth="59.0" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+            <Label fx:id="metPago" prefHeight="17.0" prefWidth="220.0" textAlignment="CENTER" GridPane.columnIndex="2" />
+            <Label fx:id="metPago2" prefHeight="17.0" prefWidth="225.0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="metPago3" prefHeight="17.0" prefWidth="197.0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="metPago4" prefHeight="17.0" prefWidth="183.0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label fx:id="metPago5" prefHeight="17.0" prefWidth="182.0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label fx:id="metPago6" prefHeight="17.0" prefWidth="187.0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label fx:id="metPago7" prefHeight="17.0" prefWidth="185.0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Label fx:id="date" prefHeight="17.0" prefWidth="111.0" textAlignment="CENTER" GridPane.columnIndex="3" />
+            <Label fx:id="date2" prefHeight="17.0" prefWidth="94.0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label fx:id="date3" prefHeight="17.0" prefWidth="156.0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label fx:id="date4" prefHeight="17.0" prefWidth="172.0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label fx:id="date5" prefHeight="17.0" prefWidth="177.0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Label fx:id="date6" prefHeight="17.0" prefWidth="103.0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Label fx:id="date7" prefHeight="17.0" prefWidth="139.0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            </children>
+        </GridPane>
+        <Button fx:id="goNextPage" layoutX="769.0" layoutY="506.0" mnemonicParsing="false" onAction="#goToNextPage" text="&gt;" />
+        <Button fx:id="goPreviousPage" layoutX="733.0" layoutY="506.0" mnemonicParsing="false" onAction="#goToPreviousPage" text="&lt;" />
+      <Label layoutX="109.0" layoutY="170.0" text="Nombre del producto" textFill="#2903e8">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="264.0" layoutY="171.0" text="Tienda y Talle" textFill="#2903e8">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="463.0" layoutY="171.0" text="N° de Tarjeta" textFill="#2903e8">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="642.0" layoutY="171.0" text="Fecha" textFill="#2903e8">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="730.0" layoutY="170.0" text="Cant." textFill="#2903e8">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="775.0" layoutY="171.0" text="Precio" textFill="#2903e8">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

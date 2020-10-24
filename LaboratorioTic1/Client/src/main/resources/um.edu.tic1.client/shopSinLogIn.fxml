@@ -38,7 +38,7 @@
             </effect>
         </Button>
         <Pane layoutX="776.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
-        <Button fx:id="buscar" layoutX="42.0" layoutY="500.0" mnemonicParsing="false" onAction="#search" prefHeight="36.0" prefWidth="199.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="BUSCAR" textFill="#e8505b">
+        <Button fx:id="buscar" layoutX="42.0" layoutY="492.0" mnemonicParsing="false" onAction="#search" prefHeight="36.0" prefWidth="199.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="BUSCAR" textFill="#e8505b">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>
@@ -74,7 +74,8 @@
          <children>
             <VBox prefHeight="226.0" prefWidth="222.0">
                <children>
-                  <ImageView fx:id="productImage" fitHeight="154.0" fitWidth="220.0" pickOnBounds="true" />
+                  <Button fx:id="addToCompare1" mnemonicParsing="false" onAction="#add" style="-fx-background-color: Transparent;" text="ADD TO COMPARE" textFill="#e40909" />
+                  <ImageView fx:id="productImage" fitHeight="139.0" fitWidth="221.0" pickOnBounds="true" />
                   <Label fx:id="nombreProducto" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" textFill="#cd0e0e" />
                   <Label fx:id="precioProducto" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" />
                   <Button fx:id="addToCart" mnemonicParsing="false" onAction="#noLogInOrRegister" style="-fx-background-color: transparent;">
@@ -89,7 +90,8 @@
             </VBox>
             <VBox prefHeight="206.0" prefWidth="196.0" GridPane.rowIndex="1">
                <children>
-                  <ImageView fx:id="productImage4" fitHeight="158.0" fitWidth="227.0" pickOnBounds="true" />
+                  <Button fx:id="addToCompare4" alignment="CENTER" mnemonicParsing="false" onAction="#add4" style="-fx-background-color: Transparent;" text="ADD TO COMPARE" textFill="#e40909" />
+                  <ImageView fx:id="productImage4" fitHeight="134.0" fitWidth="221.0" pickOnBounds="true" />
                   <Label fx:id="nombreProducto4" prefHeight="17.0" prefWidth="246.0" textAlignment="CENTER" textFill="#cd0e0e" />
                   <Label fx:id="precioProducto4" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" />
                   <Button fx:id="addToCart4" mnemonicParsing="false" onAction="#noLogInOrRegister" style="-fx-background-color: transparent;">
@@ -104,7 +106,8 @@
             </VBox>
             <VBox prefHeight="239.0" prefWidth="196.0" GridPane.columnIndex="1">
                <children>
-                  <ImageView fx:id="productImage2" fitHeight="152.0" fitWidth="222.0" pickOnBounds="true" />
+                  <Button fx:id="addToCompare2" alignment="CENTER" mnemonicParsing="false" onAction="#add2" style="-fx-background-color: Transparent;" text="ADD TO COMPARE" textFill="#e40909" />
+                  <ImageView fx:id="productImage2" fitHeight="135.0" fitWidth="221.0" pickOnBounds="true" />
                   <Label fx:id="nombreProducto2" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" textFill="#cd0e0e" />
                   <Label fx:id="precioProducto2" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" />
                   <Button fx:id="addToCart2" mnemonicParsing="false" onAction="#noLogInOrRegister" style="-fx-background-color: transparent;">
@@ -119,7 +122,8 @@
             </VBox>
             <VBox prefHeight="218.0" prefWidth="222.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <ImageView fx:id="productImage5" fitHeight="153.0" fitWidth="222.0" pickOnBounds="true" />
+                  <Button fx:id="addToCompare5" alignment="CENTER" mnemonicParsing="false" onAction="#add5" style="-fx-background-color: Transparent;" text="ADD TO COMPARE" textFill="#e40909" />
+                  <ImageView fx:id="productImage5" fitHeight="133.0" fitWidth="222.0" pickOnBounds="true" />
                   <Label fx:id="nombreProducto5" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" textFill="#cd0e0e" />
                   <Label fx:id="precioProducto5" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" />
                   <Button fx:id="addToCart5" mnemonicParsing="false" onAction="#noLogInOrRegister" prefHeight="30.0" prefWidth="29.0" style="-fx-background-color: transparent;">
@@ -134,7 +138,8 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
                <children>
-                  <ImageView fx:id="productImage3" fitHeight="149.0" fitWidth="221.0" pickOnBounds="true" />
+                  <Button fx:id="addToCompare3" alignment="CENTER" mnemonicParsing="false" onAction="#add3" style="-fx-background-color: Transparent;" text="ADD TO COMPARE" textFill="#e40909" />
+                  <ImageView fx:id="productImage3" fitHeight="136.0" fitWidth="222.0" pickOnBounds="true" />
                   <Label fx:id="nombreProducto3" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" textFill="#cd0e0e" />
                   <Label fx:id="precioProducto3" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" />
                   <Button fx:id="addToCart3" mnemonicParsing="false" onAction="#noLogInOrRegister" style="-fx-background-color: transparent;">
@@ -150,7 +155,8 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <children>
-                  <ImageView fx:id="productImage6" fitHeight="154.0" fitWidth="224.0" pickOnBounds="true" />
+                  <Button fx:id="addToCompare6" alignment="CENTER" mnemonicParsing="false" onAction="#add6" style="-fx-background-color: Transparent;" text="ADD TO COMPARE" textFill="#e40909" />
+                  <ImageView fx:id="productImage6" fitHeight="133.0" fitWidth="221.0" pickOnBounds="true" />
                   <Label fx:id="nombreProducto6" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" textFill="#cd0e0e" />
                   <Label fx:id="precioProducto6" prefHeight="17.0" prefWidth="246.0" textAlignment="RIGHT" />
                   <Button fx:id="addToCart6" mnemonicParsing="false" onAction="#noLogInOrRegister" style="-fx-background-color: transparent;">
@@ -188,6 +194,16 @@
       <Label fx:id="noLogIn" layoutX="406.0" layoutY="568.0" prefHeight="21.0" prefWidth="321.0" text="No ingreso en la aplicacion, ingrese o registrese" textFill="#f80505">
          <font>
             <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="compare" layoutX="41.0" layoutY="538.0" mnemonicParsing="false" onAction="#compareProducts" prefHeight="36.0" prefWidth="199.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="COMPARAR" textFill="#e8505b">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="compareMensaje" alignment="CENTER" layoutX="334.0" layoutY="80.0" prefHeight="17.0" prefWidth="558.0" textFill="#f80202">
+         <font>
+            <Font size="14.0" />
          </font>
       </Label>
     </children>

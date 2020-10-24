@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.ComparacionProductos">
+    <children>
+        <ImageView fitHeight="532.0" fitWidth="1006.0" layoutX="4.0" layoutY="263.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
+            <image>
+                <Image url="@../images/image1.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="home" layoutX="616.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Button fx:id="aboutUs" layoutX="696.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Button fx:id="shop" layoutX="792.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToShop" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Button fx:id="carrito" layoutX="913.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToCart" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent black;">
+            <graphic>
+                <ImageView accessibleRole="BUTTON" fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/iconocarrito.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="miPerfil" layoutX="858.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToMyPerfil" style="-fx-background-color: transparent black;">
+            <graphic>
+                <ImageView accessibleRole="BUTTON" fitHeight="31.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/iconopersona.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="back" layoutX="24.0" layoutY="82.0" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="73.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="ATRAS" textFill="#e8505b">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Button>
+      <GridPane layoutX="222.0" layoutY="167.0" prefHeight="399.0" prefWidth="581.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.33331298828125" minWidth="10.0" prefWidth="132.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.3333435058594" minWidth="10.0" prefWidth="195.33331298828125" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.66668701171875" minWidth="10.0" prefWidth="205.66668701171875" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="260.00001525878906" minHeight="10.0" prefHeight="192.33331298828125" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="177.33334350585938" minHeight="0.0" prefHeight="44.333343505859375" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="141.33334350585938" minHeight="0.0" prefHeight="64.33334350585938" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="156.66665649414062" minHeight="10.0" prefHeight="26.666656494140625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="132.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="105.66668701171875" minHeight="10.0" prefHeight="23.6666259765625" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="52.33331298828125" minHeight="10.0" prefHeight="25.3333740234375" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="302.0" text="NOMBRE:" textFill="#f10505" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="280.0" text="DESCRIPCION:" textFill="#f10505" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="252.0" text="MARCA:" textFill="#f10505" GridPane.rowIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="282.0" text="COLOR:" textFill="#f10505" GridPane.rowIndex="4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="308.0" text="ESTACIÓN:" textFill="#f10505" GridPane.rowIndex="5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="271.0" text="PRECIO:" textFill="#f10505" GridPane.rowIndex="6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imagenProducto" fitHeight="191.0" fitWidth="219.0" pickOnBounds="true" GridPane.columnIndex="1" />
+            <ImageView fx:id="imagenProducto2" fitHeight="191.0" fitWidth="207.0" pickOnBounds="true" GridPane.columnIndex="2" />
+            <Label fx:id="nombre" prefHeight="17.0" prefWidth="272.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="nombre2" prefHeight="17.0" prefWidth="241.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="descripcion" prefHeight="70.0" prefWidth="219.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="marca" prefHeight="17.0" prefWidth="317.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="color" prefHeight="17.0" prefWidth="330.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="estacion" prefHeight="17.0" prefWidth="298.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="precio" prefHeight="17.0" prefWidth="273.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label fx:id="descripcion2" prefHeight="74.0" prefWidth="206.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="marca2" prefHeight="17.0" prefWidth="329.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label fx:id="color2" prefHeight="17.0" prefWidth="285.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label fx:id="estacion2" prefHeight="17.0" prefWidth="283.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label fx:id="precio2" prefHeight="17.0" prefWidth="318.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <Label alignment="CENTER" layoutX="213.0" layoutY="103.0" prefHeight="17.0" prefWidth="581.0" text="COMPARAR PRODUCTOS" textFill="#3806ee">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="login" layoutX="852.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToLogIn" style="-fx-background-color: transparent black" text="LOGIN" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Button fx:id="register" layoutX="913.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToRegisterScene" style="-fx-background-color: transparent black" text="REGISTER" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+    </children>
+</AnchorPane>

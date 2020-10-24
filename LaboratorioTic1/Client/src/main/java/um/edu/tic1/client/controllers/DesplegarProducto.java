@@ -140,7 +140,12 @@ public class DesplegarProducto implements Initializable {
 
     @FXML
     public void goToCart (ActionEvent event) {
-
+        FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
+        Parent root = fxWeaver.loadView(MiCarrito.class);
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     private void goShopScene (ActionEvent event){
