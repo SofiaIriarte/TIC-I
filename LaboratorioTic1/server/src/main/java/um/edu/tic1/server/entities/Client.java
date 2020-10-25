@@ -126,7 +126,7 @@ public class Client {
     }
 
     public ClientDTO toDTO (){
-        ClientDTO clientDTO = new ClientDTO( this.cI = cI, this.firstName, this.lastName, this.birthday,
+        ClientDTO clientDTO = new ClientDTO( this.cI, this.firstName, this.lastName, this.birthday,
                 this.address, this.userName, this.passworld);
         if (this.cartS != null){
             clientDTO.setCartS(this.cartS.toDTO());

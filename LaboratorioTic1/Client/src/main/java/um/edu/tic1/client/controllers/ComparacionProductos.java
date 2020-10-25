@@ -75,6 +75,8 @@ public class ComparacionProductos implements Initializable {
         marca.setText(productDTOtoCompare1.getMarca());
         color.setText(productDTOtoCompare1.getColor());
         estacion.setText(productDTOtoCompare1.getEstacion());
+        Long precioProducto1 = productDTOtoCompare1.getPrice();
+        precio.setText(precioProducto1.toString());
         try {
             byte[] byteArray = productDTOtoCompare1.getImage();
             ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(byteArray);
@@ -89,6 +91,8 @@ public class ComparacionProductos implements Initializable {
         marca2.setText(productDTOtoCompare2.getMarca());
         color2.setText(productDTOtoCompare2.getColor());
         estacion2.setText(productDTOtoCompare2.getEstacion());
+        Long precioProducto2 = productDTOtoCompare2.getPrice();
+        precio2.setText(precioProducto2.toString());
         try {
             byte[] byteArray = productDTOtoCompare2.getImage();
             ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(byteArray);
