@@ -51,7 +51,6 @@ public class DesplegarProducto implements Initializable {
     ShoppingCartService shoppingCartService;
 
     @FXML private Label nombre;
-    @FXML private Label descripcion;
     @FXML private Label marca;
     @FXML private Label precio;
 
@@ -108,7 +107,7 @@ public class DesplegarProducto implements Initializable {
             bufferedImage = ImageIO.read(byteArrayInputStream);
             Image imagen = SwingFXUtils.toFXImage(bufferedImage, null);
             this.imagenProducto.setImage(imagen);
-            this.descripcion.setText(productDTO.getDescription());
+            //this.descripcion.setText(productDTO.getDescription());
             Long price = productDTO.getPrice();
             this.precio.setText("$ " +price.toString());
             this.marca.setText(productDTO.getMarca());
@@ -144,6 +143,16 @@ public class DesplegarProducto implements Initializable {
         Parent root = fxWeaver.loadView(MiCarrito.class);
         Scene scene = new Scene(root);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    public void goToMenu (ActionEvent event){
+        FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
+        Parent root = fxWeaver.loadView(InicioUsuario.class);
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
     }
