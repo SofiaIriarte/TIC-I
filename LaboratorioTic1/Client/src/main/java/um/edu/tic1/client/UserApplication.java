@@ -11,7 +11,8 @@ import org.springframework.context.ConfigurableApplicationContext;
 import um.edu.tic1.client.controllers.Inicio;
 import um.edu.tic1.client.dtos.*;
 
-public class UserApplication extends Application {
+public class
+UserApplication extends Application {
 
     public static ConfigurableApplicationContext springContext;
     private Parent root;

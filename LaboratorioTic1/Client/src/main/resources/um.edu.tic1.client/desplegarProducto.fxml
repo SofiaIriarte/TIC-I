@@ -7,6 +7,8 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.DesplegarProducto">
@@ -60,29 +62,39 @@
          </font>
       </Label>
       <ImageView fx:id="imagenProducto" fitHeight="204.0" fitWidth="230.0" layoutX="136.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true" />
-      <ComboBox fx:id="entrega" layoutX="276.0" layoutY="420.0" prefWidth="150.0" promptText="Forma de entrega" style="-fx-background-color: WHITE;" />
-      <ComboBox fx:id="tiendaTalle" layoutX="439.0" layoutY="420.0" prefWidth="150.0" promptText="TIenda - Talle" style="-fx-background-color: WHITE;" />
-      <ComboBox fx:id="cantidad" layoutX="605.0" layoutY="420.0" prefWidth="150.0" promptText="Cantidad" style="-fx-background-color: White;" />
-      <Button fx:id="addToCart" layoutX="909.0" layoutY="521.0" mnemonicParsing="false" onAction="#agregarAlCarrito" prefHeight="54.0" prefWidth="64.0" style="-fx-background-color: transparent;">
-         <graphic>
-            <ImageView fitHeight="41.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/iconocarrito.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Label fx:id="precio" layoutX="916.0" layoutY="488.0" prefHeight="3.0" prefWidth="51.0">
+      <ComboBox fx:id="entrega" layoutX="576.0" layoutY="364.0" prefHeight="40.0" prefWidth="212.0" promptText="Forma de entrega" style="-fx-background-color: WHITE;" />
+      <ComboBox fx:id="tiendaTalle" layoutX="577.0" layoutY="313.0" prefHeight="36.0" prefWidth="210.0" promptText="TIenda - Talle" style="-fx-background-color: WHITE;" />
+      <ComboBox fx:id="cantidad" layoutX="577.0" layoutY="261.0" prefHeight="36.0" prefWidth="212.0" promptText="Cantidad" style="-fx-background-color: White;" />
+      <Button fx:id="addToCart" layoutX="713.0" layoutY="439.0" mnemonicParsing="false" onAction="#agregarAlCarrito" prefHeight="42.0" prefWidth="95.0" style="-fx-background-color: white;" />
+      <Label fx:id="precio" layoutX="565.0" layoutY="442.0" prefHeight="38.0" prefWidth="125.0" text="UY 3390" textFill="#e8505b">
          <font>
-            <Font size="15.0" />
+            <Font size="27.0" />
          </font>
       </Label>
-      <Label fx:id="descripcion" layoutX="369.0" layoutY="184.0" prefHeight="65.0" prefWidth="454.0" />
-      <Label fx:id="marca" layoutX="369.0" layoutY="279.0" prefHeight="17.0" prefWidth="209.0" />
+      <Label fx:id="descripcion" layoutX="557.0" layoutY="130.0" prefHeight="65.0" prefWidth="243.0" text="Championes Nike" wrapText="true">
+         <font>
+            <Font name="Apple Braille Outline 6 Dot" size="22.0" />
+         </font></Label>
+      <Label fx:id="marca" layoutX="558.0" layoutY="209.0" prefHeight="17.0" prefWidth="209.0" text="Nike ">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
       <Label fx:id="errorMessage" layoutX="444.0" layoutY="540.0" prefHeight="20.0" prefWidth="454.0" text="Debe de completar los campos cantidad, forma de entrega, tienda y talle" textFill="#f20404">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
+      <Pane layoutX="166.0" layoutY="128.0" prefHeight="356.0" prefWidth="359.0" style="-fx-background-color: #e8505b#e8505b;" />
+      <ImageView fitHeight="348.0" fitWidth="350.0" layoutX="172.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../diseño/dapos.jpg" />
+         </image>
+      </ImageView>
+      <Line endX="86.43768310546875" layoutX="727.0" layoutY="202.0" startX="-169.90142822265625" stroke="#e8505b" />
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="745.0" layoutY="445.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/iconocarrito.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>
