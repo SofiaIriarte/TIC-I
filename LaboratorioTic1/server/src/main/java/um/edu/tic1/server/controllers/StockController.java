@@ -32,7 +32,11 @@ public class StockController {
     @GetMapping("/getStock/{id}")
     @Transactional
     public StockDTO getStock (@PathVariable("id") String id) {
-        return stockRepository.findById(id).get().toDTO();
+        if (stockRepository.existsById(id)){
+            Stock stock = stockRepository.findById(id).get();
+            return stock.toDTO();
+        }
+        return null;
     }
 
 }

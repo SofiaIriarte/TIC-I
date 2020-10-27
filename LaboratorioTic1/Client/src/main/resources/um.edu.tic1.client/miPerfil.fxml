@@ -32,18 +32,18 @@
                 <Blend />
             </effect>
         </Button>
-        <Button fx:id="agregarMetodo" layoutX="70.0" layoutY="282.0" mnemonicParsing="false" onAction="#agregarMetodoPago" prefHeight="36.0" prefWidth="221.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="AGREGAR METODO DE PAGO" textFill="#e8505b">
+        <Button fx:id="agregarMetodo" layoutX="70.0" layoutY="264.0" mnemonicParsing="false" onAction="#agregarMetodoPago" prefHeight="36.0" prefWidth="221.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="AGREGAR METODO DE PAGO" textFill="#e8505b">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>
         </Button>
-        <Button fx:id="verHistorial" layoutX="70.0" layoutY="334.0" mnemonicParsing="false" onAction="#goToHistorial" prefHeight="37.0" prefWidth="221.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="HISTORIAL DE COMPRAS" textFill="#e8505b" />
+        <Button fx:id="verHistorial" layoutX="70.0" layoutY="316.0" mnemonicParsing="false" onAction="#goToHistorial" prefHeight="37.0" prefWidth="221.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="HISTORIAL DE COMPRAS" textFill="#e8505b" />
         <Text layoutX="72.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenid@," wrappingWidth="257.6724548339844">
             <font>
                 <Font name="Futura Medium" size="35.0" />
             </font>
         </Text>
-        <Text fx:id="nombreUsuario" layoutX="70.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="445.2601623535156">
+        <Text fx:id="nombreUsuario" layoutX="72.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="290.6724548339844">
             <font>
                 <Font name="Avenir Next Bold" size="37.0" />
             </font>
@@ -92,5 +92,6 @@
             <Image url="@../images/deco1.png" />
          </image>
       </ImageView>
+      <Button fx:id="logOut" layoutX="70.0" layoutY="367.0" mnemonicParsing="false" onAction="#cerrarCesion" prefHeight="37.0" prefWidth="221.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="CERRAR CESIÓN" textFill="#e8505b" />
     </children>
 </AnchorPane>

@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static um.edu.tic1.client.UserApplication.springContext;
+import static um.edu.tic1.client.UserApplication.*;
 
 @Component
 @FxmlView("/um.edu.tic1.client/tiendaInicio.fxml")
@@ -27,7 +27,18 @@ public class TiendaInicio implements Initializable {
     }
 
     @FXML private Button addProduct;
-    @FXML private Button addStock;
+    @FXML private Button logOut;
+
+    @FXML
+    private void cerrarCesion (ActionEvent event){
+        store = null;
+        FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
+        Parent root = fxWeaver.loadView(Inicio.class);
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
 
     @FXML
     public void goToAddProduct (ActionEvent event) throws IOException {

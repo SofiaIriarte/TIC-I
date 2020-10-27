@@ -37,17 +37,18 @@
          </font>
       </Button>
       <Button fx:id="crearTienda" layoutX="116.0" layoutY="454.0" mnemonicParsing="false" onAction="#goToCrearTienda" prefHeight="37.0" prefWidth="221.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="REGISTRAR TIENDA" textFill="#7d4de0" />
-      <Button fx:id="home2" layoutX="800.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToBrandHome" style="-fx-background-color: transparent black" text="HOME" textFill="#7d4de0" textOverrun="CLIP">
+      <Button layoutX="800.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="HOME" textFill="#7d4de0" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
       </Button>
-      <Button fx:id="home11" layoutX="883.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToBrandHome" style="-fx-background-color: transparent black" text="CONTACT" textFill="#7d4de0" textOverrun="CLIP">
+      <Button layoutX="883.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="CONTACT" textFill="#7d4de0" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
       </Button>
       <Pane layoutX="802.0" layoutY="68.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #7d4de0#7d4de0;" />
       <Pane layoutX="899.0" layoutY="68.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #7d4de0#7d4de0;" />
+      <Button fx:id="logOut" layoutX="116.0" layoutY="508.0" mnemonicParsing="false" onAction="#cerrarCesion" prefHeight="37.0" prefWidth="221.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="CERRAR CESIÓN" textFill="#7d4de0" />
    </children>
 </AnchorPane>

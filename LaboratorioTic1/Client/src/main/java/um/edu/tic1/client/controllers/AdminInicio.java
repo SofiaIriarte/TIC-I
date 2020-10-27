@@ -14,6 +14,8 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static um.edu.tic1.client.UserApplication.admin;
 import static um.edu.tic1.client.UserApplication.springContext;
 
 @Component
@@ -26,6 +28,18 @@ public class AdminInicio implements Initializable {
 
     @FXML private Button crearMarca;
     @FXML private Button crearTienda;
+    @FXML private Button logOut;
+
+    @FXML
+    private void cerrarCesion (ActionEvent event){
+        admin = null;
+        FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
+        Parent root = fxWeaver.loadView(Inicio.class);
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
 
     @FXML
     public void goToCrearMarca (ActionEvent event) throws IOException {

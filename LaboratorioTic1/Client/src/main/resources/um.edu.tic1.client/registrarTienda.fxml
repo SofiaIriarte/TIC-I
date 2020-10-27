@@ -43,12 +43,12 @@
                 <Image url="@../images/Web_PNG.png" />
             </image>
         </ImageView>
-      <Button fx:id="home2" layoutX="790.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToBrandHome" style="-fx-background-color: transparent black" text="HOME" textFill="#7d4de0" textOverrun="CLIP">
+      <Button fx:id="home" layoutX="790.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToAdminHome" style="-fx-background-color: transparent black" text="HOME" textFill="#7d4de0" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
       </Button>
-      <Button fx:id="home11" layoutX="873.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToBrandHome" style="-fx-background-color: transparent black" text="CONTACT" textFill="#7d4de0" textOverrun="CLIP">
+      <Button layoutX="873.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="CONTACT" textFill="#7d4de0" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>

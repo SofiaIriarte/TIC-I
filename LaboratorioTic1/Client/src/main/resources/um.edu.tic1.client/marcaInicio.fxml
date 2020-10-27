@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="600.0" prefWidth="1000" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.MarcaInicio">
     <children>
@@ -33,17 +36,22 @@
                 <Font name="System Bold" size="13.0" />
             </font>
         </Button>
-      <Button fx:id="home" layoutX="787.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="HOME" textFill="#7d4de0" textOverrun="CLIP">
+      <Button layoutX="787.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="HOME" textFill="#7d4de0" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
       </Button>
-      <Button fx:id="home1" layoutX="870.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="CONTACT" textFill="#7d4de0" textOverrun="CLIP">
+      <Button layoutX="870.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="CONTACT" textFill="#7d4de0" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
       </Button>
       <Pane layoutX="789.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #7d4de0#7d4de0;" />
-      <Pane layoutX="886.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #7d4de0#7d4de0;" />
+      <Pane layoutX="881.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #7d4de0#7d4de0;" />
+      <Button fx:id="logOut" layoutX="116.0" layoutY="448.0" mnemonicParsing="false" onAction="#cerrarCesion" prefHeight="36.0" prefWidth="221.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="CERRAR CESIÓN" textFill="#7d4de0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

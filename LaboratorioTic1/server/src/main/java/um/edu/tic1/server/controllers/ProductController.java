@@ -21,10 +21,9 @@ public class ProductController {
 
     @GetMapping("/findProduct/")
     @Transactional
-    public ProductDTO findProduct (@RequestParam(name = "productId") String productId){
-        int idProduct = Integer.parseInt(productId);
-        if (productRepository.existsById(idProduct)){
-            Product product = productRepository.findById(idProduct).get();
+    public ProductDTO findProduct (@RequestParam(name = "productId") int productId){
+        if (productRepository.existsById(productId)){
+            Product product = productRepository.findById(productId).get();
             return product.toDTO();
         }
         return null;

@@ -52,12 +52,12 @@ public class AgregarProductoATienda implements Initializable {
     public void registerProduct (){
         StockService stockService = new StockService();
         ProductService productService = new ProductService();
-        int prod = Integer.parseInt(idProducto.getText());
+        Integer prod = Integer.parseInt(idProducto.getText());
         int store = UserApplication.store.getiD();
         int cant = Integer.parseInt(cantidad.getText());
         String id = idProducto.getText()+UserApplication.store.getUser()+talle.getText();
         String size = talle.getText();
-        ProductDTO productDTO = productService.findById("idProducto.getText()");
+        ProductDTO productDTO = productService.findById("?productId=" + prod.toString());
         if (productDTO == null){
             return;
         } else {

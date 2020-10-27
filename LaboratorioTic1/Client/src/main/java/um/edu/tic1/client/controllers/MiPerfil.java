@@ -55,6 +55,19 @@ public class MiPerfil implements Initializable {
 
     @FXML private Button cancelar;
 
+    @FXML private Button logOut;
+
+    @FXML
+    private void cerrarCesion (ActionEvent event){
+        cliente = null;
+        FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
+        Parent root = fxWeaver.loadView(Inicio.class);
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
     @FXML
     public void cancelarAgregarMetodo (){
         this.confirmar.setDisable(true);
