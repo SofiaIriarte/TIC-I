@@ -189,7 +189,7 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <ComboBox fx:id="metodosDePago" layoutX="816.0" layoutY="476.0" prefWidth="150.0" promptText="METODO DE PAGO" style="-fx-background-color: WHITE;" />
+      <ComboBox fx:id="metodosDePago" layoutX="809.0" layoutY="506.0" prefHeight="27.0" prefWidth="164.0" promptText="METODO DE PAGO" style="-fx-background-color: WHITE;" />
       <Label fx:id="error" layoutX="328.0" layoutY="552.0" prefHeight="17.0" prefWidth="351.0" textFill="#f80202">
          <font>
             <Font size="18.0" />
@@ -201,22 +201,22 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="column1" layoutX="90.0" layoutY="161.0" text="NOMBRE" textFill="#1b09e4">
+      <Label fx:id="column1" layoutX="90.0" layoutY="161.0" text="NOMBRE" textFill="#e8505b">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="column2" layoutX="290.0" layoutY="161.0" text="TIENDA Y TALLE" textFill="#1b09e4">
+      <Label fx:id="column2" layoutX="290.0" layoutY="161.0" text="TIENDA Y TALLE" textFill="#e8505b">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="column3" layoutX="565.0" layoutY="161.0" text="CANTIDAD" textFill="#1b09e4">
+      <Label fx:id="column3" layoutX="565.0" layoutY="161.0" text="CANTIDAD" textFill="#e8505b">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="column4" layoutX="656.0" layoutY="161.0" text="PRECIO" textFill="#1b09e4">
+      <Label fx:id="column4" layoutX="656.0" layoutY="161.0" text="PRECIO" textFill="#e8505b">
          <font>
             <Font size="14.0" />
          </font>
@@ -226,7 +226,7 @@
             <Image url="@../images/Carrito.png" />
          </image>
       </ImageView>
-      <Label fx:id="messageEmptyCart" layoutX="303.0" layoutY="405.0" text="EL CARRITO ESTA VACIO" textFill="#3607f2">
+      <Label fx:id="messageEmptyCart" layoutX="303.0" layoutY="405.0" text="EL CARRITO ESTA VACIO" textFill="#e8505b">
          <font>
             <Font size="18.0" />
          </font>

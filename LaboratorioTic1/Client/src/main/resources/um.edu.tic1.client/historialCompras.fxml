@@ -136,32 +136,32 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <Label fx:id="column1" layoutX="109.0" layoutY="170.0" text="Nombre del producto" textFill="#2903e8">
+      <Label fx:id="column1" layoutX="109.0" layoutY="170.0" text="Nombre del producto" textFill="#e8505b">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="column2" layoutX="264.0" layoutY="171.0" text="Tienda y Talle" textFill="#2903e8">
+      <Label fx:id="column2" layoutX="264.0" layoutY="171.0" text="Tienda y Talle" textFill="#e8505b">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="463.0" layoutY="171.0" text="N° de Tarjeta" textFill="#2903e8">
+      <Label layoutX="463.0" layoutY="171.0" text="N° de Tarjeta" textFill="#e8505b">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="column4" layoutX="642.0" layoutY="171.0" text="Fecha" textFill="#2903e8">
+      <Label fx:id="column4" layoutX="642.0" layoutY="171.0" text="Fecha" textFill="#e8505b">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="column5" layoutX="730.0" layoutY="170.0" text="Cant." textFill="#2903e8">
+      <Label fx:id="column5" layoutX="730.0" layoutY="170.0" text="Cant." textFill="#e8505b">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="column6" layoutX="775.0" layoutY="171.0" text="Precio" textFill="#2903e8">
+      <Label fx:id="column6" layoutX="775.0" layoutY="171.0" text="Precio" textFill="#e8505b">
          <font>
             <Font size="14.0" />
          </font>
@@ -171,7 +171,7 @@
             <Image url="@../images/HistorialdeCompras.png" />
          </image>
       </ImageView>
-      <Label fx:id="mensjaeEmptyHistorial" layoutX="259.0" layoutY="518.0" text="USTED NO HA REALIZADO NINGUNA COMPRA" textFill="#3500f5">
+      <Label fx:id="mensjaeEmptyHistorial" layoutX="259.0" layoutY="518.0" text="USTED NO HA REALIZADO NINGUNA COMPRA" textFill="#e8505b">
          <font>
             <Font size="18.0" />
          </font>
