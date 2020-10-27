@@ -41,7 +41,7 @@
                 <Font name="System Bold" size="13.0" />
             </font>
         </Button>
-        <Text layoutX="72.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mi Carrito" wrappingWidth="257.6724548339844">
+        <Text layoutX="72.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mi Carrito" wrappingWidth="257.6724548339844">
             <font>
                 <Font name="Futura Medium" size="35.0" />
             </font>
@@ -82,13 +82,62 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="deleteProduct" mnemonicParsing="false" onAction="#deleteProductFromCart" text="X" GridPane.columnIndex="4" />
-            <Button fx:id="deleteProduct2" mnemonicParsing="false" onAction="#deleteProductFromCart2" text="X" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <Button fx:id="deleteProduct3" mnemonicParsing="false" onAction="#deleteProductFromCart3" text="X" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <Button fx:id="deleteProduct4" mnemonicParsing="false" onAction="#deleteProductFromCart4" text="X" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-            <Button fx:id="deleteProduct5" mnemonicParsing="false" onAction="#deleteProductFromCart5" text="X" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-            <Button fx:id="deleteProduct6" mnemonicParsing="false" onAction="#deleteProductFromCart6" text="X" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-            <Button fx:id="deleteProduct7" mnemonicParsing="false" onAction="#deleteProductFromCart7" text="X" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <Button fx:id="deleteProduct" mnemonicParsing="false" onAction="#deleteProductFromCart" style="-fx-background-color: transparent;" GridPane.columnIndex="4">
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/TrashLogo.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="deleteProduct2" mnemonicParsing="false" onAction="#deleteProductFromCart2" style="-fx-background-color: transparent;" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/TrashLogo.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="deleteProduct3" mnemonicParsing="false" onAction="#deleteProductFromCart3" style="-fx-background-color: transparent;" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/TrashLogo.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="deleteProduct4" mnemonicParsing="false" onAction="#deleteProductFromCart4" style="-fx-background-color: transparent;" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/TrashLogo.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="deleteProduct5" mnemonicParsing="false" onAction="#deleteProductFromCart5" style="-fx-background-color: transparent;" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/TrashLogo.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="deleteProduct6" mnemonicParsing="false" onAction="#deleteProductFromCart6" style="-fx-background-color: transparent;" GridPane.columnIndex="4" GridPane.rowIndex="5">
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/TrashLogo.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="deleteProduct7" mnemonicParsing="false" onAction="#deleteProductFromCart7" style="-fx-background-color: transparent;" GridPane.columnIndex="4" GridPane.rowIndex="6">
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/TrashLogo.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
             <Label fx:id="nombre" prefHeight="17.0" prefWidth="181.0" />
             <Label fx:id="tiendaTalle" prefHeight="17.0" prefWidth="216.0" GridPane.columnIndex="1" />
             <Label fx:id="cantidad" prefHeight="17.0" prefWidth="85.0" GridPane.columnIndex="2" />
@@ -119,19 +168,68 @@
             <Label fx:id="precio7" prefHeight="17.0" prefWidth="59.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
          </children>
       </GridPane>
-      <Label fx:id="precioTotal" layoutX="655.0" layoutY="554.0" prefHeight="17.0" prefWidth="65.0" text="Label">
+      <Label fx:id="precioTotal" layoutX="769.0" layoutY="552.0" prefHeight="17.0" prefWidth="65.0" text="Label">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Button fx:id="goNextPage" layoutX="713.0" layoutY="506.0" mnemonicParsing="false" onAction="#goToNextPage" text="&gt;" />
-      <Button fx:id="goPreviousPage" layoutX="678.0" layoutY="506.0" mnemonicParsing="false" onAction="#goToPreviousPage" text="&lt;" />
-      <ComboBox fx:id="metodosDePago" layoutX="817.0" layoutY="434.0" prefWidth="150.0" promptText="METODO DE PAGO" style="-fx-background-color: WHITE;" />
+      <Button fx:id="goNextPage" layoutX="713.0" layoutY="506.0" mnemonicParsing="false" onAction="#goToNextPage" style="-fx-background-color: transparen;">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/FlechaIzq.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="goPreviousPage" layoutX="678.0" layoutY="506.0" mnemonicParsing="false" onAction="#goToPreviousPage" style="-fx-background-color: transparen;">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/flecha.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ComboBox fx:id="metodosDePago" layoutX="816.0" layoutY="476.0" prefWidth="150.0" promptText="METODO DE PAGO" style="-fx-background-color: WHITE;" />
       <Label fx:id="error" layoutX="328.0" layoutY="552.0" prefHeight="17.0" prefWidth="351.0" textFill="#f80202">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
       <Line endX="311.70086669921875" layoutX="294.0" layoutY="533.0" startX="-174.23306274414062" stroke="#e8505b" />
+      <Label layoutX="699.0" layoutY="552.0" text="TOTAL:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="column1" layoutX="90.0" layoutY="161.0" text="NOMBRE" textFill="#1b09e4">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="column2" layoutX="290.0" layoutY="161.0" text="TIENDA Y TALLE" textFill="#1b09e4">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="column3" layoutX="565.0" layoutY="161.0" text="CANTIDAD" textFill="#1b09e4">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="column4" layoutX="656.0" layoutY="161.0" text="PRECIO" textFill="#1b09e4">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="emptyCart" fitHeight="345.0" fitWidth="527.0" layoutX="137.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Carrito.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="messageEmptyCart" layoutX="303.0" layoutY="405.0" text="EL CARRITO ESTA VACIO" textFill="#3607f2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>

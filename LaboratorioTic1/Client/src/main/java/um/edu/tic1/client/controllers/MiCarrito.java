@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import net.rgielen.fxweaver.core.FxWeaver;
 import net.rgielen.fxweaver.core.FxmlView;
@@ -88,8 +89,11 @@ public class MiCarrito implements Initializable {
     @FXML private ComboBox<String> metodosDePago;
 
     @FXML private Label precioTotal;
-
     @FXML private Label error;
+
+    @FXML private ImageView emptyCart;
+    @FXML private Label messageEmptyCart;
+    @FXML private Label column1, column2, column3, column4;
 
     private List<CarritoDTO> search;
     private List<MetodoDePagoDTO> metodoDePagoDTOS;
@@ -104,6 +108,7 @@ public class MiCarrito implements Initializable {
         } else {
             this.clear();
         }
+        this.showEmptyThings();
         metodoDePagoDTOS = metodoDePagoService.getMetodosPorUsuario(cliente.getUserName());
         if (metodoDePagoDTOS.size() > 0){
             for (int i = 0; i < metodoDePagoDTOS.size(); i++){
@@ -114,6 +119,20 @@ public class MiCarrito implements Initializable {
         }
         Integer precioTotal = this.calcularTotal();
         this.precioTotal.setText("$ " + precioTotal.toString());
+    }
+
+    private void showEmptyThings (){
+        if (search.size() == 0){
+            this.emptyCart.setVisible(true);
+            this.messageEmptyCart.setVisible(true);
+            column1.setVisible(false);
+            column2.setVisible(false);
+            column3.setVisible(false);
+            column4.setVisible(false);
+        } else {
+            this.emptyCart.setVisible(false);
+            this.messageEmptyCart.setVisible(false);
+        }
     }
 
     @FXML
@@ -327,6 +346,7 @@ public class MiCarrito implements Initializable {
             this.showProducts();
         } else {
             this.clear();
+            this.showEmptyThings();
         }
     }
 
@@ -338,6 +358,7 @@ public class MiCarrito implements Initializable {
             this.showProducts();
         } else {
             this.clear();
+            this.showEmptyThings();
         }
     }
 
@@ -349,6 +370,7 @@ public class MiCarrito implements Initializable {
             this.showProducts();
         } else {
             this.clear();
+            this.showEmptyThings();
         }
     }
 
@@ -360,6 +382,7 @@ public class MiCarrito implements Initializable {
             this.showProducts();
         } else {
             this.clear();
+            this.showEmptyThings();
         }
     }
 
@@ -371,6 +394,7 @@ public class MiCarrito implements Initializable {
             this.showProducts();
         } else {
             this.clear();
+            this.showEmptyThings();
         }
     }
 
@@ -382,6 +406,7 @@ public class MiCarrito implements Initializable {
             this.showProducts();
         } else {
             this.clear();
+            this.showEmptyThings();
         }
     }
 
@@ -393,6 +418,7 @@ public class MiCarrito implements Initializable {
             this.showProducts();
         } else {
             this.clear();
+            this.showEmptyThings();
         }
     }
 

@@ -171,15 +171,29 @@
                 </VBox>
             </children>
         </GridPane>
-        <Button fx:id="nextPage" layoutX="922.0" layoutY="561.0" mnemonicParsing="false" onAction="#goToNextPage" style="-fx-background-color: trasparent;" text="&gt;" textAlignment="CENTER">
+        <Button fx:id="nextPage" layoutX="922.0" layoutY="561.0" mnemonicParsing="false" onAction="#goToNextPage" style="-fx-background-color: trasparent;" textAlignment="CENTER">
             <font>
                 <Font size="14.0" />
             </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/FlechaIzq.png" />
+               </image>
+            </ImageView>
+         </graphic>
         </Button>
-        <Button fx:id="previousPage" layoutX="885.0" layoutY="561.0" mnemonicParsing="false" onAction="#goToPreviousPage" style="-fx-background-color: trasparent;" text="&lt;" textAlignment="CENTER">
+        <Button fx:id="previousPage" layoutX="885.0" layoutY="561.0" mnemonicParsing="false" onAction="#goToPreviousPage" style="-fx-background-color: trasparent;" textAlignment="CENTER">
             <font>
                 <Font size="14.0" />
             </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/flecha.png" />
+               </image>
+            </ImageView>
+         </graphic>
         </Button>
         <Pane layoutX="43.0" layoutY="141.0" prefHeight="44.0" prefWidth="200.0" style="-fx-background-color: #e8505b#e8505b;">
             <children>

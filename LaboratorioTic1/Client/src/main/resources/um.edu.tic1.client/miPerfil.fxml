@@ -38,7 +38,7 @@
             </font>
         </Button>
         <Button fx:id="verHistorial" layoutX="70.0" layoutY="334.0" mnemonicParsing="false" onAction="#goToHistorial" prefHeight="37.0" prefWidth="221.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="HISTORIAL DE COMPRAS" textFill="#e8505b" />
-        <Text layoutX="72.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome," wrappingWidth="257.6724548339844">
+        <Text layoutX="72.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenid@," wrappingWidth="257.6724548339844">
             <font>
                 <Font name="Futura Medium" size="35.0" />
             </font>
@@ -67,25 +67,30 @@
                 </ImageView>
             </graphic>
         </Button>
-      <TextField fx:id="nTarjeta" layoutX="95.0" layoutY="438.0" prefHeight="25.0" prefWidth="171.0" promptText="N° de tarjeta" style="-fx-background-color: WHITE;">
+      <TextField fx:id="nTarjeta" layoutX="95.0" layoutY="428.0" prefHeight="25.0" prefWidth="171.0" promptText="N° de tarjeta" style="-fx-background-color: WHITE;">
          <font>
             <Font size="15.0" />
          </font>
       </TextField>
-      <TextField fx:id="titular" layoutX="95.0" layoutY="486.0" prefHeight="25.0" prefWidth="171.0" promptText="Titular" style="-fx-background-color: WHITE;">
+      <TextField fx:id="titular" layoutX="95.0" layoutY="471.0" prefHeight="25.0" prefWidth="171.0" promptText="Titular" style="-fx-background-color: WHITE;">
          <font>
             <Font size="15.0" />
          </font>
       </TextField>
-      <Button fx:id="confirmar" layoutX="114.0" layoutY="531.0" mnemonicParsing="false" onAction="#confirmarMetodo" prefHeight="31.0" prefWidth="133.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="CONFIRMAR" textFill="#e8505b">
+      <Button fx:id="confirmar" layoutX="114.0" layoutY="513.0" mnemonicParsing="false" onAction="#confirmarMetodo" prefHeight="31.0" prefWidth="133.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="CONFIRMAR" textFill="#e8505b">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="cancelar" layoutX="144.0" layoutY="569.0" mnemonicParsing="false" onAction="#cancelarAgregarMetodo" prefHeight="18.0" prefWidth="73.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="CANCELAR" textFill="#e8505b">
+      <Button fx:id="cancelar" layoutX="144.0" layoutY="553.0" mnemonicParsing="false" onAction="#cancelarAgregarMetodo" prefHeight="18.0" prefWidth="73.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="CANCELAR" textFill="#e8505b">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
       </Button>
+      <ImageView fitHeight="340.0" fitWidth="539.0" layoutX="398.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/deco1.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import net.rgielen.fxweaver.core.FxWeaver;
 import net.rgielen.fxweaver.core.FxmlView;
@@ -71,6 +72,10 @@ public class HistorialCompras implements Initializable {
     @FXML private Label cantidad4; @FXML private Label cantidad5;
     @FXML private Label cantidad6; @FXML private Label cantidad7;
 
+    @FXML private Label mensjaeEmptyHistorial;
+    @FXML private ImageView fotoEmptyHistorial;
+    @FXML private Label column1,column2,column3,column4,column5,column6;
+
     private List<CompraDTO> compras;
     private int page = 0;
 
@@ -79,6 +84,24 @@ public class HistorialCompras implements Initializable {
         compras = compraService.getboughtItems(cliente.getUserName());
         if (compras.size() > 0){
             this.showProducts();
+
+        }
+        this.emptyScreen();
+    }
+
+    private void emptyScreen (){
+        if (compras.size() == 0){
+            mensjaeEmptyHistorial.setVisible(true);
+            fotoEmptyHistorial.setVisible(true);
+            column1.setVisible(false);
+            column2.setVisible(false);
+            column3.setVisible(false);
+            column4.setVisible(false);
+            column5.setVisible(false);
+            column6.setVisible(false);
+        } else {
+            mensjaeEmptyHistorial.setVisible(false);
+            fotoEmptyHistorial.setVisible(false);
         }
     }
 

@@ -50,10 +50,17 @@
                 </ImageView>
             </graphic>
         </Button>
-        <Button fx:id="back" layoutX="24.0" layoutY="82.0" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="73.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="ATRAS" textFill="#e8505b">
+        <Button fx:id="back" layoutX="14.0" layoutY="68.0" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: TRANSPARENT;" textFill="#e8505b">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/flechaAtres.png" />
+               </image>
+            </ImageView>
+         </graphic>
         </Button>
       <Pane layoutX="153.0" layoutY="331.0" prefHeight="251.0" prefWidth="153.0" style="-fx-background-color: #e8505b#e8505b;">
          <children>

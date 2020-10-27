@@ -120,14 +120,28 @@
             <Label fx:id="date7" prefHeight="17.0" prefWidth="139.0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="6" />
             </children>
         </GridPane>
-        <Button fx:id="goNextPage" layoutX="769.0" layoutY="506.0" mnemonicParsing="false" onAction="#goToNextPage" text="&gt;" />
-        <Button fx:id="goPreviousPage" layoutX="733.0" layoutY="506.0" mnemonicParsing="false" onAction="#goToPreviousPage" text="&lt;" />
-      <Label layoutX="109.0" layoutY="170.0" text="Nombre del producto" textFill="#2903e8">
+        <Button fx:id="goNextPage" layoutX="769.0" layoutY="506.0" mnemonicParsing="false" onAction="#goToNextPage" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/FlechaIzq.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+        <Button fx:id="goPreviousPage" layoutX="733.0" layoutY="506.0" mnemonicParsing="false" onAction="#goToPreviousPage" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/flecha.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label fx:id="column1" layoutX="109.0" layoutY="170.0" text="Nombre del producto" textFill="#2903e8">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="264.0" layoutY="171.0" text="Tienda y Talle" textFill="#2903e8">
+      <Label fx:id="column2" layoutX="264.0" layoutY="171.0" text="Tienda y Talle" textFill="#2903e8">
          <font>
             <Font size="13.0" />
          </font>
@@ -137,19 +151,29 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="642.0" layoutY="171.0" text="Fecha" textFill="#2903e8">
+      <Label fx:id="column4" layoutX="642.0" layoutY="171.0" text="Fecha" textFill="#2903e8">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="730.0" layoutY="170.0" text="Cant." textFill="#2903e8">
+      <Label fx:id="column5" layoutX="730.0" layoutY="170.0" text="Cant." textFill="#2903e8">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="775.0" layoutY="171.0" text="Precio" textFill="#2903e8">
+      <Label fx:id="column6" layoutX="775.0" layoutY="171.0" text="Precio" textFill="#2903e8">
          <font>
             <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="fotoEmptyHistorial" fitHeight="341.0" fitWidth="383.0" layoutX="287.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/HistorialdeCompras.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="mensjaeEmptyHistorial" layoutX="259.0" layoutY="518.0" text="USTED NO HA REALIZADO NINGUNA COMPRA" textFill="#3500f5">
+         <font>
+            <Font size="18.0" />
          </font>
       </Label>
     </children>
