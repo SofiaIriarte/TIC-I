@@ -29,14 +29,6 @@ public class ProductService {
         return brands;
     }
 
-    public List<String> getDistinctColor (){
-        RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<List<String>> response = restTemplate.exchange("http://localhost:8080/product/findColor",
-                HttpMethod.GET, null, new ParameterizedTypeReference<>() {});
-        List<String> brands = response.getBody();
-        return brands;
-    }
-
     public List<String> getDistinctCathegory (){
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<List<String>> response = restTemplate.exchange("http://localhost:8080/product/findCathegory",

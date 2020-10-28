@@ -66,7 +66,6 @@
       <ComboBox fx:id="entrega" layoutX="576.0" layoutY="364.0" prefHeight="40.0" prefWidth="212.0" promptText="Forma de entrega" style="-fx-background-color: WHITE;" />
       <ComboBox fx:id="tiendaTalle" layoutX="577.0" layoutY="313.0" prefHeight="36.0" prefWidth="210.0" promptText="TIenda - Talle" style="-fx-background-color: WHITE;" />
       <ComboBox fx:id="cantidad" layoutX="577.0" layoutY="261.0" prefHeight="36.0" prefWidth="212.0" promptText="Cantidad" style="-fx-background-color: White;" />
-      <Button fx:id="addToCart" layoutX="713.0" layoutY="439.0" mnemonicParsing="false" onAction="#agregarAlCarrito" prefHeight="42.0" prefWidth="95.0" style="-fx-background-color: white;" />
       <Label fx:id="precio" layoutX="565.0" layoutY="442.0" prefHeight="38.0" prefWidth="125.0" text="UY 3390" textFill="#e8505b">
          <font>
             <Font size="27.0" />
@@ -89,10 +88,14 @@
       <ImageView fx:id="imagenProducto" fitHeight="348.0" fitWidth="350.0" layoutX="172.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
       </ImageView>
       <Line endX="86.43768310546875" layoutX="727.0" layoutY="202.0" startX="-169.90142822265625" stroke="#e8505b" />
-      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="745.0" layoutY="445.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/iconocarrito.png" />
-         </image>
-      </ImageView>
+      <Button fx:id="temp" layoutX="702.0" layoutY="437.0" mnemonicParsing="false" onAction="#temp2" prefHeight="49.0" prefWidth="87.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iconocarrito.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
     </children>
 </AnchorPane>

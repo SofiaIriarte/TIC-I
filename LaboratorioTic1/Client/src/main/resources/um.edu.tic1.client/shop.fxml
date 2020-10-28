@@ -47,19 +47,17 @@
             </effect>
         </Button>
         <Pane layoutX="776.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
-        <Button fx:id="buscar" layoutX="42.0" layoutY="491.0" mnemonicParsing="false" onAction="#search" prefHeight="36.0" prefWidth="199.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="BUSCAR" textFill="#e8505b">
+        <Button fx:id="buscar" layoutX="43.0" layoutY="464.0" mnemonicParsing="false" onAction="#search" prefHeight="36.0" prefWidth="199.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="BUSCAR" textFill="#e8505b">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>
         </Button>
         <ComboBox fx:id="marca" layoutX="43.0" layoutY="239.0" prefHeight="27.0" prefWidth="195.0" style="-fx-background-color: white;" />
         <ComboBox fx:id="categoria" layoutX="43.0" layoutY="307.0" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: white;" />
-        <ComboBox fx:id="color" layoutX="44.0" layoutY="376.0" prefHeight="27.0" prefWidth="198.0" style="-fx-background-color: white;" />
-        <ComboBox fx:id="estacion" layoutX="45.0" layoutY="444.0" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: white;" />
+        <ComboBox fx:id="estacion" layoutX="43.0" layoutY="371.0" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: white;" />
         <Label layoutX="45.0" layoutY="215.0" text="Marca:" />
         <Label layoutX="41.0" layoutY="286.0" text="Categoria:" />
-        <Label layoutX="44.0" layoutY="353.0" text="Color:" />
-        <Label layoutX="45.0" layoutY="424.0" text="Estacion:" />
+        <Label layoutX="45.0" layoutY="351.0" text="Estacion:" />
         <GridPane fx:id="grid" layoutX="321.0" layoutY="105.0" prefHeight="451.0" prefWidth="666.0">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -213,7 +211,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="compare" layoutX="41.0" layoutY="542.0" mnemonicParsing="false" onAction="#compareProducts" prefHeight="36.0" prefWidth="199.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="COMPARAR" textFill="#e8505b">
+      <Button fx:id="compare" layoutX="41.0" layoutY="512.0" mnemonicParsing="false" onAction="#compareProducts" prefHeight="36.0" prefWidth="199.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="COMPARAR" textFill="#e8505b">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>

@@ -11,4 +11,6 @@ public interface CompraRepository extends CrudRepository<Compra, String> {
 
     List<Compra> findAllByUserId(String userID);
 
+    List<Compra> findAllByTienda (String tienda);
+
 }

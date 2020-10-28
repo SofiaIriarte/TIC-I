@@ -50,11 +50,6 @@ public class ShopSinLogIn implements Initializable {
         this.marca.setItems(obList);
         this.marca.getItems().add(null);
 
-        List<String> colores = productService.getDistinctColor();
-        ObservableList<String> obList2 = FXCollections.observableList(colores);
-        this.color.setItems(obList2);
-        this.color.getItems().add(null);
-
         List<String> categorias = productService.getDistinctCathegory();
         ObservableList<String> obList3 = FXCollections.observableList(categorias);
         this.categoria.setItems(obList3);
@@ -148,7 +143,6 @@ public class ShopSinLogIn implements Initializable {
 
     @FXML private ComboBox<String> marca;
     @FXML private ComboBox<String> categoria;
-    @FXML private ComboBox<String> color;
     @FXML private ComboBox<String> estacion;
 
     @FXML private Button nextPage;
@@ -194,15 +188,12 @@ public class ShopSinLogIn implements Initializable {
     public void search () throws IOException {
         String cathegory = this.categoria.getValue();
         String brand = this.marca.getValue();
-        String col = this.color.getValue();
         String esta = this.estacion.getValue();
         String url = "";
         if (cathegory != null){
             url += "cathegrory=" + cathegory + "&";
         } if (brand != null){
             url += "marca=" + brand + "&";
-        } if (col != null){
-            url += "color=" + col + "&";
         } if (esta != null){
             url += "estacion=" + esta;
         }

@@ -19,8 +19,8 @@
             </image>
         </ImageView>
         <TextField fx:id="idProducto" layoutX="85.0" layoutY="210.0" prefHeight="27.0" prefWidth="313.0" style="-fx-background-color: white;" />
-        <TextField fx:id="cantidad" layoutX="84.0" layoutY="303.0" prefHeight="27.0" prefWidth="316.0" style="-fx-background-color: white;" />
-        <Button fx:id="agregarProducto" layoutX="139.0" layoutY="458.0" mnemonicParsing="false" onAction="#registerProduct" prefHeight="36.0" prefWidth="211.0" style="-fx-background-color: #7d4de0#7d4de0;" text="AGREGAR PRUCTO" textFill="WHITE" />
+        <TextField fx:id="cantidad" layoutX="84.0" layoutY="287.0" prefHeight="27.0" prefWidth="316.0" style="-fx-background-color: white;" />
+        <Button fx:id="agregarProducto" layoutX="137.0" layoutY="502.0" mnemonicParsing="false" onAction="#registerProduct" prefHeight="36.0" prefWidth="211.0" style="-fx-background-color: #7d4de0#7d4de0;" text="AGREGAR PRUCTO" textFill="WHITE" />
         <Label fx:id="error" layoutX="181.0" layoutY="554.0" prefHeight="17.0" prefWidth="233.0" textAlignment="CENTER" textFill="#e10505" />
         <Label layoutX="137.0" layoutY="103.0" prefHeight="41.0" prefWidth="258.0" text="AGREGAR PRODUCTO" textAlignment="CENTER" textFill="#7d4de0">
             <font>
@@ -33,14 +33,16 @@
             </effect>
         </Button>
         <Text layoutX="84.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID DEL PRODUCTO:" />
-        <Text layoutX="82.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CANTIDAD (STOCK):" />
+        <Text layoutX="82.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CANTIDAD (STOCK):" />
         <ImageView fitHeight="440.0" fitWidth="460.0" layoutX="517.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../images/app_development_PNG.png" />
             </image>
         </ImageView>
-      <TextField fx:id="talle" layoutX="83.0" layoutY="388.0" prefHeight="27.0" prefWidth="318.0" style="-fx-background-color: white;" />
-      <Text layoutX="82.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TALLE:" />
+      <TextField fx:id="talle" layoutX="83.0" layoutY="359.0" prefHeight="27.0" prefWidth="318.0" style="-fx-background-color: white;" />
+      <Text layoutX="84.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TALLE:" />
       <Pane layoutX="585.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #7d4de0#7d4de0;" />
+      <Text layoutX="84.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COLOR:" />
+      <TextField fx:id="color" layoutX="83.0" layoutY="421.0" prefHeight="27.0" prefWidth="318.0" style="-fx-background-color: white;" />
     </children>
 </AnchorPane>

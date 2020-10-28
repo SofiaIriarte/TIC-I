@@ -19,9 +19,6 @@ public interface ProductRepository extends CrudRepository<Product, Integer>, Jpa
     @Query("SELECT distinct p.cathegory from product p")
     List<String> findDistinctByCathegory();
 
-    @Query("SELECT distinct p.color from product p")
-    List<String> findDistinctByColor();
-
     @Query("SELECT distinct p.estacion from product p")
     List<String> findDistinctByEstacion();
 

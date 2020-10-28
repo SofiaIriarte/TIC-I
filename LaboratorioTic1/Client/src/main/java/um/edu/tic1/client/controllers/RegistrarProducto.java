@@ -37,7 +37,6 @@ public class RegistrarProducto implements Initializable {
     @FXML private TextField id;
     @FXML private TextField price;
     @FXML private TextField name;
-    @FXML private TextField color;
     @FXML private TextField cathegory;
     @FXML private TextField description;
     @FXML private TextField estacion;
@@ -56,14 +55,14 @@ public class RegistrarProducto implements Initializable {
         if (file != null) {
             try {
                 if (id.getText().isEmpty() || price.getText().isEmpty() || name.getText().isEmpty()
-                        || color.getText().isEmpty() || cathegory.getText().isEmpty() || description.getText().isEmpty()
+                        || cathegory.getText().isEmpty() || description.getText().isEmpty()
                         || estacion.getText().isEmpty()) {
                     return;
                 } else {
                     int idProduct = Integer.parseInt(id.getText());
                     long precio = Long.parseLong(price.getText());
-                    ProductDTO productDTO = new ProductDTO(idProduct,precio,description.getText(),name.getText(),
-                            cathegory.getText(),brand.getName(),color.getText(),estacion.getText());
+                    ProductDTO productDTO = new ProductDTO(idProduct,precio,description.getText(),
+                            name.getText(), cathegory.getText(),brand.getName(),estacion.getText());
                     productDTO.setImage(fileContet);
                     productService.save(productDTO);
                     this.goToBrandHome(event);

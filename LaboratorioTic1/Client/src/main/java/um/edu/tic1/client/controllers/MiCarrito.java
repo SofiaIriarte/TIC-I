@@ -438,13 +438,16 @@ public class MiCarrito implements Initializable {
                 }
                 for (int i = 0; i < search.size(); i++){
                     CarritoDTO temp = search.get(i);
+                    String tienda = temp.getStoreAndTalle();
+                    String[] store = tienda.split("-");
+                    tienda = store[0];
                     StockDTO toCompare = stockService.getStock(temp.getIdStock());
                     int nuevaCantidad = toCompare.getQuantity() - temp.getQuantity();
                     toCompare.setQuantity(nuevaCantidad);
                     stockService.save(toCompare);
                     CompraDTO newCompra = new CompraDTO(temp.getId(),temp.getName(),temp.getUserId(),
                             temp.getStoreAndTalle(),temp.getQuantity(),temp.getPrice(),
-                            LocalDate.now(),metodo);
+                            LocalDate.now(),metodo,temp.getType(),"Comprado",tienda);
                     compraService.save(newCompra);
                     shoppingCartService.deleteItem(temp.getId());
                     search.remove(i);

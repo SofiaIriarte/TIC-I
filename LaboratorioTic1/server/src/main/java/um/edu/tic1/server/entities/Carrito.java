@@ -17,11 +17,12 @@ public class Carrito {
     private String storeAndTalle;
     private String idStock;
     private String price;
+    private String type;
 
     public Carrito (){    }
 
     public Carrito (String id, int quantity, int productId, String name, String userId,
-                    String storeAndTalle, String idStock, String price){
+                    String storeAndTalle, String idStock, String price, String type){
         this.identificador=id;
         this.quantity=quantity;
         this.productId=productId;
@@ -30,6 +31,7 @@ public class Carrito {
         this.storeAndTalle=storeAndTalle;
         this.idStock = idStock;
         this.price=price;
+        this.type = type;
     }
 
     public String getId() {
@@ -90,7 +92,7 @@ public class Carrito {
 
     public CarritoDTO toDTO (){
         return new CarritoDTO(this.identificador, this.quantity, this.productId, this.name,
-                this.userId, this.storeAndTalle,this.idStock,this.price);
+                this.userId, this.storeAndTalle,this.idStock,this.price, this.type);
     }
 
 
@@ -101,4 +103,13 @@ public class Carrito {
     public void setPrice(String price) {
         this.price = price;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
 }

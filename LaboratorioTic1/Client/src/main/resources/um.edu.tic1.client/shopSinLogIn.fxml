@@ -38,19 +38,17 @@
             </effect>
         </Button>
         <Pane layoutX="776.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
-        <Button fx:id="buscar" layoutX="42.0" layoutY="492.0" mnemonicParsing="false" onAction="#search" prefHeight="36.0" prefWidth="199.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="BUSCAR" textFill="#e8505b">
+        <Button fx:id="buscar" layoutX="43.0" layoutY="451.0" mnemonicParsing="false" onAction="#search" prefHeight="36.0" prefWidth="199.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="BUSCAR" textFill="#e8505b">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>
         </Button>
         <ComboBox fx:id="marca" layoutX="43.0" layoutY="239.0" prefHeight="27.0" prefWidth="195.0" style="-fx-background-color: white;" />
         <ComboBox fx:id="categoria" layoutX="43.0" layoutY="307.0" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: white;" />
-        <ComboBox fx:id="color" layoutX="44.0" layoutY="376.0" prefHeight="27.0" prefWidth="198.0" style="-fx-background-color: white;" />
-        <ComboBox fx:id="estacion" layoutX="45.0" layoutY="444.0" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: white;" />
+        <ComboBox fx:id="estacion" layoutX="42.0" layoutY="373.0" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: white;" />
         <Label layoutX="45.0" layoutY="215.0" text="Marca:" />
         <Label layoutX="41.0" layoutY="286.0" text="Categoria:" />
-        <Label layoutX="44.0" layoutY="353.0" text="Color:" />
-        <Label layoutX="45.0" layoutY="424.0" text="Estacion:" />
+        <Label layoutX="45.0" layoutY="349.0" text="Estacion:" />
       <Button fx:id="logIn" layoutX="846.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToLogIn" style="-fx-background-color: transparent black" text="LOGIN" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
@@ -210,7 +208,7 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Button fx:id="compare" layoutX="41.0" layoutY="538.0" mnemonicParsing="false" onAction="#compareProducts" prefHeight="36.0" prefWidth="199.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="COMPARAR" textFill="#e8505b">
+      <Button fx:id="compare" layoutX="41.0" layoutY="503.0" mnemonicParsing="false" onAction="#compareProducts" prefHeight="36.0" prefWidth="199.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="COMPARAR" textFill="#e8505b">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>

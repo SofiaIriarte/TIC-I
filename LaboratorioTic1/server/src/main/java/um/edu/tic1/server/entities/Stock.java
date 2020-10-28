@@ -21,13 +21,16 @@ public class Stock {
     private String talle;
     @Column(length = 10)
     private int quantity;
+    @Column(length = 30)
+    private String color;
 
-    public Stock (String id, int productId, int storeId, String talle, int quantity){
+    public Stock (String id, int productId, int storeId, String talle, int quantity, String color){
         this.id = id;
         this.productId = productId;
         this.storeId = storeId;
         this.talle=talle;
         this.quantity = quantity;
+        this.color = color;
     }
 
     public Stock() {    }
@@ -73,8 +76,15 @@ public class Stock {
     }
 
     public StockDTO toDTO(){
-        StockDTO stockDTO = new StockDTO(this.id, this.productId,this.storeId,this.talle,this.quantity);
+        StockDTO stockDTO = new StockDTO(this.id, this.productId,this.storeId,this.talle,this.quantity,this.color);
         return stockDTO;
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 }

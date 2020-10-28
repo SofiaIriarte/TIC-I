@@ -12,19 +12,25 @@ public class CompraDTO {
     private String price;
     private LocalDate date;
     private String metodoDePago;
+    private String type;
+    private String estado;
+    private String tienda;
 
     public CompraDTO (){}
 
-    public CompraDTO (String id, String productId, String userId, String type, int quantity,
-                   String price, LocalDate date, String metodoDePago){
+    public CompraDTO (String id, String productId, String userId, String tiendaTalle, int quantity,
+                   String price, LocalDate date, String metodoDePago, String type, String estado, String tienda){
         this.identificador=id;
         this.productName=productId;
         this.userId=userId;
-        this.tiendaTalle =type;
+        this.tiendaTalle =tiendaTalle;
         this.quantity=quantity;
         this.price = price;
         this.date = date;
         this.metodoDePago = metodoDePago;
+        this.type = type;
+        this.estado = estado;
+        this.tienda = tienda;
     }
 
     public String getId() {
@@ -91,4 +97,27 @@ public class CompraDTO {
         this.metodoDePago = metodoDePago;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getTienda() {
+        return tienda;
+    }
+
+    public void setTienda(String tienda) {
+        this.tienda = tienda;
+    }
 }

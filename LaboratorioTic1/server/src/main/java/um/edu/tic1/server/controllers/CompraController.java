@@ -29,4 +29,10 @@ public class CompraController {
         return compraRepository.findAllByUserId(userId).stream().map(Compra::toDTO).collect(Collectors.toList());
     }
 
+    @GetMapping("/findByTienda/{tienda}")
+    @Transactional
+    public List<CompraDTO> findByTienda (@PathVariable("tienda") String tienda) throws NoSuchElementException {
+        return compraRepository.findAllByTienda(tienda).stream().map(Compra::toDTO).collect(Collectors.toList());
+    }
+
 }

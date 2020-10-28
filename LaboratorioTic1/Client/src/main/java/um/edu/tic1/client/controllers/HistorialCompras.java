@@ -33,48 +33,21 @@ public class HistorialCompras implements Initializable {
     @Autowired
     CompraService compraService;
 
-    @FXML private Button aboutUs;
-    @FXML private Button shop;
-    @FXML private Button miPerfil;
-    @FXML private Button home;
-    @FXML private Button carrito;
+    @FXML private Button aboutUs,shop,miPerfil,carrito;
+    @FXML private Button goNextPage,goPreviousPage;
+    @FXML private Button devolver,devolver2,devolver3,devolver4,devolver5,devolver6,devolver7;
 
-    @FXML private Button goNextPage;
-    @FXML private Button goPreviousPage;
-
-    @FXML private Label nombre;
-    @FXML private Label nombre2; @FXML private Label nombre3;
-    @FXML private Label nombre4; @FXML private Label nombre5;
-    @FXML private Label nombre6; @FXML private Label nombre7;
-
-    @FXML private Label tiendaTalle;
-    @FXML private Label tiendaTalle2; @FXML private Label tiendaTalle3;
-    @FXML private Label tiendaTalle4; @FXML private Label tiendaTalle5;
-    @FXML private Label tiendaTalle6; @FXML private Label tiendaTalle7;
-
-    @FXML private Label date;
-    @FXML private Label date2; @FXML private Label date3;
-    @FXML private Label date4; @FXML private Label date5;
-    @FXML private Label date6; @FXML private Label date7;
-
-    @FXML private Label metPago;
-    @FXML private Label metPago2; @FXML private Label metPago3;
-    @FXML private Label metPago4; @FXML private Label metPago5;
-    @FXML private Label metPago6; @FXML private Label metPago7;
-
-    @FXML private Label precio;
-    @FXML private Label precio2; @FXML private Label precio3;
-    @FXML private Label precio4; @FXML private Label precio5;
-    @FXML private Label precio6; @FXML private Label precio7;
-
-    @FXML private Label cantidad;
-    @FXML private Label cantidad2; @FXML private Label cantidad3;
-    @FXML private Label cantidad4; @FXML private Label cantidad5;
-    @FXML private Label cantidad6; @FXML private Label cantidad7;
+    @FXML private Label nombre,nombre2,nombre3,nombre4,nombre5,nombre6,nombre7;
+    @FXML private Label tiendaTalle,tiendaTalle2,tiendaTalle3,tiendaTalle4,tiendaTalle5,tiendaTalle6,tiendaTalle7;
+    @FXML private Label date,date2,date3,date4,date5,date6,date7;
+    @FXML private Label metPago,metPago2,metPago3,metPago4,metPago5,metPago6,metPago7;
+    @FXML private Label precio,precio2,precio3,precio4,precio5,precio6,precio7;
+    @FXML private Label cantidad,cantidad2,cantidad3,cantidad4,cantidad5,cantidad6,cantidad7;
 
     @FXML private Label mensjaeEmptyHistorial;
     @FXML private ImageView fotoEmptyHistorial;
-    @FXML private Label column1,column2,column3,column4,column5,column6;
+    @FXML private Label column1,column2,column3,column4,column5,column6,column7;
+    @FXML private Label estado, estado2, estado3, estado4, estado5, estado6, estado7;
 
     private List<CompraDTO> compras;
     private int page = 0;
@@ -84,7 +57,6 @@ public class HistorialCompras implements Initializable {
         compras = compraService.getboughtItems(cliente.getUserName());
         if (compras.size() > 0){
             this.showProducts();
-
         }
         this.emptyScreen();
     }
@@ -99,6 +71,14 @@ public class HistorialCompras implements Initializable {
             column4.setVisible(false);
             column5.setVisible(false);
             column6.setVisible(false);
+            column7.setVisible(false);
+            devolver.setVisible(false);
+            devolver2.setVisible(false);
+            devolver3.setVisible(false);
+            devolver4.setVisible(false);
+            devolver5.setVisible(false);
+            devolver6.setVisible(false);
+            devolver7.setVisible(false);
         } else {
             mensjaeEmptyHistorial.setVisible(false);
             fotoEmptyHistorial.setVisible(false);
@@ -169,6 +149,8 @@ public class HistorialCompras implements Initializable {
                 cantidad.setText(cant.toString());
                 tiendaTalle.setText(storeAndTalle);
                 date.setText(localDate.toString());
+                estado.setText(item.getEstado());
+                devolver.setVisible(true);
             } else if (productInCart==1){
                 nombre2.setText(name);
                 precio2.setText(price);
@@ -176,6 +158,8 @@ public class HistorialCompras implements Initializable {
                 cantidad2.setText(cant.toString());
                 tiendaTalle2.setText(storeAndTalle);
                 date2.setText(localDate.toString());
+                estado2.setText(item.getEstado());
+                devolver2.setVisible(true);
             } else if (productInCart==2){
                 nombre3.setText(name);
                 precio3.setText(price);
@@ -183,6 +167,8 @@ public class HistorialCompras implements Initializable {
                 cantidad3.setText(cant.toString());
                 tiendaTalle3.setText(storeAndTalle);
                 date3.setText(localDate.toString());
+                estado3.setText(item.getEstado());
+                devolver3.setVisible(true);
             } else if (productInCart==3){
                 nombre4.setText(name);
                 precio4.setText(price);
@@ -190,6 +176,8 @@ public class HistorialCompras implements Initializable {
                 cantidad4.setText(cant.toString());
                 tiendaTalle4.setText(storeAndTalle);
                 date4.setText(localDate.toString());
+                estado4.setText(item.getEstado());
+                devolver4.setVisible(true);
             } else if (productInCart==4){
                 nombre5.setText(name);
                 precio5.setText(price);
@@ -197,6 +185,8 @@ public class HistorialCompras implements Initializable {
                 cantidad5.setText(cant.toString());
                 tiendaTalle5.setText(storeAndTalle);
                 date5.setText(localDate.toString());
+                estado5.setText(item.getEstado());
+                devolver5.setVisible(true);
             } else if (productInCart==5){
                 nombre6.setText(name);
                 precio6.setText(price);
@@ -204,6 +194,8 @@ public class HistorialCompras implements Initializable {
                 cantidad6.setText(cant.toString());
                 tiendaTalle6.setText(storeAndTalle);
                 date6.setText(localDate.toString());
+                estado6.setText(item.getEstado());
+                devolver6.setVisible(true);
             } else if (productInCart==6){
                 nombre7.setText(name);
                 precio7.setText(price);
@@ -211,6 +203,8 @@ public class HistorialCompras implements Initializable {
                 cantidad7.setText(cant.toString());
                 tiendaTalle7.setText(storeAndTalle);
                 date7.setText(localDate.toString());
+                estado7.setText(item.getEstado());
+                devolver7.setVisible(true);
             }
             productInCart++;
             i++;
@@ -281,6 +275,20 @@ public class HistorialCompras implements Initializable {
         this.date5.setText("");
         this.date6.setText("");
         this.date7.setText("");
+        this.estado.setText("");
+        this.estado2.setText("");
+        this.estado3.setText("");
+        this.estado4.setText("");
+        this.estado5.setText("");
+        this.estado6.setText("");
+        this.estado7.setText("");
+        devolver.setVisible(false);
+        devolver2.setVisible(false);
+        devolver3.setVisible(false);
+        devolver4.setVisible(false);
+        devolver5.setVisible(false);
+        devolver6.setVisible(false);
+        devolver7.setVisible(false);
     }
 
     @FXML
@@ -295,6 +303,81 @@ public class HistorialCompras implements Initializable {
         this.clear();
         page++;
         this.showProducts();
+    }
+
+    public CompraDTO productoSeleccionado (String name){
+        CompraDTO toReturn = null;
+        for (int i = 0; i<compras.size(); i++){
+            CompraDTO temp = compras.get(i);
+            if (temp.getProductId().equals(name)){
+                toReturn = temp;
+                break;
+            }
+        }
+        return toReturn;
+    }
+
+    @FXML
+    public void solicitarDevolucion (){
+        CompraDTO solicitarDev = productoSeleccionado(nombre.getText());
+        solicitarDev.setEstado("Devolucion solicitada");
+        compraService.save(solicitarDev);
+        estado.setText("Devolucion solicitada");
+        devolver.setVisible(false);
+    }
+
+    @FXML
+    public void solicitarDevolucion2 (){
+        CompraDTO solicitarDev = productoSeleccionado(nombre.getText());
+        solicitarDev.setEstado("Devolucion solicitada");
+        compraService.save(solicitarDev);
+        estado2.setText("Devolucion solicitada");
+        devolver2.setVisible(false);
+    }
+
+    @FXML
+    public void solicitarDevolucion3 (){
+        CompraDTO solicitarDev = productoSeleccionado(nombre.getText());
+        solicitarDev.setEstado("Devolucion solicitada");
+        compraService.save(solicitarDev);
+        estado3.setText("Devolucion solicitada");
+        devolver3.setVisible(false);
+    }
+
+    @FXML
+    public void solicitarDevolucion4 (){
+        CompraDTO solicitarDev = productoSeleccionado(nombre.getText());
+        solicitarDev.setEstado("Devolucion solicitada");
+        compraService.save(solicitarDev);
+        estado4.setText("Devolucion solicitada");
+        devolver4.setVisible(false);
+    }
+
+    @FXML
+    public void solicitarDevolucion5 (){
+        CompraDTO solicitarDev = productoSeleccionado(nombre.getText());
+        solicitarDev.setEstado("Devolucion solicitada");
+        compraService.save(solicitarDev);
+        estado5.setText("Devolucion solicitada");
+        devolver5.setVisible(false);
+    }
+
+    @FXML
+    public void solicitarDevolucion6 (){
+        CompraDTO solicitarDev = productoSeleccionado(nombre.getText());
+        solicitarDev.setEstado("Devolucion solicitada");
+        compraService.save(solicitarDev);
+        estado6.setText("Devolucion solicitada");
+        devolver6.setVisible(false);
+    }
+
+    @FXML
+    public void solicitarDevolucion7 (){
+        CompraDTO solicitarDev = productoSeleccionado(nombre.getText());
+        solicitarDev.setEstado("Devolucion solicitada");
+        compraService.save(solicitarDev);
+        estado7.setText("Devolucion solicitada");
+        devolver7.setVisible(false);
     }
 
 }

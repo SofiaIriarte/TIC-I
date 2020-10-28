@@ -57,14 +57,15 @@
                 </ImageView>
             </graphic>
         </Button>
-        <GridPane layoutX="101.0" layoutY="189.0" prefHeight="307.0" prefWidth="724.0">
+        <GridPane layoutX="101.0" layoutY="191.0" prefHeight="305.0" prefWidth="822.0">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="217.0" minWidth="10.0" prefWidth="188.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="229.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="199.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="117.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="423.0" minWidth="10.0" prefWidth="68.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="205.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="156.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="85.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="423.0" minWidth="10.0" prefWidth="55.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.0" minWidth="0.0" prefWidth="72.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.0" minWidth="10.0" prefWidth="100.0" />
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -118,9 +119,16 @@
             <Label fx:id="date5" prefHeight="17.0" prefWidth="177.0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="4" />
             <Label fx:id="date6" prefHeight="17.0" prefWidth="103.0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="5" />
             <Label fx:id="date7" prefHeight="17.0" prefWidth="139.0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Label fx:id="estado" prefHeight="17.0" prefWidth="113.0" GridPane.columnIndex="6" />
+            <Label fx:id="estado2" prefHeight="17.0" prefWidth="113.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Label fx:id="estado3" prefHeight="17.0" prefWidth="113.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Label fx:id="estado4" prefHeight="17.0" prefWidth="103.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <Label fx:id="estado5" prefHeight="17.0" prefWidth="132.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <Label fx:id="estado6" prefHeight="17.0" prefWidth="109.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+            <Label fx:id="estado7" prefHeight="17.0" prefWidth="125.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
             </children>
         </GridPane>
-        <Button fx:id="goNextPage" layoutX="769.0" layoutY="506.0" mnemonicParsing="false" onAction="#goToNextPage" style="-fx-background-color: transparent;">
+        <Button fx:id="goNextPage" layoutX="853.0" layoutY="506.0" mnemonicParsing="false" onAction="#goToNextPage" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView fitHeight="29.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -128,7 +136,7 @@
                </image>
             </ImageView>
          </graphic></Button>
-        <Button fx:id="goPreviousPage" layoutX="733.0" layoutY="506.0" mnemonicParsing="false" onAction="#goToPreviousPage" style="-fx-background-color: transparent;">
+        <Button fx:id="goPreviousPage" layoutX="816.0" layoutY="506.0" mnemonicParsing="false" onAction="#goToPreviousPage" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView fitHeight="29.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -136,17 +144,17 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <Label fx:id="column1" layoutX="109.0" layoutY="170.0" text="Nombre del producto" textFill="#e8505b">
+      <Label fx:id="column1" layoutX="109.0" layoutY="171.0" text="Nombre del producto" textFill="#e8505b">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="column2" layoutX="264.0" layoutY="171.0" text="Tienda y Talle" textFill="#e8505b">
+      <Label fx:id="column2" layoutX="271.0" layoutY="172.0" text="Tienda, Talle y Color" textFill="#e8505b">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="463.0" layoutY="171.0" text="N° de Tarjeta" textFill="#e8505b">
+      <Label layoutX="483.0" layoutY="171.0" text="N° de Tarjeta" textFill="#e8505b">
          <font>
             <Font size="14.0" />
          </font>
@@ -156,12 +164,12 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="column5" layoutX="730.0" layoutY="170.0" text="Cant." textFill="#e8505b">
+      <Label fx:id="column5" layoutX="710.0" layoutY="172.0" text="Cant." textFill="#e8505b">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="column6" layoutX="775.0" layoutY="171.0" text="Precio" textFill="#e8505b">
+      <Label fx:id="column6" layoutX="766.0" layoutY="172.0" text="Precio" textFill="#e8505b">
          <font>
             <Font size="14.0" />
          </font>
@@ -176,5 +184,17 @@
             <Font size="18.0" />
          </font>
       </Label>
+      <Label fx:id="column7" layoutX="832.0" layoutY="172.0" text="Estado" textFill="#e8505b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="devolver" layoutX="913.0" layoutY="205.0" mnemonicParsing="false" onAction="#solicitarDevolucion" style="-fx-background-color: TRANSPARENT;" text="Devolver" textFill="#f20303" />
+      <Button fx:id="devolver2" layoutX="913.0" layoutY="244.0" mnemonicParsing="false" onAction="#solicitarDevolucion2" style="-fx-background-color: TRANSPARENT;" text="Devolver" textFill="#f20303" />
+      <Button fx:id="devolver3" layoutX="913.0" layoutY="288.0" mnemonicParsing="false" onAction="#solicitarDevolucion3" style="-fx-background-color: TRANSPARENT;" text="Devolver" textFill="#f20303" />
+      <Button fx:id="devolver4" layoutX="913.0" layoutY="330.0" mnemonicParsing="false" onAction="#solicitarDevolucion4" style="-fx-background-color: TRANSPARENT;" text="Devolver" textFill="#f20303" />
+      <Button fx:id="devolver5" layoutX="913.0" layoutY="373.0" mnemonicParsing="false" onAction="#solicitarDevolucion5" style="-fx-background-color: TRANSPARENT;" text="Devolver" textFill="#f20303" />
+      <Button fx:id="devolver6" layoutX="913.0" layoutY="421.0" mnemonicParsing="false" onAction="#solicitarDevolucion6" style="-fx-background-color: TRANSPARENT;" text="Devolver" textFill="#f20303" />
+      <Button fx:id="devolver7" layoutX="913.0" layoutY="463.0" mnemonicParsing="false" onAction="#solicitarDevolucion7" style="-fx-background-color: TRANSPARENT;" text="Devolver" textFill="#f20303" />
     </children>
 </AnchorPane>

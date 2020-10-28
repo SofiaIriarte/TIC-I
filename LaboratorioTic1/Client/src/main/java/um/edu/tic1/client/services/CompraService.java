@@ -29,4 +29,12 @@ public class CompraService {
         return items;
     }
 
+    public List<CompraDTO> getPedidos (String tienda){
+        RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<List<CompraDTO>> response = restTemplate.exchange("http://localhost:8080/compra/findByTienda/"+tienda,
+                HttpMethod.GET, null, new ParameterizedTypeReference<>() {});
+        List<CompraDTO> items = response.getBody();
+        return items;
+    }
+
 }

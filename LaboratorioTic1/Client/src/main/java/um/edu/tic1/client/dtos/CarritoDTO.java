@@ -10,11 +10,12 @@ public class CarritoDTO {
     private String storeAndTalle;
     private String idStock;
     private String price;
+    private String type;
 
     public CarritoDTO (){    }
 
     public CarritoDTO (String id, int quantity, int productId, String name, String userId,
-                       String storeAndTalle, String idStock, String price){
+                       String storeAndTalle, String idStock, String price, String type){
         this.id=id;
         this.quantity=quantity;
         this.productId=productId;
@@ -23,6 +24,7 @@ public class CarritoDTO {
         this.storeAndTalle=storeAndTalle;
         this.idStock = idStock;
         this.price = price;
+        this.type = type;
     }
 
     public String getId() {
@@ -87,5 +89,13 @@ public class CarritoDTO {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

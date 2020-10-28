@@ -22,8 +22,8 @@ public class Product {
     private String cathegory;
     @Column(length = 30)
     private String marca;
-    @Column(length = 20)
-    private String color;
+//    @Column(length = 20)
+//    private String color;
     @Column(length = 15)
     private String estacion;
     @Lob
@@ -44,14 +44,13 @@ public class Product {
     private List<ShoppingCart> shoppingCarts;
 
     public Product(int iD, long price, String description, String name,
-                   String cathegory, String marca, String color, String estacion) {
+                   String cathegory, String marca, String estacion) {
         this.iD = iD;
         this.price = price;
         this.description = description;
         this.name = name;
         this.cathegory = cathegory;
         this.marca = marca;
-        this.color = color;
         this.estacion = estacion;
         this.stores = new ArrayList<>();
         this.shoppingCarts = new ArrayList<>();
@@ -119,7 +118,7 @@ public class Product {
 
     public ProductDTO toDTO(){
         ProductDTO productDTO = new ProductDTO(this.iD, this.price, this.description,this.name,
-                this.cathegory,this.marca,this.color,this.estacion);
+                this.cathegory,this.marca,this.estacion);
         List<StoreDTO> productDTOS= new ArrayList<>();
         for (Store store:this.stores){
             productDTOS.add(store.toDTO());
@@ -143,14 +142,6 @@ public class Product {
 
     public void setMarca(String marca) {
         this.marca = marca;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 
     public String getEstacion() {

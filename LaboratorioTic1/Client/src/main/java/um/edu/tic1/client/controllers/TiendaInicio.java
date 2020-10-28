@@ -16,18 +16,44 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static um.edu.tic1.client.UserApplication.*;
+import static um.edu.tic1.client.UserApplication.springContext;
+import static um.edu.tic1.client.UserApplication.store;
 
 @Component
 @FxmlView("/um.edu.tic1.client/tiendaInicio.fxml")
 public class TiendaInicio implements Initializable {
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-    }
-
+    public static Boolean analizarDev = false;
     @FXML private Button addProduct;
     @FXML private Button logOut;
+    @FXML private Button misPedidos;
+    @FXML private Button devoluciones;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        analizarDev = false;
+    }
+
+    @FXML
+    private void verPedidos (ActionEvent event){
+        FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
+        Parent root = fxWeaver.loadView(PedidosTienda.class);
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void verDevoluciones (ActionEvent event){
+        analizarDev = true;
+        FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
+        Parent root = fxWeaver.loadView(PedidosTienda.class);
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
 
     @FXML
     private void cerrarCesion (ActionEvent event){

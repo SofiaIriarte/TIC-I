@@ -42,13 +42,6 @@ public class ProductController {
         return lista.stream().collect(Collectors.toList());
     }
 
-    @GetMapping("/findColor")
-    @Transactional
-    public List<String> findUniqueColor (){
-        List<String> lista = productRepository.findDistinctByColor();
-        return lista.stream().collect(Collectors.toList());
-    }
-
     @GetMapping("/findCathegory")
     @Transactional
     public List<String> findUniqueCathegory (){

@@ -79,17 +79,12 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="-104.0" layoutY="91.0" prefHeight="27.0" prefWidth="252.0" text="MARCA:" textFill="WHITE">
+            <Label alignment="CENTER_RIGHT" layoutX="-104.0" layoutY="130.0" prefHeight="27.0" prefWidth="252.0" text="MARCA:" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="-133.0" layoutY="132.0" prefHeight="27.0" prefWidth="282.0" text="COLOR:" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="-48.0" layoutY="47.0" prefHeight="27.0" prefWidth="198.0" text="DESCRIPCION:" textFill="WHITE">
+            <Label alignment="CENTER_RIGHT" layoutX="-48.0" layoutY="63.0" prefHeight="27.0" prefWidth="198.0" text="DESCRIPCION:" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -129,30 +124,19 @@
             <Label fx:id="nombre2" layoutY="3.0" prefHeight="31.0" prefWidth="235.0" textFill="WHITE" wrapText="true" />
          </children>
       </Pane>
-      <Pane layoutX="324.0" layoutY="373.0" prefHeight="35.0" prefWidth="221.0" style="-fx-background-color: #e8505b#e8505b;">
+      <Pane layoutX="324.0" layoutY="373.0" prefHeight="68.0" prefWidth="221.0" style="-fx-background-color: #e8505b#e8505b;">
          <children>
-            <Label fx:id="descripcion" prefHeight="35.0" prefWidth="221.0" textFill="#fffdfd" wrapText="true">
-               <font>
-                  <Font size="10.0" />
-               </font></Label>
+            <Label fx:id="descripcion" prefHeight="68.0" prefWidth="221.0" textFill="#fffdfd" wrapText="true" />
          </children>
       </Pane>
-      <Pane layoutX="563.0" layoutY="370.0" prefHeight="35.0" prefWidth="221.0" style="-fx-background-color: #e8505b#e8505b;">
+      <Pane layoutX="563.0" layoutY="370.0" prefHeight="68.0" prefWidth="221.0" style="-fx-background-color: #e8505b#e8505b;">
          <children>
-            <Label fx:id="descripcion2" layoutY="-2.0" prefHeight="37.0" prefWidth="221.0" textFill="#fffefe" wrapText="true">
-               <font>
-                  <Font size="10.0" />
-               </font></Label>
+            <Label fx:id="descripcion2" layoutY="-2.0" prefHeight="68.0" prefWidth="221.0" textFill="#fffefe" wrapText="true" />
          </children>
       </Pane>
-      <Pane layoutX="324.0" layoutY="416.0" prefHeight="35.0" prefWidth="221.0" style="-fx-background-color: #e8505b#e8505b;">
+      <Pane layoutX="324.0" layoutY="456.0" prefHeight="35.0" prefWidth="221.0" style="-fx-background-color: #e8505b#e8505b;">
          <children>
-            <Label fx:id="marca" layoutX="-1.0" layoutY="1.0" prefHeight="34.0" prefWidth="219.0" textFill="WHITE" wrapText="true" />
-         </children>
-      </Pane>
-      <Pane layoutX="324.0" layoutY="459.0" prefHeight="35.0" prefWidth="221.0" style="-fx-background-color: #e8505b#e8505b;">
-         <children>
-            <Label fx:id="color" prefHeight="38.0" prefWidth="219.0" textFill="WHITE" wrapText="true" />
+            <Label fx:id="marca" layoutX="1.0" layoutY="1.0" prefHeight="34.0" prefWidth="219.0" textFill="WHITE" wrapText="true" />
          </children>
       </Pane>
       <Pane layoutX="324.0" layoutY="502.0" prefHeight="35.0" prefWidth="221.0" style="-fx-background-color: #e8505b#e8505b;">
@@ -160,14 +144,9 @@
             <Label fx:id="estacion" layoutX="5.0" prefHeight="33.0" prefWidth="213.0" textFill="WHITE" wrapText="true" />
          </children>
       </Pane>
-      <Pane layoutX="563.0" layoutY="414.0" prefHeight="35.0" prefWidth="221.0" style="-fx-background-color: #e8505b#e8505b;">
+      <Pane layoutX="562.0" layoutY="456.0" prefHeight="35.0" prefWidth="221.0" style="-fx-background-color: #e8505b#e8505b;">
          <children>
             <Label fx:id="marca2" layoutX="1.0" layoutY="1.0" prefHeight="32.0" prefWidth="216.0" textFill="WHITE" wrapText="true" />
-         </children>
-      </Pane>
-      <Pane layoutX="563.0" layoutY="459.0" prefHeight="35.0" prefWidth="221.0" style="-fx-background-color: #e8505b#e8505b;">
-         <children>
-            <Label fx:id="color2" layoutX="1.0" layoutY="2.0" prefHeight="32.0" prefWidth="216.0" textFill="WHITE" wrapText="true" />
          </children>
       </Pane>
       <Pane layoutX="562.0" layoutY="502.0" prefHeight="35.0" prefWidth="221.0" style="-fx-background-color: #e8505b#e8505b;">

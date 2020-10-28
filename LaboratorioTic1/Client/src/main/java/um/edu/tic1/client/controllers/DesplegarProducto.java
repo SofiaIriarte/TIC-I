@@ -43,10 +43,8 @@ public class DesplegarProducto implements Initializable {
 
     @Autowired
     StockService stockService;
-
     @Autowired
     StoreService storeService;
-
     @Autowired
     ShoppingCartService shoppingCartService;
 
@@ -60,7 +58,7 @@ public class DesplegarProducto implements Initializable {
     @FXML private ComboBox<String> tiendaTalle;
     @FXML private ComboBox<String> cantidad;
 
-    @FXML private Button addToCart;
+    //@FXML private Button addToCart;
     @FXML private Button back;
     @FXML private Button home;
     @FXML private Button miPerfil;
@@ -68,6 +66,7 @@ public class DesplegarProducto implements Initializable {
     @FXML private Button aboutUs;
 
     @FXML private Label errorMessage;
+    @FXML private Button temp;
 
     private List<StockDTO> stocks = null;
 
@@ -95,7 +94,7 @@ public class DesplegarProducto implements Initializable {
                 StockDTO temp = stocks.get(i);
                 String toAdd = "";
                 StoreDTO storeDTO = storeService.findByNum(temp.getStoreId());
-                toAdd = storeDTO.getUser() + "-" + temp.getTalle();
+                toAdd = storeDTO.getUser() + "-" + temp.getTalle() + "-" + temp.getColor();
                 this.tiendaTalle.getItems().add(toAdd);
             }
         }
@@ -107,7 +106,6 @@ public class DesplegarProducto implements Initializable {
             bufferedImage = ImageIO.read(byteArrayInputStream);
             Image imagen = SwingFXUtils.toFXImage(bufferedImage, null);
             this.imagenProducto.setImage(imagen);
-            //this.descripcion.setText(productDTO.getDescription());
             Long price = productDTO.getPrice();
             this.precio.setText("$ " +price.toString());
             this.marca.setText(productDTO.getMarca());
@@ -172,12 +170,12 @@ public class DesplegarProducto implements Initializable {
         volver = true;
         this.goShopScene(event);
     }
-
+/*
     @FXML
     public void agregarAlCarrito (ActionEvent event){
         String entrega = this.entrega.getValue();
         String tiendaYTalle = this.tiendaTalle.getValue();
-        int cant = Integer.parseInt(this.cantidad.getValue());
+        Integer cant = Integer.parseInt(this.cantidad.getValue());
         if (entrega != null && tiendaYTalle != null && cant > 0) {
             Integer id = productDTO.getiD();
             String identificador = id.toString() + cliente.getUserName();
@@ -191,6 +189,32 @@ public class DesplegarProducto implements Initializable {
                 String idStock = id.toString() + temp[0] + temp[1];
                 CarritoDTO carritoDTO = new CarritoDTO(identificador, cant, id, productDTO.getName(),
                         cliente.getUserName(), tiendaYTalle, idStock, this.precio.getText());
+                shoppingCartService.saveCarrito(carritoDTO);
+                this.goShopScene(event);
+            }
+        } else {
+            errorMessage.setVisible(true);
+        }
+    }
+*/
+    @FXML
+    public void temp2 (ActionEvent event) {
+        String entrega = this.entrega.getValue();
+        String tiendaYTalle = this.tiendaTalle.getValue();
+        Integer cant = Integer.parseInt(this.cantidad.getValue());
+        if (entrega != null && tiendaYTalle != null && cant > 0) {
+            Integer id = productDTO.getiD();
+            String identificador = id.toString() + cliente.getUserName();
+            CarritoDTO existeItem = shoppingCartService.getCarrito(identificador);
+            if (existeItem != null) {
+                existeItem.setQuantity(existeItem.getQuantity()+cant);
+                shoppingCartService.saveCarrito(existeItem);
+                this.goShopScene(event);
+            } else {
+                String[] temp = tiendaYTalle.split("-");
+                String idStock = id.toString() + temp[0] + temp[1] + temp[2];
+                CarritoDTO carritoDTO = new CarritoDTO(identificador, cant, id, productDTO.getName(),
+                        cliente.getUserName(), tiendaYTalle, idStock, this.precio.getText(),entrega);
                 shoppingCartService.saveCarrito(carritoDTO);
                 this.goShopScene(event);
             }

@@ -10,21 +10,19 @@ public class ProductDTO {
     private String name;
     private String cathegory;
     private String marca;
-    private String color;
     private String estacion;
     private byte[] image;
     private List<StoreDTO> stores;
     private List<ShoppingCartDTO> shoppingCarts;
 
     public ProductDTO(int iD, long price, String description, String name,
-                   String cathegory, String marca, String color, String estacion) {
+                   String cathegory, String marca, String estacion) {
         this.iD = iD;
         this.price = price;
         this.description = description;
         this.name = name;
         this.cathegory = cathegory;
         this.marca = marca;
-        this.color = color;
         this.estacion = estacion;
     }
 
@@ -94,14 +92,6 @@ public class ProductDTO {
 
     public void setMarca(String marca) {
         this.marca = marca;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 
     public String getEstacion() {

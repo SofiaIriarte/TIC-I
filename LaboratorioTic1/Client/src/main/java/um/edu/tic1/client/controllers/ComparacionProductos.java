@@ -42,7 +42,6 @@ public class ComparacionProductos implements Initializable {
     @FXML private Label nombre;
     @FXML private Label descripcion;
     @FXML private Label marca;
-    @FXML private Label color;
     @FXML private Label estacion;
     @FXML private Label precio;
     @FXML private ImageView imagenProducto;
@@ -50,7 +49,6 @@ public class ComparacionProductos implements Initializable {
     @FXML private Label nombre2;
     @FXML private Label descripcion2;
     @FXML private Label marca2;
-    @FXML private Label color2;
     @FXML private Label estacion2;
     @FXML private Label precio2;
     @FXML private ImageView imagenProducto2;
@@ -73,7 +71,6 @@ public class ComparacionProductos implements Initializable {
         nombre.setText(productDTOtoCompare1.getName());
         descripcion.setText(productDTOtoCompare1.getDescription());
         marca.setText(productDTOtoCompare1.getMarca());
-        color.setText(productDTOtoCompare1.getColor());
         estacion.setText(productDTOtoCompare1.getEstacion());
         Long precioProducto1 = productDTOtoCompare1.getPrice();
         precio.setText(precioProducto1.toString());
@@ -89,7 +86,6 @@ public class ComparacionProductos implements Initializable {
         nombre2.setText(productDTOtoCompare2.getName());
         descripcion2.setText(productDTOtoCompare2.getDescription());
         marca2.setText(productDTOtoCompare2.getMarca());
-        color2.setText(productDTOtoCompare2.getColor());
         estacion2.setText(productDTOtoCompare2.getEstacion());
         Long precioProducto2 = productDTOtoCompare2.getPrice();
         precio2.setText(precioProducto2.toString());
