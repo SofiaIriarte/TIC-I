@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.PedidosTienda">
+    <children>
+        <ImageView fitHeight="532.0" fitWidth="1006.0" layoutX="-1.0" layoutY="68.0" pickOnBounds="true">
+            <image>
+                <Image url="@../images/image1.png" />
+            </image>
+        </ImageView>
+        <GridPane layoutX="29.0" layoutY="202.0" prefHeight="305.0" prefWidth="822.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="217.0" minWidth="10.0" prefWidth="188.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="205.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="156.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="85.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="423.0" minWidth="10.0" prefWidth="55.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.0" minWidth="0.0" prefWidth="72.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.0" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label fx:id="nombre" prefHeight="17.0" prefWidth="181.0" textAlignment="CENTER" />
+                <Label fx:id="tiendaTalle" prefHeight="17.0" prefWidth="210.0" textAlignment="CENTER" GridPane.columnIndex="1" />
+                <Label fx:id="cantidad" prefHeight="17.0" prefWidth="68.0" textAlignment="CENTER" GridPane.columnIndex="4" />
+                <Label fx:id="precio" prefHeight="17.0" prefWidth="64.0" textAlignment="CENTER" GridPane.columnIndex="5" />
+                <Label fx:id="nombre2" prefHeight="17.0" prefWidth="180.0" textAlignment="CENTER" GridPane.rowIndex="1" />
+                <Label fx:id="nombre3" prefHeight="17.0" prefWidth="181.0" textAlignment="CENTER" GridPane.rowIndex="2" />
+                <Label fx:id="nombre4" prefHeight="17.0" prefWidth="180.0" textAlignment="CENTER" GridPane.rowIndex="3" />
+                <Label fx:id="nombre5" prefHeight="17.0" prefWidth="180.0" textAlignment="CENTER" GridPane.rowIndex="4" />
+                <Label fx:id="nombre6" prefHeight="17.0" prefWidth="179.0" textAlignment="CENTER" GridPane.rowIndex="5" />
+                <Label fx:id="nombre7" prefHeight="17.0" prefWidth="181.0" textAlignment="CENTER" GridPane.rowIndex="6" />
+                <Label fx:id="tiendaTalle2" prefHeight="17.0" prefWidth="217.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label fx:id="tiendaTalle3" prefHeight="17.0" prefWidth="216.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label fx:id="tiendaTalle4" prefHeight="17.0" prefWidth="216.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label fx:id="tiendaTalle5" prefHeight="17.0" prefWidth="216.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label fx:id="tiendaTalle6" prefHeight="17.0" prefWidth="218.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Label fx:id="tiendaTalle7" prefHeight="17.0" prefWidth="217.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <Label fx:id="cantidad2" prefHeight="17.0" prefWidth="64.0" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                <Label fx:id="cantidad3" prefHeight="17.0" prefWidth="64.0" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                <Label fx:id="cantidad4" prefHeight="17.0" prefWidth="66.0" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                <Label fx:id="cantidad5" prefHeight="17.0" prefWidth="66.0" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                <Label fx:id="cantidad6" prefHeight="17.0" prefWidth="64.0" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                <Label fx:id="cantidad7" prefHeight="17.0" prefWidth="66.0" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                <Label fx:id="precio2" prefHeight="17.0" prefWidth="62.0" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                <Label fx:id="precio3" prefHeight="17.0" prefWidth="61.0" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                <Label fx:id="precio4" prefHeight="17.0" prefWidth="62.0" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                <Label fx:id="precio5" prefHeight="17.0" prefWidth="60.0" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                <Label fx:id="precio6" prefHeight="17.0" prefWidth="61.0" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                <Label fx:id="precio7" prefHeight="17.0" prefWidth="59.0" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                <Label fx:id="user" prefHeight="17.0" prefWidth="220.0" textAlignment="CENTER" GridPane.columnIndex="2" />
+                <Label fx:id="user2" prefHeight="17.0" prefWidth="225.0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Label fx:id="user3" prefHeight="17.0" prefWidth="197.0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Label fx:id="user4" prefHeight="17.0" prefWidth="183.0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Label fx:id="user5" prefHeight="17.0" prefWidth="182.0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Label fx:id="user6" prefHeight="17.0" prefWidth="187.0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                <Label fx:id="user7" prefHeight="17.0" prefWidth="185.0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                <Label fx:id="date" prefHeight="17.0" prefWidth="111.0" textAlignment="CENTER" GridPane.columnIndex="3" />
+                <Label fx:id="date2" prefHeight="17.0" prefWidth="94.0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <Label fx:id="date3" prefHeight="17.0" prefWidth="156.0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Label fx:id="date4" prefHeight="17.0" prefWidth="172.0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <Label fx:id="date5" prefHeight="17.0" prefWidth="177.0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                <Label fx:id="date6" prefHeight="17.0" prefWidth="103.0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                <Label fx:id="date7" prefHeight="17.0" prefWidth="139.0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                <Label fx:id="estado" prefHeight="17.0" prefWidth="113.0" GridPane.columnIndex="6" />
+                <Label fx:id="estado2" prefHeight="17.0" prefWidth="113.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                <Label fx:id="estado3" prefHeight="17.0" prefWidth="113.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                <Label fx:id="estado4" prefHeight="17.0" prefWidth="103.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                <Label fx:id="estado5" prefHeight="17.0" prefWidth="132.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                <Label fx:id="estado6" prefHeight="17.0" prefWidth="109.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                <Label fx:id="estado7" prefHeight="17.0" prefWidth="125.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+            </children>
+        </GridPane>
+        <Button fx:id="home" layoutX="800.0" layoutY="28.0" mnemonicParsing="false" onAction="#goToMenu" style="-fx-background-color: transparent black" text="HOME" textFill="#7d4de0" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+        <Button layoutX="883.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="CONTACT" textFill="#7d4de0" textOverrun="CLIP">
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+      <Button fx:id="goNextPage" layoutX="863.0" layoutY="516.0" mnemonicParsing="false" onAction="#goToNextPage" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/FlechaIzq.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="goPreviousPage" layoutX="826.0" layoutY="516.0" mnemonicParsing="false" onAction="#goToPreviousPage" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/flecha.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="column1" layoutX="38.0" layoutY="182.0" text="Nombre del producto" textFill="#e8505b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="column2" layoutX="212.0" layoutY="183.0" text="Tienda, Talle y Color" textFill="#e8505b">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="408.0" layoutY="183.0" text="Usuario" textFill="#e8505b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="column4" layoutX="569.0" layoutY="182.0" text="Fecha" textFill="#e8505b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="column5" layoutX="641.0" layoutY="182.0" text="Cant." textFill="#e8505b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="column6" layoutX="695.0" layoutY="182.0" text="Precio" textFill="#e8505b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="column7" layoutX="759.0" layoutY="183.0" text="Tipo" textFill="#e8505b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="rechazar" layoutX="908.0" layoutY="203.0" mnemonicParsing="false" onAction="#denegar" prefHeight="38.0" prefWidth="46.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Rechazar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="confirmar" layoutX="842.0" layoutY="203.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Confirmar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="rechazar2" layoutX="909.0" layoutY="249.0" mnemonicParsing="false" onAction="#denegar2" prefHeight="38.0" prefWidth="46.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Rechazar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="confirmar2" layoutX="843.0" layoutY="249.0" mnemonicParsing="false" onAction="#aceptar2" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Confirmar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="rechazar3" layoutX="909.0" layoutY="293.0" mnemonicParsing="false" onAction="#denegar3" prefHeight="38.0" prefWidth="46.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Rechazar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="confirmar3" layoutX="843.0" layoutY="293.0" mnemonicParsing="false" onAction="#aceptar3" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Confirmar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="rechazar4" layoutX="911.0" layoutY="337.0" mnemonicParsing="false" onAction="#denegar4" prefHeight="38.0" prefWidth="46.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Rechazar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="confirmar4" layoutX="845.0" layoutY="337.0" mnemonicParsing="false" onAction="#aceptar4" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Confirmar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="rechazar5" layoutX="911.0" layoutY="380.0" mnemonicParsing="false" onAction="#denegar5" prefHeight="38.0" prefWidth="46.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Rechazar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="confirmar5" layoutX="845.0" layoutY="380.0" mnemonicParsing="false" onAction="#aceptar5" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Confirmar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="rechazar6" layoutX="913.0" layoutY="424.0" mnemonicParsing="false" onAction="#denegar6" prefHeight="38.0" prefWidth="46.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Rechazar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="confirmar6" layoutX="847.0" layoutY="424.0" mnemonicParsing="false" onAction="#aceptar6" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Confirmar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="rechazar7" layoutX="912.0" layoutY="467.0" mnemonicParsing="false" onAction="#denegar7" prefHeight="38.0" prefWidth="46.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Rechazar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="confirmar7" layoutX="846.0" layoutY="467.0" mnemonicParsing="false" onAction="#aceptar7" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Confirmar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="titulo" layoutX="29.0" layoutY="81.0" prefHeight="70.0" prefWidth="346.0">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
