@@ -150,7 +150,9 @@ public class HistorialCompras implements Initializable {
                 tiendaTalle.setText(storeAndTalle);
                 date.setText(localDate.toString());
                 estado.setText(item.getEstado());
-                devolver.setVisible(true);
+                if (estado.getText().equals("Comprado")){
+                    devolver.setVisible(true);
+                }
             } else if (productInCart==1){
                 nombre2.setText(name);
                 precio2.setText(price);
@@ -159,7 +161,9 @@ public class HistorialCompras implements Initializable {
                 tiendaTalle2.setText(storeAndTalle);
                 date2.setText(localDate.toString());
                 estado2.setText(item.getEstado());
-                devolver2.setVisible(true);
+                if (estado2.getText().equals("Comprado")){
+                    devolver2.setVisible(true);
+                }
             } else if (productInCart==2){
                 nombre3.setText(name);
                 precio3.setText(price);
@@ -168,7 +172,9 @@ public class HistorialCompras implements Initializable {
                 tiendaTalle3.setText(storeAndTalle);
                 date3.setText(localDate.toString());
                 estado3.setText(item.getEstado());
-                devolver3.setVisible(true);
+                if (estado3.getText().equals("Comprado")){
+                    devolver3.setVisible(true);
+                }
             } else if (productInCart==3){
                 nombre4.setText(name);
                 precio4.setText(price);
@@ -177,7 +183,9 @@ public class HistorialCompras implements Initializable {
                 tiendaTalle4.setText(storeAndTalle);
                 date4.setText(localDate.toString());
                 estado4.setText(item.getEstado());
-                devolver4.setVisible(true);
+                if (estado4.getText().equals("Comprado")){
+                    devolver4.setVisible(true);
+                }
             } else if (productInCart==4){
                 nombre5.setText(name);
                 precio5.setText(price);
@@ -186,7 +194,9 @@ public class HistorialCompras implements Initializable {
                 tiendaTalle5.setText(storeAndTalle);
                 date5.setText(localDate.toString());
                 estado5.setText(item.getEstado());
-                devolver5.setVisible(true);
+                if (estado5.getText().equals("Comprado")){
+                    devolver5.setVisible(true);
+                }
             } else if (productInCart==5){
                 nombre6.setText(name);
                 precio6.setText(price);
@@ -195,7 +205,9 @@ public class HistorialCompras implements Initializable {
                 tiendaTalle6.setText(storeAndTalle);
                 date6.setText(localDate.toString());
                 estado6.setText(item.getEstado());
-                devolver6.setVisible(true);
+                if (estado6.getText().equals("Comprado")){
+                    devolver6.setVisible(true);
+                }
             } else if (productInCart==6){
                 nombre7.setText(name);
                 precio7.setText(price);
@@ -204,7 +216,9 @@ public class HistorialCompras implements Initializable {
                 tiendaTalle7.setText(storeAndTalle);
                 date7.setText(localDate.toString());
                 estado7.setText(item.getEstado());
-                devolver7.setVisible(true);
+                if (estado7.getText().equals("Comprado")){
+                    devolver7.setVisible(true);
+                }
             }
             productInCart++;
             i++;
