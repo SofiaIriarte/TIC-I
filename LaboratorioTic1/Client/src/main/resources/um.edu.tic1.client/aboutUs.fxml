@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.Inicio">
+   <children>
+      <ImageView fitHeight="532.0" fitWidth="1006.0" layoutX="4.0" layoutY="263.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
+         <image>
+            <Image url="@../images/image1.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="541.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Button fx:id="aboutUs" layoutX="621.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Button fx:id="shop" layoutX="719.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToShop" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Button fx:id="login" layoutX="794.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToLogIn" style="-fx-background-color: transparent black" text="LOGIN" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Text layoutX="98.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Quienes somos?" wrappingWidth="330.5098571777344">
+         <font>
+            <Font name="Futura Medium" size="38.0" />
+         </font>
+      </Text>
+      <Pane layoutX="638.0" layoutY="66.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
+      <Button fx:id="registrarse2" layoutX="872.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToRegisterScene" style="-fx-background-color: transparent black" text="REGISTER" textFill="#e8505b" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
+      <Text layoutX="163.0" layoutY="182.0" lineSpacing="1.5" strokeType="OUTSIDE" strokeWidth="0.0" text="La aplicacion nace a raiz del proyecto planteado en la materia Laboratorio TIC I. Fue desarrollada por tres estudiantes de la UM con el fin de crear una nueva experiencia a la hora de comprar indumentaria." textAlignment="JUSTIFY" wrappingWidth="722.6177062988281">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Pane layoutX="698.0" layoutY="286.0" prefHeight="266.0" prefWidth="186.0" style="-fx-background-color: #e8505b#e8505b;">
+         <children>
+            <ImageView fitHeight="190.0" fitWidth="161.0" layoutX="13.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/IMG_7450.JPG" />
+               </image>
+            </ImageView>
+            <Button layoutX="27.0" layoutY="199.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="Sofia Iriarte" textFill="WHITE" textOverrun="CLIP">
+               <effect>
+                  <Blend />
+               </effect>
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button layoutX="49.0" layoutY="230.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="Persistencia" textFill="WHITE" textOverrun="CLIP">
+               <effect>
+                  <Blend />
+               </effect>
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="437.0" layoutY="289.0" prefHeight="263.0" prefWidth="186.0" style="-fx-background-color: #e8505b#e8505b;">
+         <children>
+            <ImageView fitHeight="190.0" fitWidth="161.0" layoutX="13.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/IMG_7449.PNG" />
+               </image>
+            </ImageView>
+            <Button layoutX="61.0" layoutY="228.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="Spring" textFill="WHITE" textOverrun="CLIP">
+               <effect>
+                  <Blend />
+               </effect>
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="165.0" layoutY="288.0" prefHeight="263.0" prefWidth="186.0" style="-fx-background-color: #e8505b#e8505b;">
+         <children>
+            <ImageView fitHeight="190.0" fitWidth="161.0" layoutX="12.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/imagenperfil.jpeg" />
+               </image>
+            </ImageView>
+            <Button layoutX="11.0" layoutY="197.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="Rossina Valles" textFill="WHITE" textOverrun="CLIP">
+               <effect>
+                  <Blend />
+               </effect>
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button layoutX="25.0" layoutY="227.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="Interfaz de usuario" textFill="WHITE" textOverrun="CLIP">
+               <effect>
+                  <Blend />
+               </effect>
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button layoutX="445.0" layoutY="485.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="Bruno Costanzo" textFill="WHITE" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
