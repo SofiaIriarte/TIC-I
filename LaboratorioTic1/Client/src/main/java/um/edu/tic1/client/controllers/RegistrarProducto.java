@@ -46,8 +46,20 @@ public class RegistrarProducto implements Initializable {
 
     @FXML private AnchorPane anchorPaneProduct;
 
+    @FXML private Button contact;
+
     private File file = null;
     private byte[] fileContet;
+
+    @FXML
+    private void goToContactUs (ActionEvent event){
+        FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
+        Parent root = fxWeaver.loadView(ContactUs.class);
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
 
     @FXML
     public void submitButton(ActionEvent event) {

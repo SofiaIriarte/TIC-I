@@ -62,4 +62,15 @@ public class InicioUsuario implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+
+    @FXML
+    public void goToAboutUs (ActionEvent event) {
+        FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
+        Parent root = fxWeaver.loadView(AboutUsWithLogIn.class);
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
 }

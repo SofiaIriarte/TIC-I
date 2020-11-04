@@ -69,6 +69,16 @@ public class MiPerfil implements Initializable {
     }
 
     @FXML
+    public void goToAboutUs (ActionEvent event) {
+        FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
+        Parent root = fxWeaver.loadView(AboutUsWithLogIn.class);
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
     public void cancelarAgregarMetodo (){
         this.confirmar.setDisable(true);
         this.confirmar.setVisible(false);

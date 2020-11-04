@@ -48,6 +48,7 @@ public class PedidosTienda implements Initializable {
 
     @FXML private Button confirmar, confirmar2, confirmar3, confirmar4, confirmar5, confirmar6, confirmar7;
     @FXML private Button rechazar, rechazar2, rechazar3, rechazar4, rechazar5, rechazar6, rechazar7;
+    @FXML private Button contact;
 
     private List<CompraDTO> compras;
     private int page = 0;
@@ -84,6 +85,16 @@ public class PedidosTienda implements Initializable {
                 this.emptyScreen();
             }
         }
+    }
+
+    @FXML
+    private void goToContactUs (ActionEvent event){
+        FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
+        Parent root = fxWeaver.loadView(ContactUs.class);
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML

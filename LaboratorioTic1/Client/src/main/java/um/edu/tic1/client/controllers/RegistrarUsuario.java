@@ -94,4 +94,14 @@ public class RegistrarUsuario implements Initializable {
         stage.show();
     }
 
+    @FXML
+    public void goToAboutUs (ActionEvent event) {
+        FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
+        Parent root = fxWeaver.loadView(AboutUs.class);
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
 }

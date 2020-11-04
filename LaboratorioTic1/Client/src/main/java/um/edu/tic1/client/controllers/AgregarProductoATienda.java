@@ -44,6 +44,17 @@ public class AgregarProductoATienda implements Initializable {
 
     @FXML private Button home;
     @FXML private Button agregarProducto;
+    @FXML private Button contact;
+
+    @FXML
+    private void goToContactUs (ActionEvent event){
+        FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
+        Parent root = fxWeaver.loadView(ContactUs.class);
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
 
     @FXML
     public void goToStoreHome (ActionEvent event) {

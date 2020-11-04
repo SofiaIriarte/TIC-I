@@ -94,7 +94,7 @@
                 <Blend />
             </effect>
         </Button>
-        <Button layoutX="883.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="CONTACT" textFill="#7d4de0" textOverrun="CLIP">
+        <Button fx:id="contact" layoutX="883.0" layoutY="28.0" mnemonicParsing="false" onAction="#goToContactUs" style="-fx-background-color: transparent black" text="CONTACT" textFill="#7d4de0" textOverrun="CLIP">
             <effect>
                 <Blend />
             </effect>
@@ -179,7 +179,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="confirmar2" layoutX="843.0" layoutY="249.0" mnemonicParsing="false" onAction="#aceptar2" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: white;">
+      <Button fx:id="confirmar2" layoutX="842.0" layoutY="249.0" mnemonicParsing="false" onAction="#aceptar2" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: white;">
          <graphic>
             <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>

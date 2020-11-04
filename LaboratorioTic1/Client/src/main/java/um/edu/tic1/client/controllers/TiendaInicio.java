@@ -28,10 +28,21 @@ public class TiendaInicio implements Initializable {
     @FXML private Button logOut;
     @FXML private Button misPedidos;
     @FXML private Button devoluciones;
+    @FXML private Button contact;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         analizarDev = false;
+    }
+
+    @FXML
+    private void goToContactUs (ActionEvent event){
+        FxWeaver fxWeaver = springContext.getBean(FxWeaver.class);
+        Parent root = fxWeaver.loadView(ContactUs.class);
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML

@@ -7,7 +7,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -48,12 +47,10 @@
       <TextField fx:id="cathegory" layoutX="114.0" layoutY="312.0" prefHeight="27.0" prefWidth="363.0" style="-fx-background-color: white;" />
       <Text layoutX="116.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria:" />
       <Button fx:id="elegirFoto" layoutX="219.0" layoutY="458.0" mnemonicParsing="false" onAction="#choosePicture" prefHeight="25.0" prefWidth="159.0" style="-fx-background-color: #7d4de0#7d4de0;" text="INGRESAR IMAGEN" textFill="WHITE" />
-      <Button layoutX="863.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="CONTACT" textFill="#7d4de0" textOverrun="CLIP">
+      <Button fx:id="contact" layoutX="863.0" layoutY="28.0" mnemonicParsing="false" onAction="#goToContactUs" style="-fx-background-color: transparent black" text="CONTACT" textFill="#7d4de0" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
       </Button>
-      <Pane layoutX="782.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #7d4de0#7d4de0;" />
-      <Pane layoutX="879.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #7d4de0#7d4de0;" />
     </children>
 </AnchorPane>

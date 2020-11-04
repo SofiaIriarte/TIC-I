@@ -27,7 +27,7 @@
                 <Blend />
             </effect>
         </Button>
-        <Button fx:id="aboutUs" layoutX="689.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
+        <Button fx:id="aboutUs" layoutX="689.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToAboutUs" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
             <effect>
                 <Blend />
             </effect>

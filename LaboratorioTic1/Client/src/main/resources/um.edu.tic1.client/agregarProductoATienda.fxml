@@ -44,5 +44,10 @@
       <Pane layoutX="585.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #7d4de0#7d4de0;" />
       <Text layoutX="84.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COLOR:" />
       <TextField fx:id="color" layoutX="83.0" layoutY="421.0" prefHeight="27.0" prefWidth="318.0" style="-fx-background-color: white;" />
+      <Button fx:id="contact" layoutX="663.0" layoutY="26.0" mnemonicParsing="false" onAction="#goToContactUs" style="-fx-background-color: transparent black" text="CONTACT" textFill="#7d4de0" textOverrun="CLIP">
+         <effect>
+            <Blend />
+         </effect>
+      </Button>
     </children>
 </AnchorPane>
