@@ -1,16 +1,20 @@
+dtos/AdministradorDTO.java
+ dtos.AdministradorDTO
 dtos/MetodoDePagoDTO.java
  dtos.MetodoDePagoDTO
 dtos/ShoppingCartDTO.java
  dtos.ShoppingCartDTO
 dtos/BrandDTO.java
  dtos.BrandDTO
+dtos/CompraDTO.java
+ dtos.CompraDTO
 dtos/StockDTO.java
  dtos.StockDTO
-dtos/ProductDTO.java
- dtos.ProductDTO
 dtos/ClientDTO.java
  dtos.ClientDTO
-dtos/AdministradorDTO.java
- dtos.AdministradorDTO
+dtos/ProductDTO.java
+ dtos.ProductDTO
+dtos/CarritoDTO.java
+ dtos.CarritoDTO
 dtos/StoreDTO.java
  dtos.StoreDTO
