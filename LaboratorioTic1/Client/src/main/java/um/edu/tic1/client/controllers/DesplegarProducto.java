@@ -79,7 +79,7 @@ public class DesplegarProducto implements Initializable {
 
         List<String> entregasTipos = new ArrayList<>();
         entregasTipos.add("Pick up");
-        entregasTipos.add("Deleviry");
+        entregasTipos.add("Delivery");
         ObservableList<String> obList = FXCollections.observableList(entregasTipos);
         this.entrega.setItems(obList);
 
