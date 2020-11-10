@@ -29,6 +29,13 @@ public class ProductController {
         return null;
     }
 
+    @GetMapping("/findProductByName/")
+    @Transactional
+    public ProductDTO findProductByName (@RequestParam(name = "productName") String productName){
+        Product product = productRepository.findByName(productName);
+        return product.toDTO();
+    }
+
     @PostMapping("/saveproduct")
     @Transactional
     public void createCustomer(@RequestBody Product product) {

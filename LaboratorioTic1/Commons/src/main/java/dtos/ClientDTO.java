@@ -1,8 +1,6 @@
 package dtos;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ClientDTO {
 
@@ -13,13 +11,13 @@ public class ClientDTO {
     private String address;
     private String userName;
     private String passworld;
-    private List<MetodoDePagoDTO> metodoDePagos;
     private ShoppingCartDTO cartS;
 
     public ClientDTO(){
     }
 
-    public ClientDTO(String cI, String firstName, String lastName, LocalDate birthday, String address, String userName, String passworld) {
+    public ClientDTO(String cI, String firstName, String lastName, LocalDate birthday, String address,
+                     String userName, String passworld, ShoppingCartDTO shoppingCartDTO) {
         this.cI = cI;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -27,7 +25,18 @@ public class ClientDTO {
         this.address = address;
         this.userName = userName;
         this.passworld = passworld;
-        this.metodoDePagos = new ArrayList<>();
+        this.cartS = shoppingCartDTO;
+    }
+
+    public ClientDTO(String cI, String firstName, String lastName, LocalDate birthday, String address,
+                     String userName, String passworld) {
+        this.cI = cI;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthday = birthday;
+        this.address = address;
+        this.userName = userName;
+        this.passworld = passworld;
     }
 
     @Override
@@ -83,14 +92,6 @@ public class ClientDTO {
 
     public void setPassworld(String passworld) {
         this.passworld = passworld;
-    }
-
-    public List<MetodoDePagoDTO> getMetodoDePagos() {
-        return metodoDePagos;
-    }
-
-    public void setMetodoDePagos(List<MetodoDePagoDTO> metodoDePagos) {
-        this.metodoDePagos = metodoDePagos;
     }
 
     public ShoppingCartDTO getCartS() {

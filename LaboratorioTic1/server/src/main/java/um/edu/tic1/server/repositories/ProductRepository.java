@@ -22,4 +22,6 @@ public interface ProductRepository extends CrudRepository<Product, Integer>, Jpa
     @Query("SELECT distinct p.estacion from product p")
     List<String> findDistinctByEstacion();
 
+    Product findByName(String name);
+
 }

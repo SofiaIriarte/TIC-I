@@ -1,27 +1,21 @@
 package dtos;
 
-import java.sql.Time;
-import java.util.ArrayList;
-import java.util.List;
-
 public class StoreDTO {
 
     private int iD;
-    private Time hours;
+    private int horaApertura;
+    private int horaCerrar;
     private String user;
     private String address;
     private String password;
-    private List<ProductDTO> products;
-    private List<BrandDTO> brands;
 
-    public StoreDTO(int iD, Time hours, String user, String address, String password) {
+    public StoreDTO(int iD, int horaApertura, int horaCerrar, String user, String address, String password) {
         this.iD = iD;
-        this.hours = hours;
+        this.horaApertura = horaApertura;
+        this.horaCerrar = horaCerrar;
         this.user = user;
         this.address = address;
         this.password = password;
-        this.products = new ArrayList<>();
-        this.brands = new ArrayList<>();
     }
 
     public StoreDTO() {    }
@@ -32,14 +26,6 @@ public class StoreDTO {
 
     public void setiD(int iD) {
         this.iD = iD;
-    }
-
-    public Time getHours() {
-        return hours;
-    }
-
-    public void setHours(Time hours) {
-        this.hours = hours;
     }
 
     public String getUser() {
@@ -66,20 +52,19 @@ public class StoreDTO {
         this.password = password;
     }
 
-    public List<ProductDTO> getProducts() {
-        return products;
+    public int getHoraApertura() {
+        return horaApertura;
     }
 
-    public void setProducts(List<ProductDTO> products) {
-        this.products = products;
+    public void setHoraApertura(int horaApertura) {
+        this.horaApertura = horaApertura;
     }
 
-    public List<BrandDTO> getBrands() {
-        return brands;
+    public int getHoraCerrar() {
+        return horaCerrar;
     }
 
-    public void setBrands(List<BrandDTO> brands) {
-        this.brands = brands;
+    public void setHoraCerrar(int horaCerrar) {
+        this.horaCerrar = horaCerrar;
     }
-
 }

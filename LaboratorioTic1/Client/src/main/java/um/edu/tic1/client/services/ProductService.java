@@ -61,4 +61,12 @@ public class ProductService {
         return productDTO;
     }
 
+    public ProductDTO findByName (String url){
+        RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<ProductDTO> response = restTemplate.exchange("http://localhost:8080/product/findProductByName/?"+url,
+                HttpMethod.GET, null, new ParameterizedTypeReference<>() {});
+        ProductDTO productDTO = response.getBody();
+        return productDTO;
+    }
+
 }

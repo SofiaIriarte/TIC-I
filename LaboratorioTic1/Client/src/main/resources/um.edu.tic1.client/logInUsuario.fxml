@@ -56,7 +56,7 @@
             <Blend />
          </effect>
       </Button>
-      <Button fx:id="shop" layoutX="721.0" layoutY="31.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
+      <Button fx:id="shop" layoutX="721.0" layoutY="31.0" mnemonicParsing="false" onAction="#goToShop" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>

@@ -11,7 +11,6 @@ public class ClientDTO {
     private String address;
     private String userName;
     private String passworld;
-    //private List<MetodoDePagoDTO> metodoDePagos;
     private ShoppingCartDTO cartS;
 
     public ClientDTO(){
@@ -26,7 +25,6 @@ public class ClientDTO {
         this.address = address;
         this.userName = userName;
         this.passworld = passworld;
-        //this.metodoDePagos = new ArrayList<>();
         this.cartS = shoppingCartDTO;
     }
 
@@ -39,7 +37,6 @@ public class ClientDTO {
         this.address = address;
         this.userName = userName;
         this.passworld = passworld;
-        //this.metodoDePagos = new ArrayList<>();
     }
 
     @Override
@@ -96,14 +93,6 @@ public class ClientDTO {
     public void setPassworld(String passworld) {
         this.passworld = passworld;
     }
-
-//    public List<MetodoDePagoDTO> getMetodoDePagos() {
-//        return metodoDePagos;
-//    }
-//
-//    public void setMetodoDePagos(List<MetodoDePagoDTO> metodoDePagos) {
-//        this.metodoDePagos = metodoDePagos;
-//    }
 
     public ShoppingCartDTO getCartS() {
         return cartS;

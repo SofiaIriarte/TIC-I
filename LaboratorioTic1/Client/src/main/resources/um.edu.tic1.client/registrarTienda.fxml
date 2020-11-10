@@ -48,12 +48,6 @@
             <Blend />
          </effect>
       </Button>
-      <Button layoutX="873.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="CONTACT" textFill="#7d4de0" textOverrun="CLIP">
-         <effect>
-            <Blend />
-         </effect>
-      </Button>
       <Pane layoutX="792.0" layoutY="68.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #7d4de0#7d4de0;" />
-      <Pane layoutX="889.0" layoutY="68.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #7d4de0#7d4de0;" />
     </children>
 </AnchorPane>

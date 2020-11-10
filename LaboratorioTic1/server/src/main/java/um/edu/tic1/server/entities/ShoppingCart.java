@@ -13,12 +13,9 @@ public class ShoppingCart {
     @Id
     private String iD;
     private long precio;
-    @ManyToMany(mappedBy = "shoppingCarts")
-    private List<Product> products;
 
     public ShoppingCart(String iD) {
         this.iD = iD;
-        this.products = new ArrayList<>();
     }
 
     public ShoppingCart() {
@@ -41,21 +38,9 @@ public class ShoppingCart {
         this.precio = precio;
     }
 
-    public List<Product> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<Product> products) {
-        this.products = products;
-    }
-
     public ShoppingCartDTO toDTO(){
         ShoppingCartDTO shoppingCartDTO = new ShoppingCartDTO(this.iD);
         List<ProductDTO> productDTOS = new ArrayList<>();
-        for (Product producto:this.products){
-            productDTOS.add(producto.toDTO());
-        }
-        shoppingCartDTO.setProducts(productDTOS);
         return shoppingCartDTO;
     }
 

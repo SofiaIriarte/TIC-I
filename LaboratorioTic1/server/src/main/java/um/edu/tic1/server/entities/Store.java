@@ -1,11 +1,13 @@
 package um.edu.tic1.server.entities;
 
 
-import um.edu.tic1.server.dtos.BrandDTO;
 import um.edu.tic1.server.dtos.ProductDTO;
 import um.edu.tic1.server.dtos.StoreDTO;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,10 +28,10 @@ public class Store {
     private String address;
     @Column(length = 30)
     private String password;
-    @ManyToMany(mappedBy = "stores")
-    private List<Product> products;
-    @ManyToMany(mappedBy = "storesBrand")
-    private List<Brand> brands;
+//    @ManyToMany(mappedBy = "stores")
+//    private List<Product> products;
+//    @ManyToMany(mappedBy = "storesBrand")
+//    private List<Brand> brands;
 
     public Store(int iD, int horaApertura, int horaCerrar, String user, String address, String password) {
         this.identificador = iD;
@@ -38,8 +40,6 @@ public class Store {
         this.user = user;
         this.address = address;
         this.password = password;
-        this.products = new ArrayList<>();
-        this.brands = new ArrayList<>();
     }
 
     public Store() {
@@ -78,34 +78,9 @@ public class Store {
         this.password = password;
     }
 
-    public List<Product> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<Product> products) {
-        this.products = products;
-    }
-
-    public List<Brand> getBrands() {
-        return brands;
-    }
-
-    public void setBrands(List<Brand> brands) {
-        this.brands = brands;
-    }
-
     public StoreDTO toDTO(){
         StoreDTO storeDTO = new StoreDTO(this.identificador = identificador, this.horaApertura,this.horaCerrar, this.user, this.address, this.password);
         List<ProductDTO> productDTOS = new ArrayList<>();
-        for (Product producto:this.products){
-            productDTOS.add(producto.toDTO());
-        }
-        storeDTO.setProducts(productDTOS);
-        List<BrandDTO> brandDTOS = new ArrayList<>();
-        for (Brand brand:this.brands){
-            brandDTOS.add(brand.toDTO());
-        }
-        storeDTO.setBrands(brandDTOS);
         return storeDTO;
     }
 

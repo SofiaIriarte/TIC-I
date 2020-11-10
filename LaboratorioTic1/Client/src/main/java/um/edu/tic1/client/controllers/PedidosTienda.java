@@ -14,14 +14,17 @@ import net.rgielen.fxweaver.core.FxmlView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import um.edu.tic1.client.dtos.CompraDTO;
+import um.edu.tic1.client.dtos.ProductDTO;
+import um.edu.tic1.client.dtos.StockDTO;
 import um.edu.tic1.client.services.CompraService;
+import um.edu.tic1.client.services.ProductService;
+import um.edu.tic1.client.services.StockService;
 
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.ResourceBundle;
-
 import static um.edu.tic1.client.UserApplication.springContext;
 import static um.edu.tic1.client.UserApplication.store;
 
@@ -31,6 +34,10 @@ public class PedidosTienda implements Initializable {
 
     @Autowired
     CompraService compraService;
+    @Autowired
+    ProductService productService;
+    @Autowired
+    StockService stockService;
 
     @FXML private Button home;
     @FXML private Button goNextPage;
@@ -369,6 +376,10 @@ public class PedidosTienda implements Initializable {
     public void aceptar () {
         CompraDTO modificada = productoSeleccionado(nombre.getText());
         modificada.setEstado("Dev. Aceptada");
+        int cantidad = modificada.getQuantity();
+        String tiendaTalleColor = modificada.getTiendaTalle();
+        String name = modificada.getProductId();
+        this.sumarStock(name,tiendaTalleColor,cantidad);
         compraService.save(modificada);
         compras.remove(modificada);
         this.clear();
@@ -397,6 +408,10 @@ public class PedidosTienda implements Initializable {
     public void aceptar2 () {
         CompraDTO modificada = productoSeleccionado(nombre2.getText());
         modificada.setEstado("Dev. Aceptada");
+        int cantidad = modificada.getQuantity();
+        String tiendaTalleColor = modificada.getTiendaTalle();
+        String name = modificada.getProductId();
+        this.sumarStock(name,tiendaTalleColor,cantidad);
         compraService.save(modificada);
         compras.remove(modificada);
         this.clear();
@@ -425,6 +440,10 @@ public class PedidosTienda implements Initializable {
     public void aceptar3 () {
         CompraDTO modificada = productoSeleccionado(nombre3.getText());
         modificada.setEstado("Dev. Aceptada");
+        int cantidad = modificada.getQuantity();
+        String tiendaTalleColor = modificada.getTiendaTalle();
+        String name = modificada.getProductId();
+        this.sumarStock(name,tiendaTalleColor,cantidad);
         compraService.save(modificada);
         compras.remove(modificada);
         this.clear();
@@ -453,6 +472,10 @@ public class PedidosTienda implements Initializable {
     public void aceptar4 () {
         CompraDTO modificada = productoSeleccionado(nombre4.getText());
         modificada.setEstado("Dev. Aceptada");
+        int cantidad = modificada.getQuantity();
+        String tiendaTalleColor = modificada.getTiendaTalle();
+        String name = modificada.getProductId();
+        this.sumarStock(name,tiendaTalleColor,cantidad);
         compraService.save(modificada);
         compras.remove(modificada);
         this.clear();
@@ -481,6 +504,10 @@ public class PedidosTienda implements Initializable {
     public void aceptar5 () {
         CompraDTO modificada = productoSeleccionado(nombre5.getText());
         modificada.setEstado("Dev. Aceptada");
+        int cantidad = modificada.getQuantity();
+        String tiendaTalleColor = modificada.getTiendaTalle();
+        String name = modificada.getProductId();
+        this.sumarStock(name,tiendaTalleColor,cantidad);
         compraService.save(modificada);
         compras.remove(modificada);
         this.clear();
@@ -509,6 +536,10 @@ public class PedidosTienda implements Initializable {
     public void aceptar6 () {
         CompraDTO modificada = productoSeleccionado(nombre6.getText());
         modificada.setEstado("Dev. Aceptada");
+        int cantidad = modificada.getQuantity();
+        String tiendaTalleColor = modificada.getTiendaTalle();
+        String name = modificada.getProductId();
+        this.sumarStock(name,tiendaTalleColor,cantidad);
         compraService.save(modificada);
         compras.remove(modificada);
         this.clear();
@@ -537,6 +568,10 @@ public class PedidosTienda implements Initializable {
     public void aceptar7 () {
         CompraDTO modificada = productoSeleccionado(nombre7.getText());
         modificada.setEstado("Dev. Aceptada");
+        int cantidad = modificada.getQuantity();
+        String tiendaTalleColor = modificada.getTiendaTalle();
+        String name = modificada.getProductId();
+        this.sumarStock(name,tiendaTalleColor,cantidad);
         compraService.save(modificada);
         compras.remove(modificada);
         this.clear();
@@ -559,6 +594,17 @@ public class PedidosTienda implements Initializable {
         } else {
             this.sacarBotones();
         }
+    }
+
+    private void sumarStock (String name, String tiendaTalleColor, int cantidad){
+        String url = "productName=" + name;
+        ProductDTO temp = productService.findByName(url);
+        Integer idProduct = temp.getiD();
+        String[] storeSizeColor = tiendaTalleColor.split("-");
+        String idStock = idProduct.toString()+storeSizeColor[0]+storeSizeColor[1]+storeSizeColor[2];
+        StockDTO toAdd = stockService.getStock(idStock);
+        toAdd.setQuantity(toAdd.getQuantity()+cantidad);
+        stockService.save(toAdd);
     }
 
 }

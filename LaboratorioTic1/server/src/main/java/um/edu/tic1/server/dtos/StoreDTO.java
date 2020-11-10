@@ -1,8 +1,5 @@
 package um.edu.tic1.server.dtos;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class StoreDTO {
 
     private int iD;
@@ -11,8 +8,6 @@ public class StoreDTO {
     private String user;
     private String address;
     private String password;
-    private List<ProductDTO> products;
-    private List<BrandDTO> brands;
 
     public StoreDTO(int iD, int horaApertura, int horaCerrar, String user, String address, String password) {
         this.iD = iD;
@@ -21,8 +16,6 @@ public class StoreDTO {
         this.user = user;
         this.address = address;
         this.password = password;
-        this.products = new ArrayList<>();
-        this.brands = new ArrayList<>();
     }
 
     public StoreDTO() {    }
@@ -57,22 +50,6 @@ public class StoreDTO {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public List<ProductDTO> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<ProductDTO> products) {
-        this.products = products;
-    }
-
-    public List<BrandDTO> getBrands() {
-        return brands;
-    }
-
-    public void setBrands(List<BrandDTO> brands) {
-        this.brands = brands;
     }
 
     public int getHoraApertura() {

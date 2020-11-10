@@ -22,26 +22,10 @@ public class Product {
     private String cathegory;
     @Column(length = 30)
     private String marca;
-//    @Column(length = 20)
-//    private String color;
     @Column(length = 15)
     private String estacion;
     @Lob
     private byte[] image;
-    @ManyToMany
-    @JoinTable(
-            name = "Product_Store",
-            joinColumns = {@JoinColumn(name = "product_id")},
-            inverseJoinColumns = {@JoinColumn(name = "sotre_id")}
-    )
-    private List<Store> stores;
-    @ManyToMany
-    @JoinTable(
-            name = "Product_ShoppingCart",
-            joinColumns = {@JoinColumn(name = "product_id")},
-            inverseJoinColumns = {@JoinColumn(name = "shopping_cart_id")}
-    )
-    private List<ShoppingCart> shoppingCarts;
 
     public Product(int iD, long price, String description, String name,
                    String cathegory, String marca, String estacion) {
@@ -52,8 +36,6 @@ public class Product {
         this.cathegory = cathegory;
         this.marca = marca;
         this.estacion = estacion;
-        this.stores = new ArrayList<>();
-        this.shoppingCarts = new ArrayList<>();
     }
 
     public Product() {
@@ -100,30 +82,10 @@ public class Product {
         this.cathegory = cathegory;
     }
 
-    public List<Store> getStores() {
-        return stores;
-    }
-
-    public void setStores(List<Store> stores) {
-        this.stores = stores;
-    }
-
-    public List<ShoppingCart> getShoppingCarts() {
-        return shoppingCarts;
-    }
-
-    public void setShoppingCarts(List<ShoppingCart> shoppingCarts) {
-        this.shoppingCarts = shoppingCarts;
-    }
-
     public ProductDTO toDTO(){
         ProductDTO productDTO = new ProductDTO(this.iD, this.price, this.description,this.name,
                 this.cathegory,this.marca,this.estacion);
         List<StoreDTO> productDTOS= new ArrayList<>();
-        for (Store store:this.stores){
-            productDTOS.add(store.toDTO());
-        }
-        productDTO.setStores(productDTOS);
         productDTO.setImage(this.image);
         return productDTO;
     }

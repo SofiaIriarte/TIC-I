@@ -2,9 +2,11 @@ package um.edu.tic1.server.entities;
 
 import um.edu.tic1.server.dtos.BrandDTO;
 import um.edu.tic1.server.dtos.ProductDTO;
-import um.edu.tic1.server.dtos.StoreDTO;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,16 +20,16 @@ public class Brand {
     private String name;
     @Column(length = 30)
     private String passworld;
-    @OneToMany
-    @JoinColumn(name="product_iD")
-    private List<Product> products;
-    @ManyToMany
-    @JoinTable(
-            name = "Brand_Store",
-            joinColumns = {@JoinColumn(name = "brand_id")},
-            inverseJoinColumns = {@JoinColumn(name = "store_id")}
-    )
-    private List<Store> storesBrand;
+//    @OneToMany
+//    @JoinColumn(name="product_iD")
+//    private List<Product> products;
+//    @ManyToMany
+//    @JoinTable(
+//            name = "Brand_Store",
+//            joinColumns = {@JoinColumn(name = "brand_id")},
+//            inverseJoinColumns = {@JoinColumn(name = "store_id")}
+//    )
+//    private List<Store> storesBrand;
 
     public Brand() {
     }
@@ -36,8 +38,6 @@ public class Brand {
         this.iD = iD;
         this.name = name;
         this.passworld = passworld;
-        this.products = new ArrayList<>();
-        this.storesBrand = new ArrayList<>();
     }
 
     public int getiD() {
@@ -56,22 +56,6 @@ public class Brand {
         this.name = name;
     }
 
-    public List<Product> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<Product> products) {
-        this.products = products;
-    }
-
-    public List<Store> getStoresBrand() {
-        return storesBrand;
-    }
-
-    public void setStoresBrand(List<Store> storesBrand) {
-        this.storesBrand = storesBrand;
-    }
-
     public String getPassworld() {
         return passworld;
     }
@@ -83,15 +67,6 @@ public class Brand {
     public BrandDTO toDTO() {
         BrandDTO brandDTO = new BrandDTO(this.iD, this.name, this.passworld );
         List<ProductDTO> productDTOS = new ArrayList<>();
-        for (Product producto:this.products){
-            productDTOS.add(producto.toDTO());
-        }
-        brandDTO.setProducts(productDTOS);
-        List<StoreDTO> storeDTOS = new ArrayList<>();
-        for (Store store:this.storesBrand){
-            storeDTOS.add(store.toDTO());
-        }
-        brandDTO.setStoresBrand(storeDTOS);
         return brandDTO;
     }
 

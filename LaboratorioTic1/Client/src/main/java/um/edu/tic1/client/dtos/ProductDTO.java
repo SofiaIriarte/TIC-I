@@ -1,7 +1,5 @@
 package um.edu.tic1.client.dtos;
 
-import java.util.List;
-
 public class ProductDTO {
 
     private int iD;
@@ -12,8 +10,6 @@ public class ProductDTO {
     private String marca;
     private String estacion;
     private byte[] image;
-    private List<StoreDTO> stores;
-    private List<ShoppingCartDTO> shoppingCarts;
 
     public ProductDTO(int iD, long price, String description, String name,
                       String cathegory, String marca, String estacion) {
@@ -68,22 +64,6 @@ public class ProductDTO {
 
     public void setCathegory(String cathegory) {
         this.cathegory = cathegory;
-    }
-
-    public List<StoreDTO> getStores() {
-        return stores;
-    }
-
-    public void setStores(List<StoreDTO> stores) {
-        this.stores = stores;
-    }
-
-    public List<ShoppingCartDTO> getShoppingCarts() {
-        return shoppingCarts;
-    }
-
-    public void setShoppingCarts(List<ShoppingCartDTO> shoppingCarts) {
-        this.shoppingCarts = shoppingCarts;
     }
 
     public String getMarca() {

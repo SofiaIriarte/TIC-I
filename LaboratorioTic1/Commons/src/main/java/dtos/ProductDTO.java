@@ -1,9 +1,5 @@
 package dtos;
 
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
-
 public class ProductDTO {
 
     private int iD;
@@ -11,19 +7,19 @@ public class ProductDTO {
     private String description;
     private String name;
     private String cathegory;
-    // Revisar
-    private Image image;
-    private List<StoreDTO> stores;
-    private List<ShoppingCartDTO> shoppingCarts;
+    private String marca;
+    private String estacion;
+    private byte[] image;
 
-    public ProductDTO(int iD, long price, String description, String name, String cathegory) {
+    public ProductDTO(int iD, long price, String description, String name,
+                      String cathegory, String marca, String estacion) {
         this.iD = iD;
         this.price = price;
         this.description = description;
         this.name = name;
         this.cathegory = cathegory;
-        this.stores = new ArrayList<>();
-        this.shoppingCarts = new ArrayList<>();
+        this.marca = marca;
+        this.estacion = estacion;
     }
 
     public ProductDTO() {
@@ -70,20 +66,27 @@ public class ProductDTO {
         this.cathegory = cathegory;
     }
 
-    public List<StoreDTO> getStores() {
-        return stores;
+    public String getMarca() {
+        return marca;
     }
 
-    public void setStores(List<StoreDTO> stores) {
-        this.stores = stores;
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
-    public List<ShoppingCartDTO> getShoppingCarts() {
-        return shoppingCarts;
+    public String getEstacion() {
+        return estacion;
     }
 
-    public void setShoppingCarts(List<ShoppingCartDTO> shoppingCarts) {
-        this.shoppingCarts = shoppingCarts;
+    public void setEstacion(String estacion) {
+        this.estacion = estacion;
     }
 
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
+    }
 }

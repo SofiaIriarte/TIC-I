@@ -107,6 +107,8 @@ public class MiPerfil implements Initializable {
         metodoDePagoService.save(metodoDePagoDTO);
         this.confirmar.setDisable(true);
         this.confirmar.setVisible(false);
+        this.cancelar.setDisable(true);
+        this.cancelar.setVisible(false);
         this.titular.setVisible(false);
         this.nTarjeta.setVisible(false);
     }
