@@ -58,6 +58,7 @@ public class PedidosTienda implements Initializable {
     @FXML private Button contact;
 
     private List<CompraDTO> compras;
+    private List<CompraDTO> devolucion;
     private int page = 0;
 
     @Override
@@ -79,13 +80,19 @@ public class PedidosTienda implements Initializable {
             if (compras.size() > 0) {
                 for (int i = 0; i<compras.size(); i++){
                     CompraDTO temp = compras.get(i);
-                    if (!temp.getEstado().equals("Devolucion solicitada")){
-                        compras.remove(temp);
+                    if (temp.getEstado().equals("Devolucion solicitada")){
+                        devolucion.add(temp);
                     }
                 }
-                if (compras.size() > 0) {
-                    this.showProducts();
-                } else {
+                compras = devolucion;
+                if (compras != null) {
+                    if (compras.size() > 0) {
+                        this.showProducts();
+                    } else {
+                        this.emptyScreen();
+                    }
+                }
+                else {
                     this.emptyScreen();
                 }
             } else {
@@ -115,14 +122,16 @@ public class PedidosTienda implements Initializable {
     }
 
     private void emptyScreen (){
-        if (compras.size() == 0){
-            column1.setVisible(false);
-            column2.setVisible(false);
-            column3.setVisible(false);
-            column4.setVisible(false);
-            column5.setVisible(false);
-            column6.setVisible(false);
-            column7.setVisible(false);
+        if (compras!= null) {
+            if (compras.size() == 0) {
+                column1.setVisible(false);
+                column2.setVisible(false);
+                column3.setVisible(false);
+                column4.setVisible(false);
+                column5.setVisible(false);
+                column6.setVisible(false);
+                column7.setVisible(false);
+            }
         }
     }
 
@@ -384,6 +393,7 @@ public class PedidosTienda implements Initializable {
         compras.remove(modificada);
         this.clear();
         if (compras.size() > 0) {
+            this.sacarBotones();
             this.showProducts();
         } else {
             this.sacarBotones();
@@ -398,6 +408,7 @@ public class PedidosTienda implements Initializable {
         compras.remove(modificada);
         this.clear();
         if (compras.size() > 0) {
+            this.sacarBotones();
             this.showProducts();
         } else {
             this.sacarBotones();
@@ -416,6 +427,7 @@ public class PedidosTienda implements Initializable {
         compras.remove(modificada);
         this.clear();
         if (compras.size() > 0) {
+            this.sacarBotones();
             this.showProducts();
         } else {
             this.sacarBotones();
@@ -430,6 +442,7 @@ public class PedidosTienda implements Initializable {
         compras.remove(modificada);
         this.clear();
         if (compras.size() > 0) {
+            this.sacarBotones();
             this.showProducts();
         } else {
             this.sacarBotones();
@@ -448,6 +461,7 @@ public class PedidosTienda implements Initializable {
         compras.remove(modificada);
         this.clear();
         if (compras.size() > 0) {
+            this.sacarBotones();
             this.showProducts();
         } else {
             this.sacarBotones();
@@ -462,6 +476,7 @@ public class PedidosTienda implements Initializable {
         compras.remove(modificada);
         this.clear();
         if (compras.size() > 0) {
+            this.sacarBotones();
             this.showProducts();
         } else {
             this.sacarBotones();
@@ -480,6 +495,7 @@ public class PedidosTienda implements Initializable {
         compras.remove(modificada);
         this.clear();
         if (compras.size() > 0) {
+            this.sacarBotones();
             this.showProducts();
         } else {
             this.sacarBotones();
@@ -494,6 +510,7 @@ public class PedidosTienda implements Initializable {
         compras.remove(modificada);
         this.clear();
         if (compras.size() > 0) {
+            this.sacarBotones();
             this.showProducts();
         } else {
             this.sacarBotones();
@@ -512,6 +529,7 @@ public class PedidosTienda implements Initializable {
         compras.remove(modificada);
         this.clear();
         if (compras.size() > 0) {
+            this.sacarBotones();
             this.showProducts();
         } else {
             this.sacarBotones();
@@ -526,6 +544,7 @@ public class PedidosTienda implements Initializable {
         compras.remove(modificada);
         this.clear();
         if (compras.size() > 0) {
+            this.sacarBotones();
             this.showProducts();
         } else {
             this.sacarBotones();
@@ -544,6 +563,7 @@ public class PedidosTienda implements Initializable {
         compras.remove(modificada);
         this.clear();
         if (compras.size() > 0) {
+            this.sacarBotones();
             this.showProducts();
         } else {
             this.sacarBotones();
@@ -558,6 +578,7 @@ public class PedidosTienda implements Initializable {
         compras.remove(modificada);
         this.clear();
         if (compras.size() > 0) {
+            this.sacarBotones();
             this.showProducts();
         } else {
             this.sacarBotones();
@@ -576,6 +597,7 @@ public class PedidosTienda implements Initializable {
         compras.remove(modificada);
         this.clear();
         if (compras.size() > 0) {
+            this.sacarBotones();
             this.showProducts();
         } else {
             this.sacarBotones();
@@ -590,6 +612,7 @@ public class PedidosTienda implements Initializable {
         compras.remove(modificada);
         this.clear();
         if (compras.size() > 0) {
+            this.sacarBotones();
             this.showProducts();
         } else {
             this.sacarBotones();

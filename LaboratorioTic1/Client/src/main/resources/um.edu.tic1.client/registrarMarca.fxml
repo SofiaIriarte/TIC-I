@@ -8,7 +8,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -24,7 +23,7 @@
             <Image url="@../images/security_PNG.png" />
          </image>
       </ImageView>
-      <Button fx:id="home" layoutX="564.0" layoutY="36.0" mnemonicParsing="false" onAction="#goToAdminHome" style="-fx-background-color: transparent black" text="HOME" textFill="#7d4de0" textOverrun="CLIP">
+      <Button fx:id="home" layoutX="800.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToAdminHome" style="-fx-background-color: transparent black" text="HOME" textFill="#7d4de0" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
@@ -44,6 +43,5 @@
          <font>
             <Font size="20.0" />
          </font></Button>
-      <Pane layoutX="566.0" layoutY="71.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #7d4de0#7d4de0;" />
    </children>
 </AnchorPane>

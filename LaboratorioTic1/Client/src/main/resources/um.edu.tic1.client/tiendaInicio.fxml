@@ -36,12 +36,12 @@
                 <Font name="System Bold" size="14.0" />
             </font>
         </Button>
-      <Button layoutX="800.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="HOME" textFill="#7d4de0" textOverrun="CLIP">
+      <Button layoutX="800.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="HOME" textFill="#7d4de0" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
       </Button>
-      <Button fx:id="contact" layoutX="883.0" layoutY="28.0" mnemonicParsing="false" onAction="#goToContactUs" style="-fx-background-color: transparent black" text="CONTACT" textFill="#7d4de0" textOverrun="CLIP">
+      <Button fx:id="contact" layoutX="880.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToContactUs" style="-fx-background-color: transparent black" text="CONTACT" textFill="#7d4de0" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>

@@ -17,7 +17,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="um.edu.tic1.client.controllers.Shop">
     <children>
-      <Button fx:id="perfil" layoutX="853.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToMyPerfil" style="-fx-background-color: transparent black;">
+      <Button fx:id="perfil" layoutX="858.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToMyPerfil" style="-fx-background-color: transparent black;">
          <graphic>
             <ImageView accessibleRole="BUTTON" fitHeight="31.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -36,17 +36,17 @@
                 <Blend />
             </effect>
         </Button>
-        <Button fx:id="aboutUs" layoutX="689.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
+        <Button fx:id="aboutUs" layoutX="696.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
             <effect>
                 <Blend />
             </effect>
         </Button>
-        <Button layoutX="778.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
+        <Button layoutX="792.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
             <effect>
                 <Blend />
             </effect>
         </Button>
-        <Pane layoutX="776.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
+        <Pane layoutX="790.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
         <Button fx:id="buscar" layoutX="43.0" layoutY="464.0" mnemonicParsing="false" onAction="#search" prefHeight="36.0" prefWidth="199.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="BUSCAR" textFill="#e8505b">
             <font>
                 <Font name="System Bold" size="13.0" />
@@ -202,7 +202,7 @@
                 </Text>
             </children>
         </Pane>
-      <Button fx:id="cart" layoutX="899.0" layoutY="15.0" mnemonicParsing="false" onAction="#goToCart" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent black;">
+      <Button fx:id="cart" layoutX="913.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToCart" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent black;">
          <graphic>
             <ImageView accessibleRole="BUTTON" fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>

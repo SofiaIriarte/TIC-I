@@ -17,22 +17,22 @@
                 <Image url="@../images/image1.png" />
             </image>
         </ImageView>
-        <Button fx:id="home" layoutX="616.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
+        <Button fx:id="home" layoutX="541.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
             <effect>
                 <Blend />
             </effect>
         </Button>
-        <Button fx:id="aboutUs" layoutX="696.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
+        <Button fx:id="aboutUs" layoutX="621.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
             <effect>
                 <Blend />
             </effect>
         </Button>
-        <Button fx:id="shop" layoutX="792.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToShop" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
+        <Button fx:id="shop" layoutX="719.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToShop" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
             <effect>
                 <Blend />
             </effect>
         </Button>
-        <Button fx:id="carrito" layoutX="913.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToCart" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent black;">
+        <Button fx:id="carrito" layoutX="883.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToCart" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent black;">
             <graphic>
                 <ImageView accessibleRole="BUTTON" fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -41,7 +41,7 @@
                 </ImageView>
             </graphic>
         </Button>
-        <Button fx:id="miPerfil" layoutX="858.0" layoutY="16.0" mnemonicParsing="false" onAction="#goToMyPerfil" style="-fx-background-color: transparent black;">
+        <Button fx:id="miPerfil" layoutX="800.0" layoutY="23.0" mnemonicParsing="false" onAction="#goToMyPerfil" style="-fx-background-color: transparent black;">
             <graphic>
                 <ImageView accessibleRole="BUTTON" fitHeight="31.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -50,14 +50,14 @@
                 </ImageView>
             </graphic>
         </Button>
-        <Button fx:id="back" layoutX="14.0" layoutY="68.0" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: TRANSPARENT;" textFill="#e8505b">
+        <Button fx:id="back" layoutX="4.0" layoutY="73.0" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: TRANSPARENT;" textFill="#e8505b">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>
          <graphic>
             <ImageView fitHeight="50.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/flechaAtres.png" />
+                  <Image url="@../images/flecha.png" />
                </image>
             </ImageView>
          </graphic>
@@ -91,12 +91,12 @@
             </Label>
          </children>
       </Pane>
-      <Button fx:id="login" layoutX="852.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToLogIn" style="-fx-background-color: transparent black" text="LOGIN" textFill="#e8505b" textOverrun="CLIP">
+      <Button fx:id="login" layoutX="794.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToLogIn" style="-fx-background-color: transparent black" text="LOGIN" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
       </Button>
-      <Button fx:id="register" layoutX="913.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToRegisterScene" style="-fx-background-color: transparent black" text="REGISTER" textFill="#e8505b" textOverrun="CLIP">
+      <Button fx:id="register" layoutX="872.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToRegisterScene" style="-fx-background-color: transparent black" text="REGISTER" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
@@ -129,7 +129,7 @@
             <Label fx:id="descripcion" prefHeight="68.0" prefWidth="221.0" textFill="#fffdfd" wrapText="true" />
          </children>
       </Pane>
-      <Pane layoutX="563.0" layoutY="370.0" prefHeight="68.0" prefWidth="221.0" style="-fx-background-color: #e8505b#e8505b;">
+      <Pane layoutX="564.0" layoutY="373.0" prefHeight="68.0" prefWidth="221.0" style="-fx-background-color: #e8505b#e8505b;">
          <children>
             <Label fx:id="descripcion2" layoutY="-2.0" prefHeight="68.0" prefWidth="221.0" textFill="#fffefe" wrapText="true" />
          </children>

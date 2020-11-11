@@ -6,7 +6,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -48,7 +47,6 @@
                 <Font name="Avenir Next Bold" size="37.0" />
             </font>
         </Text>
-        <Pane layoutX="853.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
         <Button fx:id="cart" layoutX="913.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToCart" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent black;">
             <graphic>
                 <ImageView accessibleRole="BUTTON" fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">

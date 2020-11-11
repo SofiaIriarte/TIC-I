@@ -46,27 +46,27 @@
          <font>
             <Font size="14.0" />
          </font></RadioButton>
-      <Button fx:id="menu" layoutX="549.0" layoutY="31.0" mnemonicParsing="false" onAction="#goToMenu" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
+      <Button fx:id="menu" layoutX="541.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToMenu" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
       </Button>
-      <Button fx:id="aboutUs" layoutX="623.0" layoutY="31.0" mnemonicParsing="false" onAction="#goToAboutUs" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
+      <Button fx:id="aboutUs" layoutX="621.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToAboutUs" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
       </Button>
-      <Button fx:id="shop" layoutX="721.0" layoutY="31.0" mnemonicParsing="false" onAction="#goToShop" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
+      <Button fx:id="shop" layoutX="719.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToShop" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
       </Button>
-      <Button fx:id="login" layoutX="792.0" layoutY="31.0" mnemonicParsing="false" onAction="#logIn" style="-fx-background-color: transparent black" text="LOGIN" textFill="#e8505b" textOverrun="CLIP">
+      <Button fx:id="login" layoutX="794.0" layoutY="29.0" mnemonicParsing="false" onAction="#logIn" style="-fx-background-color: transparent black" text="LOGIN" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
       </Button>
-      <Pane layoutX="796.0" layoutY="66.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
+      <Pane layoutX="794.0" layoutY="66.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
       <TextField fx:id="userName" layoutX="171.0" layoutY="317.0" prefHeight="27.0" prefWidth="247.0" style="-fx-background-color: white;" />
       <Text layoutX="171.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User name:" />
       <Text layoutX="171.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
@@ -79,7 +79,7 @@
          </image>
       </ImageView>
       <PasswordField fx:id="password" layoutX="172.0" layoutY="394.0" prefHeight="25.0" prefWidth="247.0" style="-fx-background-color: white;" />
-      <Button fx:id="registrarse" layoutX="865.0" layoutY="31.0" mnemonicParsing="false" onAction="#goToRegisterScene" style="-fx-background-color: transparent black" text="REGISTER" textFill="#e8505b" textOverrun="CLIP">
+      <Button fx:id="registrarse" layoutX="872.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToRegisterScene" style="-fx-background-color: transparent black" text="REGISTER" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>

@@ -52,7 +52,7 @@
             <Font name="Futura Medium" size="35.0" />
          </font>
       </Text>
-      <Text layoutX="68.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="la nueva experiencia? " wrappingWidth="403.9798889160156">
+      <Text layoutX="68.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="una nueva experiencia? " wrappingWidth="403.9798889160156">
          <font>
             <Font name="Avenir Next Bold" size="37.0" />
          </font>

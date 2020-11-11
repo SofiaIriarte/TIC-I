@@ -99,7 +99,7 @@
                 <Blend />
             </effect>
         </Button>
-      <Button fx:id="goNextPage" layoutX="863.0" layoutY="516.0" mnemonicParsing="false" onAction="#goToNextPage" style="-fx-background-color: transparent;">
+      <Button fx:id="goNextPage" layoutX="863.0" layoutY="529.0" mnemonicParsing="false" onAction="#goToNextPage" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView fitHeight="29.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -108,7 +108,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="goPreviousPage" layoutX="826.0" layoutY="516.0" mnemonicParsing="false" onAction="#goToPreviousPage" style="-fx-background-color: transparent;">
+      <Button fx:id="goPreviousPage" layoutX="826.0" layoutY="529.0" mnemonicParsing="false" onAction="#goToPreviousPage" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView fitHeight="29.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -117,163 +117,163 @@
             </ImageView>
          </graphic>
       </Button>
-      <Label fx:id="column1" layoutX="38.0" layoutY="182.0" text="Nombre del producto" textFill="#e8505b">
+      <Label fx:id="column1" layoutX="38.0" layoutY="182.0" text="Nombre del producto" textFill="#7d4de0">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="column2" layoutX="212.0" layoutY="183.0" text="Tienda, Talle y Color" textFill="#e8505b">
+      <Label fx:id="column2" layoutX="212.0" layoutY="183.0" text="Tienda, Talle y Color" textFill="#7d4de0">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="408.0" layoutY="183.0" text="Usuario" textFill="#e8505b">
+      <Label layoutX="408.0" layoutY="183.0" text="Usuario" textFill="#7d4de0">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="column4" layoutX="569.0" layoutY="182.0" text="Fecha" textFill="#e8505b">
+      <Label fx:id="column4" layoutX="569.0" layoutY="182.0" text="Fecha" textFill="#7d4de0">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="column5" layoutX="641.0" layoutY="182.0" text="Cant." textFill="#e8505b">
+      <Label fx:id="column5" layoutX="641.0" layoutY="182.0" text="Cant." textFill="#7d4de0">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="column6" layoutX="695.0" layoutY="182.0" text="Precio" textFill="#e8505b">
+      <Label fx:id="column6" layoutX="695.0" layoutY="182.0" text="Precio" textFill="#7d4de0">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="column7" layoutX="759.0" layoutY="183.0" text="Tipo" textFill="#e8505b">
+      <Label fx:id="column7" layoutX="759.0" layoutY="183.0" text="Tipo" textFill="#7d4de0">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Button fx:id="rechazar" layoutX="908.0" layoutY="203.0" mnemonicParsing="false" onAction="#denegar" prefHeight="38.0" prefWidth="46.0" style="-fx-background-color: white;">
+      <Button fx:id="rechazar" layoutX="908.0" layoutY="203.0" mnemonicParsing="false" onAction="#denegar" prefHeight="38.0" prefWidth="39.0" style="-fx-background-color: TRANSPARENT;">
          <graphic>
-            <ImageView fitHeight="30.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/Rechazar.png" />
+                  <Image url="@../images/CRUZ.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="confirmar" layoutX="842.0" layoutY="203.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: white;">
+      <Button fx:id="confirmar" layoutX="842.0" layoutY="203.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="37.0" prefWidth="39.0" style="-fx-background-color: TRANSPARENT;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/TIC.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="rechazar2" layoutX="908.0" layoutY="249.0" mnemonicParsing="false" onAction="#denegar2" prefHeight="38.0" prefWidth="39.0" style="-fx-background-color: TRANSPARENT;">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/CRUZ.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="confirmar2" layoutX="842.0" layoutY="249.0" mnemonicParsing="false" onAction="#aceptar2" prefHeight="25.0" prefWidth="13.0" style="-fx-background-color: TRANSPARENT;">
          <graphic>
             <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/Confirmar.png" />
+                  <Image url="@../images/TIC.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="rechazar2" layoutX="909.0" layoutY="249.0" mnemonicParsing="false" onAction="#denegar2" prefHeight="38.0" prefWidth="46.0" style="-fx-background-color: white;">
+      <Button fx:id="rechazar3" layoutX="908.0" layoutY="293.0" mnemonicParsing="false" onAction="#denegar3" prefHeight="38.0" prefWidth="39.0" style="-fx-background-color: TRANSPARENT;">
          <graphic>
-            <ImageView fitHeight="30.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/Rechazar.png" />
+                  <Image url="@../images/CRUZ.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="confirmar2" layoutX="842.0" layoutY="249.0" mnemonicParsing="false" onAction="#aceptar2" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: white;">
-         <graphic>
-            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/Confirmar.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button fx:id="rechazar3" layoutX="909.0" layoutY="293.0" mnemonicParsing="false" onAction="#denegar3" prefHeight="38.0" prefWidth="46.0" style="-fx-background-color: white;">
-         <graphic>
-            <ImageView fitHeight="30.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/Rechazar.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button fx:id="confirmar3" layoutX="843.0" layoutY="293.0" mnemonicParsing="false" onAction="#aceptar3" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: white;">
+      <Button fx:id="confirmar3" layoutX="842.0" layoutY="293.0" mnemonicParsing="false" onAction="#aceptar3" prefHeight="3.0" prefWidth="0.0" style="-fx-background-color: TRANSPARENT;">
          <graphic>
             <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/Confirmar.png" />
+                  <Image url="@../images/TIC.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="rechazar4" layoutX="911.0" layoutY="337.0" mnemonicParsing="false" onAction="#denegar4" prefHeight="38.0" prefWidth="46.0" style="-fx-background-color: white;">
+      <Button fx:id="rechazar4" layoutX="908.0" layoutY="337.0" mnemonicParsing="false" onAction="#denegar4" prefHeight="38.0" prefWidth="39.0" style="-fx-background-color: TRANSPARENT;">
          <graphic>
-            <ImageView fitHeight="30.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/Rechazar.png" />
+                  <Image url="@../images/CRUZ.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="confirmar4" layoutX="845.0" layoutY="337.0" mnemonicParsing="false" onAction="#aceptar4" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: white;">
-         <graphic>
-            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/Confirmar.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button fx:id="rechazar5" layoutX="911.0" layoutY="380.0" mnemonicParsing="false" onAction="#denegar5" prefHeight="38.0" prefWidth="46.0" style="-fx-background-color: white;">
-         <graphic>
-            <ImageView fitHeight="30.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/Rechazar.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button fx:id="confirmar5" layoutX="845.0" layoutY="380.0" mnemonicParsing="false" onAction="#aceptar5" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: white;">
+      <Button fx:id="confirmar4" layoutX="842.0" layoutY="337.0" mnemonicParsing="false" onAction="#aceptar4" prefHeight="4.0" prefWidth="0.0" style="-fx-background-color: TRANSPARENT;">
          <graphic>
             <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/Confirmar.png" />
+                  <Image url="@../images/TIC.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="rechazar6" layoutX="913.0" layoutY="424.0" mnemonicParsing="false" onAction="#denegar6" prefHeight="38.0" prefWidth="46.0" style="-fx-background-color: white;">
+      <Button fx:id="rechazar5" layoutX="908.0" layoutY="380.0" mnemonicParsing="false" onAction="#denegar5" prefHeight="38.0" prefWidth="39.0" style="-fx-background-color: TRANSPARENT;">
          <graphic>
-            <ImageView fitHeight="30.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/Rechazar.png" />
+                  <Image url="@../images/CRUZ.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="confirmar6" layoutX="847.0" layoutY="424.0" mnemonicParsing="false" onAction="#aceptar6" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: white;">
-         <graphic>
-            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/Confirmar.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button fx:id="rechazar7" layoutX="912.0" layoutY="467.0" mnemonicParsing="false" onAction="#denegar7" prefHeight="38.0" prefWidth="46.0" style="-fx-background-color: white;">
-         <graphic>
-            <ImageView fitHeight="30.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/Rechazar.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button fx:id="confirmar7" layoutX="846.0" layoutY="467.0" mnemonicParsing="false" onAction="#aceptar7" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: white;">
+      <Button fx:id="confirmar5" layoutX="842.0" layoutY="380.0" mnemonicParsing="false" onAction="#aceptar5" prefHeight="20.0" prefWidth="0.0" style="-fx-background-color: TRANSPARENT;">
          <graphic>
             <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/Confirmar.png" />
+                  <Image url="@../images/TIC.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="rechazar6" layoutX="908.0" layoutY="424.0" mnemonicParsing="false" onAction="#denegar6" prefHeight="38.0" prefWidth="39.0" style="-fx-background-color: TRANSPARENT;">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/CRUZ.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="confirmar6" layoutX="842.0" layoutY="424.0" mnemonicParsing="false" onAction="#aceptar6" prefHeight="6.0" prefWidth="0.0" style="-fx-background-color: TRANSPARENT;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/TIC.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="rechazar7" layoutX="908.0" layoutY="467.0" mnemonicParsing="false" onAction="#denegar7" prefHeight="38.0" prefWidth="39.0" style="-fx-background-color: TRANSPARENT;">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/CRUZ.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="confirmar7" layoutX="842.0" layoutY="467.0" mnemonicParsing="false" onAction="#aceptar7" prefHeight="0.0" prefWidth="0.0" style="-fx-background-color: TRANSPARENT;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/TIC.png" />
                </image>
             </ImageView>
          </graphic>

@@ -22,22 +22,22 @@
                 <Image url="@../images/image1.png" />
             </image>
         </ImageView>
-        <Button fx:id="home" layoutX="616.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToMenu" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
+        <Button fx:id="home" layoutX="541.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToMenu" style="-fx-background-color: transparent black" text="HOME" textFill="#e8505b" textOverrun="CLIP">
             <effect>
                 <Blend />
             </effect>
         </Button>
-        <Button fx:id="aboutUs" layoutX="689.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToAboutUs" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
+        <Button fx:id="aboutUs" layoutX="621.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToAboutUs" style="-fx-background-color: transparent black" text="ABOUT US" textFill="#e8505b" textOverrun="CLIP">
             <effect>
                 <Blend />
             </effect>
         </Button>
-        <Button layoutX="778.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
+        <Button layoutX="719.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: transparent black" text="SHOP" textFill="#e8505b" textOverrun="CLIP">
             <effect>
                 <Blend />
             </effect>
         </Button>
-        <Pane layoutX="776.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
+        <Pane layoutX="715.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #E8505B#E8505B;" />
         <Button fx:id="buscar" layoutX="43.0" layoutY="451.0" mnemonicParsing="false" onAction="#search" prefHeight="36.0" prefWidth="199.0" style="-fx-background-radius: 20; -fx-background-color: white;" text="BUSCAR" textFill="#e8505b">
             <font>
                 <Font name="System Bold" size="13.0" />
@@ -49,12 +49,12 @@
         <Label layoutX="45.0" layoutY="215.0" text="Marca:" />
         <Label layoutX="41.0" layoutY="286.0" text="Categoria:" />
         <Label layoutX="45.0" layoutY="349.0" text="Estacion:" />
-      <Button fx:id="logIn" layoutX="846.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToLogIn" style="-fx-background-color: transparent black" text="LOGIN" textFill="#e8505b" textOverrun="CLIP">
+      <Button fx:id="logIn" layoutX="794.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToLogIn" style="-fx-background-color: transparent black" text="LOGIN" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
       </Button>
-      <Button fx:id="registrarse" layoutX="914.0" layoutY="22.0" mnemonicParsing="false" onAction="#goToRegisterScene" style="-fx-background-color: transparent black" text="REGISTER" textFill="#e8505b" textOverrun="CLIP">
+      <Button fx:id="registrarse" layoutX="872.0" layoutY="29.0" mnemonicParsing="false" onAction="#goToRegisterScene" style="-fx-background-color: transparent black" text="REGISTER" textFill="#e8505b" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>

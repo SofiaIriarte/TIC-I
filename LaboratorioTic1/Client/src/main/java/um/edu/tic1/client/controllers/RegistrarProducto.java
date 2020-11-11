@@ -105,8 +105,10 @@ public class RegistrarProducto implements Initializable {
         );
         Stage stage = (Stage)anchorPaneProduct.getScene().getWindow();
         this.file = fileChooser.showOpenDialog(stage);
-        Path path = Paths.get(file.getAbsolutePath());
-        fileContet = Files.readAllBytes(path);
+        if (this.file != null) {
+            Path path = Paths.get(file.getAbsolutePath());
+            fileContet = Files.readAllBytes(path);
+        }
     }
 
 }
