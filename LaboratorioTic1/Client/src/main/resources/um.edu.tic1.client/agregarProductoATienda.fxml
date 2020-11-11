@@ -7,7 +7,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -27,7 +26,7 @@
                 <Font name="Apple Braille" size="22.0" />
             </font>
         </Label>
-        <Button fx:id="home" layoutX="581.0" layoutY="26.0" mnemonicParsing="false" onAction="#goToStoreHome" style="-fx-background-color: transparent black" text="HOME" textFill="#7d4de0" textOverrun="CLIP">
+        <Button fx:id="home" layoutX="800.0" layoutY="28.0" mnemonicParsing="false" onAction="#goToStoreHome" style="-fx-background-color: transparent black" text="HOME" textFill="#7d4de0" textOverrun="CLIP">
             <effect>
                 <Blend />
             </effect>
@@ -41,10 +40,9 @@
         </ImageView>
       <TextField fx:id="talle" layoutX="83.0" layoutY="359.0" prefHeight="27.0" prefWidth="318.0" style="-fx-background-color: white;" />
       <Text layoutX="84.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TALLE:" />
-      <Pane layoutX="585.0" layoutY="67.0" prefHeight="3.0" prefWidth="50.0" style="-fx-background-color: #7d4de0#7d4de0;" />
       <Text layoutX="84.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COLOR:" />
       <TextField fx:id="color" layoutX="83.0" layoutY="421.0" prefHeight="27.0" prefWidth="318.0" style="-fx-background-color: white;" />
-      <Button fx:id="contact" layoutX="663.0" layoutY="26.0" mnemonicParsing="false" onAction="#goToContactUs" style="-fx-background-color: transparent black" text="CONTACT" textFill="#7d4de0" textOverrun="CLIP">
+      <Button fx:id="contact" layoutX="883.0" layoutY="28.0" mnemonicParsing="false" onAction="#goToContactUs" style="-fx-background-color: transparent black" text="CONTACT" textFill="#7d4de0" textOverrun="CLIP">
          <effect>
             <Blend />
          </effect>
